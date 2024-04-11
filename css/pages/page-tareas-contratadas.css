@@ -1,0 +1,136 @@
+.contracted-tasks{
+    color: #575550;
+    font-size: 18px;
+    padding: 1rem;
+}
+.contracted-tasks-pills{
+    display: flex;
+    justify-content: space-between;
+}
+.contracted-tasks-pill{
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 1.5rem;
+    color: #575550;
+    font-weight: bold;
+    outline: none;
+    /* padding: 0.4rem 1.5rem; */
+    padding: 0.7rem 0;
+    width: 120px;
+}
+.contracted-tasks-pill.active{
+    background-color: #e2eeec;
+    border: 1px solid #5aab9f;
+}
+.contracted-tasks-item{
+    border-radius: 20px;
+    box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    overflow: hidden;
+    font-family: 'Open Sans';
+}
+.contracted-tasks-item-header{
+    align-items: center;
+    background-color: #e2eeec;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    padding: 1.1rem 0.7rem 1.5rem;
+    position: relative;
+}
+.contracted-tasks-item-headerBtn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+}
+.contracted-tasks-item-header .img-fluid{
+    border-radius: 50%;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    width: 100px;
+}
+.contracted-tasks-item-header-text{
+    font-weight: 500;
+    color: #5aab9f;
+    margin-bottom: 0;
+}
+.contracted-tasks-item-header-text span{
+    color: #575550;
+    display: block;
+    font-weight: normal;
+    font-size: .9rem;
+}
+.contracted-tasks-item-body{
+    padding: .7rem 1rem;
+    position: relative;
+}
+.contracted-tasks-item-body-item{
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+.contracted-tasks-item-body-item:last-of-type{
+    padding-bottom: 0;
+}
+.contracted-tasks-item-body-itemIcon{
+    height: 1.3rem;
+    margin-right: 0.3rem;
+    width: 1.3rem;
+}
+.contracted-tasks-item-body-itemPrice {
+    color: #575550;
+    font-weight: 700;
+    font-family: "Century Gothic";
+    font-size: 2.1rem;
+    text-align: right;
+    display: block;
+    width: 100%;
+    /* padding: 0 0.4rem; */
+    margin: 0rem;
+    letter-spacing: -0.13rem;
+    line-height: 1.9rem;
+}
+.contracted-tasks-item-body-itemPrice span {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: normal;
+}
+.contracted-tasks-item-body-itemState {
+    color: #d4d4d4;
+    font-weight: 500;
+    font-family: 'Open Sans';
+}
+.contracted-tasks-item-body-itemState-cancel {
+    color: #ef4047;
+    font-weight: 500;
+    font-family: 'Open Sans';
+}
+.contracted-tasks-item-footerBtn{
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid #d4d4d4;
+    color: #575550;
+    font-weight: 600;
+    font-family: "Century Gothic";
+    font-size: 1rem;
+    outline: none;
+    position: relative;
+    padding: .7rem 1rem;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+}
+.contracted-tasks-item-footerBtn .img-fluid{    
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    width: 0.4rem;
+}

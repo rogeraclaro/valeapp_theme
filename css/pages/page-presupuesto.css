@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Century Gothic';
+}
+
+.cards {
+    padding: 24.8px 16px;
+    font-family: 'Century Gothic';
+}
+.cards-header{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cards-header-deleteIcon{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.cards-header button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+.cards-header-title{
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    flex-direction: row;
+    margin-bottom: 0.1rem;
+}
+.cards-header-qty{
+    align-items: center;
+    background-color: #ef4047;
+    border-radius: 50%;
+    color: white;
+    display: inline-flex;
+    font-size: 0.5rem;
+    font-weight: normal;
+    height: 1rem;
+    justify-content: center;
+    margin: 0.2rem 0.4rem 0;
+    width: 1rem;
+}
+.cards-header-time{
+    font-size: 0.8rem;
+}
+.cards-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards-title {
+    font-family: 'Century Gothic';
+    font-size: 0.96rem;
+    letter-spacing: 0.04rem;
+    margin-bottom: 1.4rem;
+    line-height: 0.95rem;
+}
+
+.cards-item {
+    width: 50%;
+}
+
+.cards-item-content {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+
+    margin-bottom: 27px;
+    padding: 1rem;
+}
+
+.cards-item:nth-child(2n + 1) .cards-item-content {
+    margin-right: 10px;
+}
+
+.cards-item:nth-child(2n + 2) .cards-item-content {
+    margin-left: 10px;
+}
+
+.cards-item-img {
+    display: block;
+    height: 100px;
+    margin: 0 auto 0.4rem;
+    position: relative;
+    width: 100px;
+}
+
+.cards-item-imgIcon {
+    bottom: 4px;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    background-color: #5aab9f;
+    height: 20px;
+    width: 20px;
+}
+
+.cards-item .img-fluid {
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.cards-item-texts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cards-item-texts p{
+    margin-top: 0;
+}
+
+.cards-item-texts .name {
+    color: #575550;
+    font-family: "Century Gothic";
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    margin-right: auto;
+}
+
+.cards-item-texts .star {
+    width: 1.1rem;
+    margin-right: 0.3rem;
+}
+
+.cards-item-texts .rate {
+    color: #575550;
+    font-family: 'Open Sans';
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin-bottom: 0;
+}
+
+.cards-item-content .duration {
+    color: #5aab9f;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+
+.cards-item-content .price {
+    color: #575550;
+    font-weight: 700;
+    font-family: "Century Gothic";
+    font-size: 1.9rem;
+    text-align: right;
+    display: block;
+    width: 100%;
+    /* padding: 0 0.4rem; */
+    margin: 0rem;
+    letter-spacing: -0.13rem;
+}
+
+.cards-item-content .price span {
+    font-size: 1.2rem;
+}

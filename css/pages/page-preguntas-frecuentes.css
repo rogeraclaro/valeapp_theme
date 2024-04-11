@@ -1,0 +1,134 @@
+.PreguntasFrecuentes{
+    padding-top: 1.4rem;
+}
+.PreguntasFrecuentes-container{
+display: flex;
+flex-direction: column;
+padding-left: 1.2rem;
+padding-right: 1.2rem;
+    .Ayuda-footer{
+        padding-top: 1.3rem;
+    }
+}
+.PreguntasFrecuentes-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.PreguntasFrecuentes-title{
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-family: "Century Gothic";
+    color: #575550;
+    margin-bottom: 1.9rem;
+}
+.PreguntasFrecuentes-btn{
+    border: none;
+    width: 11.5rem;
+    border-radius: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem 1rem;
+    font-size: 1.2rem;
+    font-family: "Open Sans";
+    font-weight: 600;
+    color: #575550;
+    background-color: #fff;
+    margin-bottom: 1.7rem;
+    box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+}
+.PreguntasFrecuentes-btn:focus  {
+    background-color: #59ab9f;
+    color: #fff;
+    .PreguntasFrecuentes-icon{
+        filter: brightness(3.5);
+    }
+}
+.PreguntasFrecuentes-icon{
+    width: 2rem;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+.PreguntasFrecuentes-icon.icon2{
+    width: 2.4rem;
+    height: auto;
+}
+.PreguntasFrecuentes-boxImg{
+    position: relative;
+}
+.PreguntasFrecuentes-question{
+    font-family: "Open Sans";
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.4rem;
+    background-color: #fff;
+    font-weight: 500;
+    border-radius: 3rem;
+    font-size: 0.6rem; 
+    box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    color: #000;
+    top: -30%;
+    left: 65%;
+}
+.PreguntasFrecuentes-question.head{
+    font-size: 0.6rem;
+    padding: 0 0.3rem;
+}
+.PreguntasFrecuentes-headerBtn{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    color: #59ab9f;
+    font-family: "Open Sans";
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 1.6rem;
+    margin-right: 1.3rem;
+
+}
+.PreguntasFrecuentes-iconHead{
+    width: 2rem;
+    height: auto;
+    margin-bottom: 0;
+}
+#questionTextBox{
+    display: none;
+    position: fixed;
+    width: 24.5rem;
+    text-align: left;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem;
+    background-color: #e1edeb;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+#questionCloseBtn{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        width: 1.7rem;
+}
+.PreguntasFrecuentes-modal h5{
+    font-family: "Open Sans";
+    color: #575550;
+    font-size: 1rem;
+}
+.PreguntasFrecuentes-modal p{
+    font-family: "Open Sans";
+    color: #575550;
+    font-size: 0.92rem;
+    margin: 0;
+}
+.PreguntasFrecuentes-close{
+    font-family: "Open Sans";
+
+}

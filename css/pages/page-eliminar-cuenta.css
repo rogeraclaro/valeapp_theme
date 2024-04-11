@@ -1,0 +1,143 @@
+.EliminarCuenta{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: #575550;
+  text-align: center;
+  padding-top: 1.6rem;
+}
+.EliminarCuenta-container{
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.7rem;
+  box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 3rem 1rem;
+  padding-bottom: 4.4rem;
+}
+.EliminarCuenta-title{
+  font-family: "Century Gothic";
+  font-weight: 700;
+  width: 15rem;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  margin-bottom: 1.2rem;
+  color: #575550;
+}
+.EliminarCuenta-text{
+font-family: "Open Sans";
+color: #575550;
+line-height: 28px;
+font-weight: 500;
+width: 21.6rem;
+font-size: 1.25rem;
+line-height: 30px;
+margin: 0 auto;
+margin-bottom: 2.2rem;
+}
+.EliminarCuenta-textModal{
+  font-family: "Open Sans";
+  color: #575550;
+  line-height: 28px;
+  font-weight: 500;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  font-size: 1.25rem;
+  line-height: 30px;
+}
+.EliminarCuenta-count{
+font-size: 1rem;
+color: #575550;
+font-weight: 500;
+font-family: "Open Sans";
+text-align: center;
+margin-bottom: 0;
+margin-top: 1.3rem;
+}
+.EliminarCuenta-btn{
+  background-color: #5aab9f;
+  width: fit-content;
+  border: 0;
+  border-radius: 2rem;
+  padding: 1rem 1.2rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+  font-family: "Century Gothic";
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+.EliminarCuenta-delete{
+  background-color: #fff;
+  width: fit-content;
+  border: 2px solid #5aab9f;
+  border-radius: 2rem;
+  padding: 1rem 1.2rem;
+  color: #575550;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+  font-family: "Century Gothic";
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.EliminarCuenta-item {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-family: 'Open Sans';
+  color: #575550;
+
+}
+
+.EliminarCuenta-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.EliminarCuenta-itemLabel {
+  background-color: transparent;
+  border-radius: 4rem;
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.6rem 2.1rem;
+  transition: background 0.2s ease;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0.6rem;
+}
+.EliminarCuenta-item:hover input ~ .EliminarCuenta-itemLabel {
+  background-color: transparent;
+}
+.EliminarCuenta-item input:checked ~ .EliminarCuenta-itemLabel {
+  background-color: #e2eeec;
+  font-weight: bold;
+}
+
+.modal-body.EliminarCuenta-body{
+  height: 100%;
+  max-height: 100%;
+  padding: 0 1.3rem;
+}
+.modal-header.EliminarCuenta-head{
+border-bottom: none;
+padding-bottom: 0;
+}
+.modal-content.EliminarCuenta-modal{
+  border-radius: 1.7rem;
+  margin: 1rem;
+}
+.modal-footer.EliminarCuenta-footer{
+padding-bottom: 2.5rem;
+margin: 0 auto;
+}

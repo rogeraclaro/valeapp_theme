@@ -1,0 +1,177 @@
+.JodRequests{
+    color: #575550;
+    font-size: 18px;
+    padding: 1rem;
+}
+.JodRequests-pills{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.8rem !important;
+}
+.JodRequests-pill{
+    font-size:1.2rem ;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 2.5rem;
+    color: #575550;
+    font-weight: bold;
+    outline: none;
+    padding: 0.7rem 0rem;
+    padding: 0.7rem 0;
+    width: 130px;
+}
+.JodRequests-pill.active{
+    background-color: #e2eeec;
+    border: 1px solid #5aab9f;
+}
+.JodRequests-item{
+    border-radius: 20px;
+    box-shadow:  2.877px 2.779px 7px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+    overflow: hidden;
+    font-family: 'Open Sans';
+}
+.JodRequests-item-header{
+    align-items: center;
+    background-color: #e2eeec;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    padding: 1.1rem 1rem 1.5rem;
+    position: relative;
+}
+.JodRequests-item-headerBtn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+}
+.JodRequests-item-header .img-fluid{
+    border-radius: 50%;
+    height: 92px;
+    object-fit: cover;
+    object-position: center;
+    width: 92px;
+}
+.JodRequests-item-header-text{
+    font-weight: 500;
+    color: #5aab9f;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+}
+.JodRequests-item-header-text span{
+    color: #575550;
+    display: block;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+.JodRequests-item-body{
+    padding: .7rem 1rem;
+    position: relative;
+}
+.JodRequests-item-body-item{
+    font-weight: 600;
+    padding-bottom: 1rem;
+    font-size: 1.25rem;
+}
+.JodRequests-item-body-item:last-of-type{
+    padding-bottom: 0;
+}
+.JodRequests-item-body-itemIcon{
+    height: 1.2rem;
+    margin-right: 0.5rem;
+    width: 1.1rem;
+}
+.JodRequests-item-body-itemPrice {
+    color: #575550;
+    font-weight: 700;
+    font-family: "Century Gothic";
+    font-size: 2.3rem;
+    text-align: right;
+    display: block;
+    width: 100%;
+    /* padding: 0 0.4rem; */
+    margin: 0rem;
+    letter-spacing: -0.13rem;
+    line-height: 1.9rem;
+}
+.JodRequests-item-body-itemPrice span {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: normal;
+}
+.JodRequests-item-body-itemState {
+    color: #d4d4d4;
+    font-weight: 600;
+    font-size: 1.25rem;
+    font-family: 'Open Sans';
+}
+.JodRequests-item-body-itemState-cancel {
+    color: #ef4047;
+    font-weight: 500;
+    font-family: 'Open Sans';
+}
+.JodRequests-item-footerBtn{
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid #d4d4d4;
+    color: #575550;
+    font-weight: 600;
+    font-family: "Century Gothic";
+    font-size: 1rem;
+    outline: none;
+    position: relative;
+    padding: .7rem 1rem;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+}
+.JodRequests-item-footerBtn .img-fluid{    
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    width: 0.4rem;
+}
+.JodRequests-btnContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.8rem 0 1.3rem;
+}
+.JodRequests-deny{
+    border: 0;
+    border-radius: 32px;
+    background-color: #ef4047;
+    padding: 0.9rem 2.8rem;
+    span{
+        font-size: 1.3rem;
+        line-height: 24px;
+        color: #ffffff;
+        font-weight: 700;
+        font-family: "Century Gothic";
+        text-align: center;
+    }
+}
+.JodRequests-accept{
+    border: 0;
+    border-radius: 22px;
+    background-color: #59ab9f;
+    padding: 0.8rem 2.5rem;
+
+    span{
+        font-size: 1.2rem;
+        line-height: 24px;
+        color: #ffffff;
+        font-weight: 700;
+        font-family: "Century Gothic";
+        text-align: center;
+    }
+}
+.JodRequests-item-footer{
+    padding-bottom: 0.7rem;
+}

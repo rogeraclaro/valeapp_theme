@@ -1,0 +1,113 @@
+html {
+    /* background-image: url("../../img/interiorPromoción.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  body {
+    /* opacity: 0.6; */
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .section2.interiorPromociones {
+    padding-bottom: 2.525rem;
+    padding-top: 1.225rem;
+}
+.section2.interiorPromociones .title{
+    font-size: 2.3rem;
+}
+
+.interiorPromociones{
+    padding: 2.4rem 1rem 0;
+}
+.interiorPromociones-container{
+    display: flex;
+    flex-direction: column;
+}
+.interiorPromociones-card{
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 1.125rem;
+    padding-top: 1.2rem;
+    padding-bottom: 4.1rem;
+    margin-bottom: 1.5rem;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #e2eeec;
+    border-radius: 1.7rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+.interiorPromociones-title{
+    font-family: 'Century Gothic';
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #575550;
+    margin-bottom: 0.4rem;
+}
+.interiorPromociones-subtitle{
+    font-family: 'Open Sans';
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1rem;
+    color: #575550;
+}
+.interiorPromociones-cardContent{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+}
+.interiorPromociones-icon{
+    position: absolute;
+    right: 5%;
+    width: 1.8rem;
+    top: 17%;
+    transform: rotate(180deg)
+
+}
+.interiorPromociones-arrow{
+    position: absolute;
+    right: -7%;
+    width: 14rem;
+    top: -3%;
+}
+.interiorPromociones-text{
+    text-align: left;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.375rem;
+    color: #575550;
+    font-family: 'Open Sans';
+    margin-bottom: 1.5rem;
+
+}
+.interiorPromociones-button{
+    color: #fff;
+    background-color: #5aab9f;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 1.1rem 2rem;
+    line-height: 1rem;
+    border-radius: 1.7rem;
+    width: 12.6rem;
+    margin: 0 auto;
+	font-family: 'Century Gothic';
+
+}
+.interiorPromociones-button:hover{
+    color: #ffF; 
+}

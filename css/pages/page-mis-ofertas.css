@@ -1,0 +1,111 @@
+.myOffers.cards{
+    padding-bottom: 2.125rem;
+}
+.myOffers .cards-items{
+    flex-direction: column;
+    gap: 30px;
+}
+.myOffers .cards-item{
+    width: 100%;
+}
+.myOffers .cards-item .img-fluid{
+    height: 24vw;
+    width: 24vw;
+}
+.myOffers .cards-item-content{
+    border-radius: 21px;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 1rem;
+}
+.myOffers .cards-item-content:nth-child(n){
+    margin: 0;
+}
+.myOffers .cards-item-description{
+    padding: 0 1rem 0;
+    width: 50%;
+}
+.myOffers .cards-title{
+    font-weight: 600;
+    margin: 0;
+}
+.myOffers .cards-header-title{
+    font-size: 1.2rem;
+}
+.myOffers .cards-header-qty{
+    font-family: 'Open Sans';
+    font-size: 0.56rem;
+}
+.myOffers .cards-header-time{
+    font-family: 'Open Sans';
+}
+.myOffers .cards-item-texts{
+    display: flex;
+    flex-direction: column;
+}
+.myOffers .cards-item-texts .name{
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+.myOffers .cards-item-content .duration{
+    margin-top: 0.3rem;
+}
+.myOffers .cards-item-img ,
+.myOffers .cards-item-img .img-fluid{
+    height: auto;
+    width: 110px;
+}
+.myOffers .cards-item-imgIcon{
+    height: 25px;
+    width: 25px;   
+}
+@media (max-width: 375px){
+    .myOffers .cards-item-imgIcon{
+        bottom: 23%;
+    }
+}
+.myOffers .cards-item-rate{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0.1rem;
+    width: 100%;
+}
+.myOffers .cards-item-rate .star{
+   object-fit: contain;
+}
+.myOffers .cards-item-texts .rate{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.myOffers .cards-item-content .price{
+    line-height: normal;
+    font-size: 2.1rem;
+    width: 20%;
+}
+.myOffers .cards-item-content .price span{
+    letter-spacing: normal;
+}
+.myOffers .cards-item-content .price span{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.myOffers .button{
+    background-color: #5aab9f;
+    width: 8rem;
+    border: 0;
+    border-radius: 2rem;
+    padding: 0.3rem 0.1rem 0.3rem 0.1rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    text-decoration: none;
+}
+.myOffers .contentButton{
+    display: flex;
+    flex-direction: column;
+    height: 6.3rem;
+    justify-content: space-between;
+}

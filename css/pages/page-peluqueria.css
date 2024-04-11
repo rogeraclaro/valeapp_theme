@@ -1,0 +1,174 @@
+.peluqueria {
+  color: #575550;
+  font-family: 'Open Sans';
+}
+.peluqueria::after {
+  content: attr(data-peluqueria-qtymsg);
+  display: block;
+  font-weight: 600;
+  text-align: center;
+}
+.peluqueria-body {
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  overflow: scroll;
+}
+.peluqueria-item {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.peluqueria-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.peluqueria-itemLabel {
+  background-color: transparent;
+  border-radius: 2rem;
+  display: block;
+  padding: 0.7rem 1rem;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+.peluqueria-item:hover input ~ .peluqueria-itemLabel {
+  background-color: transparent;
+}
+.peluqueria-item input:checked ~ .peluqueria-itemLabel {
+  background-color: #e2eeec;
+  font-weight: bold;
+}
+.HairSalon-modal .modal-header,
+.HairSalon-modal .modal-footer{
+    border: none;
+}
+.HairSalon-modal .modal-content{
+    border-radius: 1.5rem;
+}
+.HairSalon-modal .modal-header{
+    padding: 1.2rem 1.5rem 1rem 1rem;
+}
+.HairSalon-modal .modal-footer{
+    padding-bottom: 1.5rem;
+    margin: 0 auto;
+}
+.HairSalon-modal .CreateAccountUserOrProfessional-cardBtn{
+    margin: auto;
+    text-align: center;
+    width: 11rem;
+}
+.HairSalon-searchModal .modal-content{
+  border-radius: 1.3rem;
+}
+.HairSalon-searchModal .modal-body,
+.HairSalon-searchModal .home-menu-card{
+  padding: 0;
+}
+.HairSalon-modal .modal-title{
+  font-family: 'Century Gothic';
+  font-weight: 600;
+}
+.HairSalon-btn{
+  font-family: 'Century Gothic';
+  background-color: #5aab9f;
+  border-radius: 30px;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.2rem;
+  height: auto;
+  border: none;
+  margin-bottom: 0.5rem;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  margin: auto;
+  text-align: center;
+  width: 11rem;
+}
+
+.peluqueria {
+  font-family: Arial, sans-serif;
+  margin: 0rem 0.5rem;
+}
+
+.peluqueria-item {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+#contador {
+  margin-top: 10px;
+  text-align: center;
+  display: block;
+  font-weight: 600;
+  text-align: center;
+}
+.gender.modal-header{
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}
+.gender.modal-body{
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}
+.gender.modal-footer{
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}
+
+.gender-body {
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  overflow: scroll;
+}
+.gender-item {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-family: 'Open Sans';
+  color: #575550;
+
+}
+
+.gender-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.gender-itemLabel {
+  background-color: transparent;
+  border-radius: 2rem;
+  display: block;
+  padding: 1.1rem 1.2rem;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+.gender-item:hover input ~ .gender-itemLabel {
+  background-color: transparent;
+}
+.gender-item input:checked ~ .gender-itemLabel {
+  background-color: #e2eeec;
+  font-weight: bold;
+}

@@ -1,0 +1,212 @@
+.ConfirmAndPay {
+  padding: 32px 16px 0;
+}
+.ConfirmAndPay hr {
+  color: #d4d4d4;
+  opacity: 1;
+  padding: 0.04rem;
+}
+.ConfirmAndPay-card {
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+
+  margin-bottom: 27px;
+  padding: 1rem;
+}
+.ConfirmAndPay-cardImg {
+  display: block;
+  height: 120px;
+
+  position: relative;
+  width: 120px;
+}
+
+.ConfirmAndPay-cardIcon {
+  bottom: 4px;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  background-color: #5aab9f;
+  height: 30px;
+  width: 30px;
+}
+
+.ConfirmAndPay-cardImg .img-fluid {
+  border-radius: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+.ConfirmAndPay-cardText {
+  color: #575550;
+  text-align: left;
+}
+.ConfirmAndPay-cardName {
+  display: block;
+  font-family: "Century Gothic";
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.ConfirmAndPay-cardProfession {
+  font-family: "Open Sans";
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/*SECTIONS*/
+.ConfirmAndPay-section {
+  padding: 0 0 1rem;
+}
+.ConfirmAndPay-sectionHeader {
+  align-items: center;
+  display: flex;
+  font-family: "Open Sans";
+  margin-bottom: 1rem;
+}
+.ConfirmAndPay-sectionHeader-title {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-right: auto;
+  line-height: 2rem;
+}
+.ConfirmAndPay-sectionBody {
+  font-family: "Open Sans";
+  font-size: 1.2rem;
+}
+.ConfirmAndPay-sectionBody hr {
+  color: #575550;
+}
+.ConfirmAndPay-sectionBody-itemIcon {
+  height: 1.3rem;
+  margin-right: 0.3rem;
+  width: 1.3rem;
+}
+.ConfirmAndPay-sectionBody-item-timeline {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 0;
+  position: relative;
+  z-index: 1;
+}
+.ConfirmAndPay-sectionBody-item-timeline::before {
+  background-color: #d4d4d4;
+  bottom: 1rem;
+  content: "";
+  left: 0.67rem;
+  position: absolute;
+  top: 0.7rem;
+  width: 0.2rem;
+  z-index: -1;
+}
+.ConfirmAndPay-sectionBody-item-timeline span {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.ConfirmAndPay-sectionBody-item-timeline span::before {
+  border-radius: 50%;
+  background-color: #5aab9f;
+  border: 1px solid #5aab9f;
+  content: "";
+  display: inline-block;
+  margin: 0 0.6rem 0 0.4rem;
+  height: 0.7rem;
+  width: 0.7rem;
+}
+.ConfirmAndPay-sectionBody-item-timeline
+  span.ConfirmAndPay-sectionBody-itemStart::before {
+  background-color: white;
+}
+
+.ConfirmAndPay-sectionBody-item-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.ConfirmAndPay-sectionBody-item-total,
+.ConfirmAndPay-sectionBody-itemValue {
+  font-family: "Century Gothic";
+  font-weight: bold;
+}
+.ConfirmAndPay-sectionBody-text{
+    font-weight: 500;
+}
+
+/* BUTTON */
+.ConfirmAndPay a.HomeOffer-btn {
+  display: flex;
+  font-family: "Century Gothic";
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.4rem;
+  gap: 0.5rem;
+  margin: 1rem auto 3.5rem;
+  padding-top: 1.5rem;
+  width: 22.3rem;
+}
+
+/* SECTION LIST */
+.ConfirmAndPay-sectionBody-list {
+  margin-top: 2rem;
+}
+.ConfirmAndPay-sectionBody-item-listHeader {
+  background-color: #5aab9f;
+}
+.ConfirmAndPay-sectionBody-list
+  .ConfirmAndPay-sectionBody-item-listHeader
+  .ConfirmAndPay-sectionBody-itemName {
+  border-right: 1px solid #fff;
+}
+.ConfirmAndPay-sectionBody-list
+  .ConfirmAndPay-sectionBody-item-listHeader
+  .ConfirmAndPay-sectionBody-itemName,
+.ConfirmAndPay-sectionBody-list
+  .ConfirmAndPay-sectionBody-item-listHeader
+  .ConfirmAndPay-sectionBody-itemValue {
+  color: #fff;
+  font-weight: 600;
+}
+.ConfirmAndPay-sectionBody-list,
+.ConfirmAndPay-sectionBody-list .ConfirmAndPay-sectionBody-itemValue {
+  font-family: "Open Sans";
+}
+.ConfirmAndPay-sectionBody-list .ConfirmAndPay-sectionBody-itemName,
+.ConfirmAndPay-sectionBody-list .ConfirmAndPay-sectionBody-itemValue {
+  line-height: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0.7rem;
+}
+
+.ConfirmAndPay-sectionBody-list .ConfirmAndPay-sectionBody-itemName {
+  padding-left: 1rem;
+  text-align: left;
+  width: 60%;
+  font-weight: 500;
+  border: 1px solid #d4d4d4;
+  border-top: none;
+}
+.ConfirmAndPay-sectionBody-list .ConfirmAndPay-sectionBody-itemValue {
+  text-align: center;
+  width: 40%;
+
+  border: 1px solid #d4d4d4;
+  border-top: none;
+  border-left: none;
+}
+
+/* WHYVALE */
+.ConfirmAndPay .WhyVale p.text{
+    font-weight: 500;
+    font-family: "Open Sans";
+}

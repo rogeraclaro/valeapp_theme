@@ -1,0 +1,91 @@
+.NeedHelp {
+  padding: 1rem 1.2rem;
+  text-align: left;
+}
+.NeedHelp-goBack {
+  color: #575550;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-family: "Open Sans";
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.NeedHelp-goBack:active,
+.NeedHelp-goBack:focus,
+.NeedHelp-goBack:hover {
+  color: #575550;
+  text-decoration: none;
+}
+.NeedHelp-goBack .Ayuda-iconArrow {
+  margin-right: .5rem;
+  transform: rotateY(180deg);
+  width: 0.5rem;
+}
+.NeedHelp-card {
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 3px 3px 11.63px 2.38px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1.6rem 1.4rem 2.4rem;
+  text-align: left;
+}
+
+.NeedHelp-cardTitle {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: "Century Gothic";
+  font-size: 1.2rem;
+  margin-bottom: 1.3rem;
+
+}
+.NeedHelp-cardSelect{
+  width: 100%;
+}
+.NeedHelp-option {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 0.3rem;
+  font-weight: 400;
+}
+
+.NeedHelp-option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.NeedHelp-optionLabel {
+  background-color: transparent;
+  border-radius: 2rem;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 1.7rem;
+  transition: background 0.2s ease;
+  width: 100%;
+  font-family: "Open Sans";
+  margin-bottom: 0.5rem;
+
+}
+.NeedHelp-option:hover input ~ .NeedHelp-optionLabel {
+  background-color: transparent;
+}
+.NeedHelp-option input:checked ~ .NeedHelp-optionLabel {
+  background-color: #e2eeec;
+  font-weight: bold;
+}

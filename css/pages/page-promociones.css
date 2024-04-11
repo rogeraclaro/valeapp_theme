@@ -1,0 +1,86 @@
+html {
+    /* background-image: url("../../img/promocionesProfesionales.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  body {
+    /* opacity: 0.6; */
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  
+.section2.promociones {
+    margin-top: 0rem;
+    padding-bottom: 2.125rem;
+    padding-top: 2.125rem;
+}
+.section2.promociones .title{
+    font-size: 2.3rem;
+}
+
+.promociones{
+    padding: 2.4rem 1rem 0;
+}
+.promociones-card{
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 1.125rem;
+    padding-top: 1.2rem;
+    padding-bottom: 4.1rem;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #e2eeec;
+    border-radius: 1.7rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+.promociones-card:last-child{
+    margin-bottom: 0;
+}
+
+.promociones-title{
+    font-family: 'Century Gothic';
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #575550;
+    margin-bottom: 0.4rem;
+}
+.promociones-subtitle{
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1rem;
+    color: #575550;
+    font-family: 'Open Sans';
+}
+.promociones-cardContent{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+}
+.promociones-icon{
+    position: absolute;
+    right: 5%;
+    width: 1.8rem;
+    top: 17%;
+}
+.promociones-arrow{
+    position: absolute;
+    right: -7%;
+    width: 14rem;
+    top: -3%;
+}
+

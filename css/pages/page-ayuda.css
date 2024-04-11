@@ -1,0 +1,77 @@
+.section2.Ayuda{
+    padding: 1.2rem 0 2.6rem;
+  }
+.Ayuda ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.Ayuda-item{
+    border-bottom: 1px solid #d4d4d4;
+}
+.Ayuda{
+padding-top: 0;
+}
+.Ayuda-container{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.Ayuda-iconArrow{
+    width: 0.6rem;
+    height: auto;
+    transform: rotate(0deg);
+}
+.Ayuda-iconArrowLeft{
+    width: 0.7rem;
+    height: auto;
+    transform: rotate(180deg);
+    margin-right: 0.2rem;
+}
+  
+.Ayuda-link{
+    text-decoration: none;
+    padding: 1.3rem 0 ;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+	font-family: "Open Sans";
+    justify-content: space-between;
+    color: #575550;
+}
+.Ayuda-link.head{
+    font-weight: 700;
+    flex-direction: row-reverse;
+    justify-content: left;
+    font-family: 'Century Gothic';
+
+}
+.Ayuda-link:hover{
+    color: #575550;
+}
+.Ayuda-footer{
+padding-top: 3rem;
+display: flex;
+flex-direction: column;
+}
+.Ayuda-help{
+    color: #575550;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: 'Century Gothic';
+    margin-bottom: 1rem;
+}
+.Ayuda-help:hover{
+    color: #575550;
+    text-decoration: underline;
+}
+.Ayuda-delete{
+    color: #898989;
+    font-family: 'Century Gothic';
+    font-weight: 600;
+
+}
+.Ayuda-delete:hover{
+    color: #898989;
+    text-decoration: underline;
+}

@@ -1,0 +1,140 @@
+.servicio-generica {
+  padding-top: 1.2rem;
+  padding-bottom: 2.8rem;
+}
+.MiSaldo {
+  padding-top: 1rem;
+  color: #575550;
+}
+.MiSaldo-container {
+  max-width: 91%;
+  width: 100%;
+  margin: 0 auto;
+  color: #575550;
+}
+.MiSaldo-saldoText {
+  font-weight: 600;
+  font-size: 1.06rem;
+  color: #575550;
+  font-family: "Century Gothic";
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.MiSaldo-saldoNum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MiSaldo-arrowIcon{
+  width: 2rem;
+  margin-left: 0.3rem;
+}
+.MiSaldo-saldoNumText {
+  margin-top: 0.7rem;
+  color: #5aab9f;
+  font-weight: 700;
+  font-size: 2.4rem;
+  font-family: "Open Sans";
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.MiSaldo-tokens {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+.MiSaldo-addBtn {
+  background-color: #5aab9f;
+  width: 13.4rem;
+  border: 0;
+  border-radius: 2rem;
+  padding: 1rem 1rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-top: 0.6rem;
+  font-family: "Century Gothic";
+}
+.MiSaldo-removeBtn {
+  background-color: transparent;
+  width: 13.4rem;
+  border: 0;
+  border-radius: 2rem;
+  color: #575550;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-top: 0.6rem;
+  padding-left: 1.1rem;
+  font-family: "Century Gothic";
+}
+.MiSaldo-payment {
+  margin-top: 2rem;
+}
+.MiSaldo-paymentHead {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+}
+.MiSaldo-title {
+  text-align: left;
+  font-weight: 700;
+  color: #575550;
+  font-size: 1.28rem;
+  line-height: 2.4rem;
+  margin-bottom: 0 !important;
+  font-family: "Century Gothic";
+}
+.MiSaldo-editBtn {
+  background-color: transparent;
+  border: none;
+  width: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0rem;
+  color: #575550;
+  font-family: "Open Sans";
+
+}
+.MiSaldo-editIcon {
+  width: 1.4rem;
+}
+.MiSaldo-card {
+  text-align: left;
+  margin-top: 1rem;
+  padding-left: 0.3rem;
+}
+.MiSaldo-cardType {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #bec7ce;
+  font-family: "Open Sans";
+}
+.MiSaldo-cardNum {
+  margin-top: 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #bec7ce;
+  font-family: "Open Sans";
+}
+.MiSaldo-icon1 {
+  background-color: #bec7ce;
+  padding: 0rem 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 3rem;
+  color: #fff;
+}
+.MiSaldo-icon2 {
+  width: 1.9rem;
+  opacity: 0.6;
+  margin-right: 1.5rem;
+}

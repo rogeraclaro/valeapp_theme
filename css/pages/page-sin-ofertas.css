@@ -1,0 +1,69 @@
+html {
+  /* background-image: url("../../img/sinOfertas.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  /* opacity: 0.6; */
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.servicio-generica {
+  /* margin-top: 4.9rem; */
+  padding-top: 1.2rem;
+  padding-bottom: 2.8rem;
+}
+.SinOferta {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.SinOferta-container {
+  max-width: 95%;
+  width: 100%;
+  margin: 0 auto;
+}
+.SinOferta-icon {
+  width: 9.4rem;
+  margin: 0 auto;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+}
+.SinOferta-img {
+  width: 100%;
+  height: 100%;
+}
+.SinOferta-title {
+  font-size: 1.53rem;
+  margin-top: 2.5rem;
+  color: #575550;
+}
+.SinOferta-text {
+  color: #575550;
+  font-family: "Open Sans";
+  font-size: 1.19rem;
+  font-weight: 700;
+  width: 22.1rem;
+  margin: 0 auto;
+  margin-top: 1.4rem;
+  line-height: 2.1rem;
+}
+.SinOferta-btn {
+    background-color: #5aab9f;
+    width: 21.3rem;
+    border: 0;
+    border-radius: 2rem;
+    padding: 1.1rem 1rem 1.5rem 1rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+    margin-top: 2.6rem;
+}

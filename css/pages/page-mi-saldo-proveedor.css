@@ -1,0 +1,230 @@
+.servicio-generica {
+  padding-top: 1.2rem;
+  padding-bottom: 2.8rem;
+}
+.miSaldoProveedor {
+  padding-top: 1rem;
+  color: #575550;
+}
+.miSaldoProveedor-container {
+  max-width: 91%;
+  width: 100%;
+  margin: 0 auto;
+  color: #575550;
+}
+.miSaldoProveedor-saldoText {
+  font-weight: 600;
+  font-size: 1.06rem;
+  color: #575550;
+  font-family: "Century Gothic";
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.miSaldoProveedor-saldoNum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.miSaldoProveedor-arrowIcon{
+  width: 2rem;
+  margin-left: 0.3rem;
+}
+.miSaldoProveedor-saldoNumText {
+  margin-top: 0.7rem;
+  color: #5aab9f;
+  font-weight: 700;
+  font-size: 2.4rem;
+  font-family: "Open Sans";
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.miSaldoProveedor-tokens {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+.miSaldoProveedor-addBtn {
+  background-color: #5aab9f;
+  width: 13.4rem;
+  border: 0;
+  border-radius: 2rem;
+  padding: 1rem 1rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-top: 0.6rem;
+  font-family: "Century Gothic";
+}
+.miSaldoProveedor-removeBtn {
+  background-color: transparent;
+  width: 13.4rem;
+  border: 0;
+  border-radius: 2rem;
+  color: #575550;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-top: 0.6rem;
+  padding-left: 1.1rem;
+  font-family: "Century Gothic";
+}
+.miSaldoProveedor-payment {
+  margin-top: 1rem;
+}
+.miSaldoProveedor-paymentHead {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+}
+.miSaldoProveedor-title {
+  text-align: left;
+  font-weight: 700;
+  color: #575550;
+  font-size: 1.28rem;
+  line-height: 2.4rem;
+  margin-bottom: 0 !important;
+  font-family: "Century Gothic";
+}
+.miSaldoProveedor-editBtn {
+  background-color: transparent;
+  border: none;
+  width: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0rem;
+  color: #575550;
+  font-family: "Open Sans";
+
+}
+.miSaldoProveedor-editIcon {
+  width: 1.4rem;
+}
+.miSaldoProveedor-card {
+  text-align: left;
+  margin-top: 1rem;
+  padding-left: 0.3rem;
+}
+.miSaldoProveedor-cardType {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #bec7ce;
+  font-family: "Open Sans";
+}
+.miSaldoProveedor-cardNum {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #bec7ce;
+  font-family: "Open Sans";
+}
+.miSaldoProveedor-icon1 {
+  background-color: #bec7ce;
+  padding: 0rem 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 3rem;
+  color: #fff;
+}
+.miSaldoProveedor-icon2 {
+  width: 1.9rem;
+  opacity: 0.6;
+  margin-right: 1.5rem;
+}
+.miSaldoProveedor-filter{
+  border: none;
+  background-color: #5aab9f;
+  border-radius: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: 0.5rem 1.4rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-top: 0.6rem;
+  font-family: "Century Gothic";
+}
+.miSaldoProveedor-filterIcon{
+  width: 2rem;
+  margin-right: 0.7rem;
+}
+.miSaldoProveedor .MultiCheck::after{
+  display: none;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  overflow: scroll;
+}
+.miSaldoProveedor-input{
+  opacity: 0;
+}
+.miSaldoProveedor-item{
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  padding: 0.6rem 0;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  text-align: left;
+  font-family: "Open Sans";
+  padding: 1rem;
+
+}
+.miSaldoProveedor-item.selected {
+  background-color: #e2eeec ;
+  font-weight: bold ;
+}
+.miSaldoProveedor-cardBtn{
+  background-color: #5aab9f;
+  border-radius: 20px;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.17rem;
+  height: auto;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  width: 50%;
+}
+.miSaldoProveedor-cardBtn:hover{
+  color: #fff;
+}
+.modal-footer.miSaldoProveedor-footer{
+  justify-content: center;
+  border-top: 0px;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  padding-bottom: 1.3rem;
+}
+.modal-header.miSaldoProveedor-header{
+ border-bottom: 0px;
+ padding: 1.3rem;
+ font-family: 'Century Gothic';
+ font-weight: 700 !important;
+ padding-left: 1.3rem;
+ padding-right: 1.3rem;
+}
+.modal-content.miSaldoProveedor-content{
+  border-radius: 1.5rem;
+}
+.modal-body.miSaldoProveedor-body{
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}

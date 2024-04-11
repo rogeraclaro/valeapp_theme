@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.CategoryDetail {
+    margin-top: 0rem;
+    padding-top: 3.3rem;
+    padding-bottom: 4.2rem;
+}
+
+.CategoryDetail .breadcrumb {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.3rem;
+}
+
+.CategoryDetail .breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+.CategoryDetail .title {
+    color: #fff;
+    font-size: 2.3rem;
+    font-family: 'Century Gothic';
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 1rem;
+    margin-top: 0;
+}
+
+.CategoryDetail-content {
+    padding: 4rem 1rem 0rem 1rem;
+    margin-bottom: 3.5rem;
+}
+
+.CategoryDetail-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1.2rem;
+}
+
+.CategoryDetail-image {
+    width: 100%;
+    height: 15.1rem;
+    object-fit: contain;
+    position: relative;
+}
+
+.CategoryDetail-image .img-fluid{
+    width: 100%;
+}
+
+.CategoryDetail-offer {
+    background-color: #e2eeec;
+    padding: 3.9rem 1rem 3.1rem 1rem;
+}
+
+.CategoryDetail-offer-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.7rem;
+}
+
+.CategoryDetail-offer-title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 2.02rem;
+    font-family: 'Century Gothic';
+    margin-bottom: 2rem;
+}
+
+.CategoryDetail-offer-text {
+    text-align: left;
+    font-family: 'Open Sans';
+    font-weight: 500;
+    font-size: 1.29rem;
+    line-height: 2.1rem;
+    margin-bottom: 2.4rem;
+}
+
+.CategoryDetail-offer-button {
+    background-color: #5aab9f;
+    width: 16.4rem;
+    border: 0;
+    border-radius: 2rem;
+    padding: 1.35rem 1rem 1.35rem 2.7rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.37rem;
+    line-height: 1.4rem;
+    text-align: left;
+    display: block;
+}
+
+.CategoryDetail-blog {
+    padding-top: 2.3rem;
+}
+
+.CategoryDetail-blog-title {
+    font-family: 'Century Gothic';
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 2.4rem;
+}
+
+.CategoryDetail-blog-title.title2 {
+    font-family: 'Century Gothic';
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0rem;
+    margin-top: 2.7rem;
+}
+
+.CategoryDetail-blog-cards{
+    padding: 0 1rem;
+}
+
+.CategoryDetail-blog-image {
+    width: 100%;
+    height: 15.1rem;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 1.5rem;
+}
+
+.CategoryDetail-blog-card-title {
+    text-align: left;
+    font-family: 'Century Gothic';
+    font-weight: 700;
+    font-size: 1.53rem;
+    margin-bottom: 1.4rem;
+}
+
+.CategoryDetail-blog-card-text {
+    text-align: left;
+    font-family: 'Open Sans';
+    font-weight: 500;
+    font-size: 1.28rem;
+    margin-bottom: 1.8rem;
+    line-height: 2.1rem;
+    margin-bottom: 2.9rem;
+}
+
+.CategoryDetail-blog-link {
+    text-decoration: none;
+    color: #5aab9f;
+    font-weight: 700;
+    font-size: 1.4rem;
+    font-family: 'Century Gothic';
+}
+
+.CategoryDetail-textImg {
+    background-color: #5aab9f;
+    padding: 0.3rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: "Open Sans";
+    line-height: 1.6rem;
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    width: 9rem;
+    text-align: center;
+    transform: translateX(-50%);
+    text-decoration: none;
+}
+
+.CategoryDetail-imgContent{
+    position: relative;
+  }
+
+.section7.servicio-generica.CategoryDetail-categories {
+    margin-top: 1rem;
+    padding-bottom: 0;
+}
+
+/* html {
+    background-image: url("../img/Interior\ categoría.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    opacity: 0.6;
+    margin: 0;
+    padding: 0;
+} */

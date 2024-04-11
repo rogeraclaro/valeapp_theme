@@ -1,0 +1,31 @@
+.section2.Contacto{
+  padding: 1.2rem 0 2.6rem;
+}
+.Contacto{
+  padding-top: 0.4rem;
+
+}
+.Contacto-container{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  .Ayuda-link.head{
+    font-size: 1.35rem;
+  }
+  .Ayuda-footer{
+    padding-bottom: 0;
+  }
+}
+.Contacto-text{
+  font-family: "Open Sans";
+  font-weight: 600;
+  text-align: left;
+  font-size: 1rem;
+  color: #575550;
+  line-height: 1.125rem ;
+  margin-bottom: 0;
+}
+@media (min-width: 350px) and (max-width: 380px){
+  .Contacto-text{
+      font-size: 0.98rem;
+    }
+}
