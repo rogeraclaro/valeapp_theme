@@ -15,6 +15,16 @@
  
 get_header();
 ?>
-<h1>Pruebas de carrito</h1>
+
+<div class="pageCart">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12">
+                <h1>Pruebas de carrito</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
 <?php
 get_footer();
