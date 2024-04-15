@@ -183,6 +183,109 @@
     padding-bottom: 0;
 }
 
+.section2 {
+    background-color: #5aab9f;
+    padding-bottom: 1rem;
+    padding-top: 3rem;
+    overflow-x: visible;
+}
+
+section.section2.CategorySub {
+    padding-top: 0;
+}
+
+.CategoryDetail-image .img-fluid {
+    border-radius: 22px;
+}
+
+.HomeOffer .title, .HomeOffer .text  {
+    text-align: left;
+}
+
+.section4 {
+    background-color: #fff;
+}
+
+.section4.Blog .title {
+    font-size: 1.4rem !important;
+    margin-bottom: 2rem !important;
+}
+
+@media (min-width: 767.98px) {
+
+    .section2 {
+        background-color: #5aab9f;
+        padding-bottom: 4rem;
+        padding-top: 3rem;
+        overflow-x: visible;
+    }
+
+    section.section2.CategorySub {
+        background-color: #fff;
+        padding-top: 4rem;
+    }
+
+    .CategoryDetail-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.6rem;
+    }
+
+    .CategoryDetail-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        position: relative;
+    }
+
+    .CategoryDetail-content {
+        padding: 0 1rem 0rem 1rem;
+    }
+
+    .CategoryDetail-image .img-fluid {
+        border-radius: 55px;
+    }
+
+    a.CategoryDetail-textImg {
+        background-color: #5aab9f;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1rem;
+        text-decoration: none;
+        transition: all 0.3s;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        padding: 0.7rem;
+        width: 9rem;
+    }
+
+    a.CategoryDetail-textImg:hover {
+        border: 2px solid #5aab9f;
+        background-color: #fff;
+        color: #5aab9f;
+        transition: all 0.3s;
+    }
+
+    .Promo.HomeOffer .title {
+        margin-left: 0;
+    }
+
+    .section4.Blog .content .subtitle {
+        text-align: left;
+    }
+
+    .section5 .Homecategories-content {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .section5.Homecategories .title {
+        margin: 0 auto 3rem;
+    }
+}
+
 /* html {
     background-image: url("../img/Interior\ categoría.jpg");
     background-repeat: no-repeat;

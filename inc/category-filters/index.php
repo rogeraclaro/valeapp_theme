@@ -58,7 +58,10 @@ $id = search_category($posts);
 $title = get_field('field_65ef43396b388', $id);
 $field = get_field('field_65ef38881ab1a', $id);
 $title_cat = "";
-
+$titleP = get_field('titulo', $id);
+$textP = get_field('texto', $id);
+$imatgeP = get_field('imagen', $id);
+$botoP = get_field('texto_boton', $id);
 
 switch($title) {
     case "Eventos":

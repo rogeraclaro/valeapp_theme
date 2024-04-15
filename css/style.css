@@ -4129,7 +4129,7 @@ footer .footer-logos.carte-logos .footer-separator {
 
   /* FOOTER */
   footer {
-    margin-top: 1.3rem;
+    margin-top: 0rem;
     padding-top: 0;
     padding-bottom: 2rem;
   }
@@ -4989,6 +4989,7 @@ a.tokens-btn:focus{
   border-radius: 12px;
 }
 .HomeOffer .title{
+  font-family: 'Century Gothic';
   font-size: 1.78rem;
   font-weight: 600;
   margin-bottom: 1.6rem;
