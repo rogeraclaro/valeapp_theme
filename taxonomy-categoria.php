@@ -51,14 +51,14 @@ get_header();
 	<div class="container">
 		<div class="row justify-content-center align-items-center">
 			<div class="col-12 col-sm-6">
-			<img class="img-fluid offer" src="<?php echo($imatgeP); ?>" alt="valeapp" />
+				<img class="img-fluid offer" src="<?php echo($imatgeP); ?>" alt="valeapp" />
 			</div>
 			<div class="col-12 col-sm-6 ps-sm-4">
-			<h2 class="title"><?php echo $titleP; ?></h2>
-			<p class="text">
-				<?php echo($textP); ?>
-			</p>
-			<a class="HomeOffer-btn" href="#"><?php echo($botoP); ?></a>
+				<h2 class="title"><?php echo $titleP; ?></h2>
+				<p class="text">
+					<?php echo($textP); ?>
+				</p>
+				<a class="HomeOffer-btn" href="#"><?php echo($botoP); ?></a>
 			</div>
 		</div>
 	</div>

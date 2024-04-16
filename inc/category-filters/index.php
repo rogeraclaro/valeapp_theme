@@ -106,6 +106,7 @@ function render_filter($field) {
             <?php
                 foreach ($field as $fila) {
                     $img = $fila['img_subcategory']['url'];
+                    $img_desk = $fila['img_subcategory_desktop']['url'];
                     if(!$img){
                         $img = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png";
                     };
@@ -113,7 +114,8 @@ function render_filter($field) {
                     $link = $fila['link_subcategory'];                
                     ?>
                     <div class="CategoryDetail-image">
-                        <img class="img-fluid" src=<?php echo $img ?> alt="valeapp">
+                        <img class="img-fluid d-sm-none" src=<?php echo $img ?> alt="valeapp">
+                        <img class="img-fluid d-none d-sm-block" src=<?php echo $img_desk ?> alt="valeapp">
                         <a class="CategoryDetail-textImg" href="/categoria/<?php echo $link; ?>">
                             <?php echo $title; ?>
                         </a>
