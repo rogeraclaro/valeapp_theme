@@ -8,13 +8,21 @@ $category_hero = $hero['category'];
 $cat1 = $category_hero['cat1'];
 $cat1_link = $category_hero['cat1_link'];
 $cat2 = $category_hero['cat2'];
+$cat2_link = $category_hero['cat2_link'];
 $cat3 = $category_hero['cat3'];
+$cat3_link = $category_hero['cat3_link'];
 $cat4 = $category_hero['cat4'];
+$cat4_link = $category_hero['cat4_link'];
 $cat5 = $category_hero['cat5'];
+$cat5_link = $category_hero['cat5_link'];
 $cat6 = $category_hero['cat6'];
+$cat6_link = $category_hero['cat6_link'];
 $cat7 = $category_hero['cat7'];
+$cat7_link = $category_hero['cat7_link'];
 $cat8 = $category_hero['cat8'];
+$cat8_link = $category_hero['cat8_link'];
 $cat9 = $category_hero['cat9'];
+$cat9_link = $category_hero['cat9_link'];
 
 //Section 1 *-*-*-*-*-*-*-*-*-*-*-*-*-
 $section1 = get_field('field_6571e9652c47f', $page_id);

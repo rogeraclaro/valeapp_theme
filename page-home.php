@@ -28,41 +28,41 @@ get_header();
       <div class="container">
         <div class="row justify-content-center">
           <div class="firstrow">
-              <a class="category">
+              <a href="<?php echo $cat1_link; ?>" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category1-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name"><?php echo $cat1; ?></p>
               </a>
-              <a class="category">
+              <a href="<?php echo $cat2_link; ?>" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category2-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name"><?php echo $cat2; ?></p>
               </a>
-              <a class="category">
+              <a href="<?php echo $cat3_link; ?>" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category3-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name"><?php echo $cat3; ?></p>
               </a>
-              <a class="category">
+              <a href="<?php echo $cat4_link; ?>" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category4-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name"><?php echo $cat4; ?></p>
               </a>
           </div>
           <div class="secondrow">
-              <a class="category">
+              <a href="<?php echo $cat5_link; ?>" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category5-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name"><?php echo $cat5; ?></p>
               </a>
-              <a class="category">
+              <a href="<?php echo $cat6_link; ?>" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category6-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name"><?php echo $cat6; ?></p>
               </a>
-              <a class="category">
+              <a href="<?php echo $cat7_link; ?>" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category7-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name"><?php echo $cat7; ?></p>
               </a>
-              <a class="category">
+              <a href="<?php echo $cat8_link; ?>" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category8-white.png" alt="valeapp" class="img-fluid category-icon icon8" />
                 <p class="category-name"><?php echo $cat8; ?></p>
               </a>
-              <a class="category">
+              <a href="<?php echo $cat9_link; ?>" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category9-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name"><?php echo $cat9; ?></p>
               </a>
