@@ -131,41 +131,41 @@ get_header();
 	  	<div class="title">Altres categories</div>
         <div class="row justify-content-center">
           <div class="firstrow">
-              <a class="category">
+              <a href="<?php echo home_url(); ?>/categoria/hogar" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category1-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name">Llar</p>
               </a>
-              <a class="category">
+              <a href="<?php echo home_url(); ?>/categoria/aprende" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category2-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name">Aprèn</p>
               </a>
-              <a class="category">
+              <a href="<?php echo home_url(); ?>/categoria/deporte" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category3-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name">Esport</p>
               </a>
-              <a class="category">
+              <a href="<?php echo home_url(); ?>/categoria/mente" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category4-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name">Ment</p>
               </a>
           </div>
           <div class="secondrow">
-              <a class="category">
+              <a href="<?php echo home_url(); ?>/categoria/cuidados" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category5-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name">Cures</p>
               </a>
-              <a class="category">
+              <a href="<?php echo home_url(); ?>/categoria/belleza" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category6-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name">Bellesa</p>
               </a>
-              <a class="category">
+              <a href="<?php echo home_url(); ?>/categoria/contrata" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category7-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name">Contracta</p>
               </a>
-              <a class="category">
+              <a href="<?php echo home_url(); ?>/categoria/comparte" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category8-white.png" alt="valeapp" class="img-fluid category-icon icon8" />
                 <p class="category-name">Comparteix</p>
               </a>
-              <a class="category">
+              <a href="<?php echo home_url(); ?>/categoria/eventos" class="category">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category9-white.png" alt="valeapp" class="img-fluid category-icon" />
                 <p class="category-name">Esdeveniments</p>
               </a>
