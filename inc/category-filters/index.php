@@ -193,31 +193,31 @@ if(!$posts) {
     function render_users($items, $users){
         if($items) {
             ?>
-            <section class="section3 pages" id="page3">
+            <section class="section3 pages users" id="page3">
                 <div class="container">
                     <div class="row">
                         <div id="cards" class="swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="cards">
-                                    <?php
-                                    foreach($items as $item){
-                                        $post_id = $item->ID;
-                                        $user_id = get_post_field('post_author', $post_id);
-                                        $group = get_field('field_656e52af35d62', $post_id);
-                                        $price = $group['precio_por_hora'] + $group['precio_por_servicio'] - 10;
-                                        search_author_url($user_id, $price);
-                                    }
-                                    ?>
+                                        <?php
+                                        foreach($items as $item){
+                                            $post_id = $item->ID;
+                                            $user_id = get_post_field('post_author', $post_id);
+                                            $group = get_field('field_656e52af35d62', $post_id);
+                                            $price = $group['precio_por_hora'] + $group['precio_por_servicio'] - 10;
+                                            search_author_url($user_id, $price);
+                                        }
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         <?php
-        } else {
+            } else {
         ?>
         <h1>No hay Proveedores por el momento (Data Dummie)</h1>
         <?php

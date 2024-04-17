@@ -2452,7 +2452,7 @@ header .overlay {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 2rem;
-  padding: 1rem 1rem 0 1rem;
+  padding: 0;
 }
 
 .section3 .card {
@@ -3599,6 +3599,11 @@ footer .footer-logos.carte-logos .footer-separator {
     -webkit-box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.2);
     z-index: 2;
+  }
+
+  .section2 .providers .card {
+    background-color: #fff;
+    margin-bottom: 2rem;
   }
 
   .section2 .container.blocks {

@@ -185,13 +185,14 @@
 
 .section2 {
     background-color: #5aab9f;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
     padding-top: 3rem;
     overflow-x: visible;
 }
 
 section.section2.CategorySub {
     padding-top: 0;
+    background-color: #fff;
 }
 
 .CategoryDetail-image .img-fluid {
