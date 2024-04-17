@@ -6,6 +6,7 @@ function render_providers($users){
 		<div class="container">
 			<div class="row">
 				<div id="cards" class="swiper">
+					
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="cards">
@@ -23,6 +24,7 @@ function render_providers($users){
 								<?php } ?>
 							</div>
 						</div>
+
 						<div class="swiper-slide">
 							<div class="cards">	
 								<div class="card">
@@ -35,6 +37,7 @@ function render_providers($users){
 									<span class="duration">3 meses en Vale</span>
 									<p class="price">20 <span>€/h</span></p>
 								</div>
+								
 								<div class="card">
 									<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-card-image-v2.png" alt="ValeApp">
 									<div class="wrapper">
@@ -150,6 +153,7 @@ function render_providers($users){
 							</div>
 						</div>
 					</div>
+
 					<div class="swiper-pagination event" data-label="swiper_pagination"></div>
 				</div>
 			</div>
