@@ -19,7 +19,7 @@ function change_filter($title){
                 $variable = "Promocionals";
             break;
             case "sin-animo-de-lucro":
-                $variable = "Sense animo de lucre";
+                $variable = "Sense anim de lucre";
             break;
 
             case "espacio":
@@ -195,7 +195,7 @@ function change_filter($title){
             break;
 
             case "fontaneria":
-                $variable = "Fontaneria";
+                $variable = "Lampista";
             break;
             case "limpieza":
                 $variable = "Neteja";

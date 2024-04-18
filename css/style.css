@@ -6588,6 +6588,72 @@ footer .accordion-button {
   padding: 0.6rem 0rem;
 }
 
+.header-links .NavMenu-collapse {
+  font-weight: bold;
+}
+
+.header-links {
+  position: relative;
+}
+
+.header-links .NavMenu-section {
+  border-top: 0;
+  padding-bottom: 0.5rem;
+  position: absolute;
+  top: -0.75rem;
+  left: 3rem;
+  z-index: 999;
+}
+
+.header-links .NavMenu-service-trigger {
+  /* background-color: #e2eeec; */
+  border-radius: 0px;
+  color: #575550;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: bold;
+  gap: 0.5rem;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  margin-bottom: 0rem;
+  font-size: 1rem;
+}
+
+.header-links .NavMenu-service-link {
+  color: #575550;
+  margin-left: auto;
+  padding: 0rem 0rem 0rem 3rem;
+  text-decoration: none;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.header-links .NavMenu-service-link:hover, .header-links .NavMenu-service-link:focus, .header-links .NavMenu-service-link:active {
+  border-radius: 0px;
+  background-color: #e2eeec;
+  color: #575550;
+  font-weight: normal;
+  text-align: left;
+}
+
+.header-links button.NavMenu-collapse.header-link.collapsed, button.NavMenu-collapse.header-link {
+  width: 5.5rem;
+}
+
+.header-links div#servicesCollapse {
+  background: #fff;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); 
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+.NavMenu-collapse::after {
+    height: 1rem;
+    margin-left: auto;
+    transform: rotateX(180deg);
+    width: 1rem;
+}
+
 @media (min-width: 768px) {
 	.Homecategories-content {
     width: auto;
