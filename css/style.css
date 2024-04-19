@@ -6673,6 +6673,14 @@ footer .accordion-button {
   display: none;
 }
 
+.weglot-flags.flag-0.es>a:before, .weglot-flags.flag-0.es>span:before {
+  display: none;
+}
+
+.country-selector.weglot-dropdown ul {
+  border: 0;
+}
+
 @media (min-width: 768px) {
 	.Homecategories-content {
     width: auto;
