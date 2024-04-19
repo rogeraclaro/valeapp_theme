@@ -6588,6 +6588,8 @@ footer .accordion-button {
   padding: 0.6rem 0rem;
 }
 
+/* Header */
+
 .header-links .NavMenu-collapse {
   font-weight: bold;
 }
@@ -6652,6 +6654,23 @@ footer .accordion-button {
     margin-left: auto;
     transform: rotateX(180deg);
     width: 1rem;
+}
+
+.country-selector.weglot-dropdown a, .country-selector.weglot-dropdown span {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.country-selector.weglot-dropdown .wgcurrent {
+  border: 0;
+}
+
+.weglot-flags.flag-0.ca>a:before, .weglot-flags.flag-0.ca>span:before {
+  display: none;
 }
 
 @media (min-width: 768px) {

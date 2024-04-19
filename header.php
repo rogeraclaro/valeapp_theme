@@ -215,17 +215,6 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 							</a>
 						</div>
 						<div id="weglot_here"></div>
-						<div class="header-lang-wrapper dropdown">
-							<button type="button" class="header-lang dropdown-toggle" id="header-lang-dropdown" data-bs-toggle="dropdown" aria-expanded="false" >
-									CA
-								<img class="image-fluid header-lang-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-down.png" alt="lang chevron" />
-							</button>
-							<div class="header-lang-content dropdown-menu" aria-labelledby="header-lang-dropdown">
-								<button type="button" class="header-lang header-lang-option">
-									ES
-								</button>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
