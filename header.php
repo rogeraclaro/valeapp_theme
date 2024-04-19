@@ -58,7 +58,6 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 					</div>
 					<div class="col-10 header-links">
 
-
 						<div class="NavMenu-section">
 							<button class="NavMenu-collapse collapsed header-link" type="button" data-bs-toggle="collapse" data-bs-target="#servicesCollapse" aria-expanded="false" aria-controls="servicesCollapse">
 								Serveis
@@ -73,7 +72,7 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 										<a href="/categoria/fontaneria" class="NavMenu-service-link">Lampista</a>
 										<a href="/categoria/limpieza" class="NavMenu-service-link">Neteja</a>
 										<a href="/categoria/pintura" class="NavMenu-service-link">Pintura</a>
-										<a href="/categoria/mudanzas" class="NavMenu-service-link">Mudança</a>
+										<a href="/categoria/mudanza" class="NavMenu-service-link">Mudança</a>
 										<a href="/categoria/obras" class="NavMenu-service-link">Obres</a>
 										<a href="/categoria/electricidad" class="NavMenu-service-link">Electricitat</a>
 										<a href="/categoria/montaje-muebles" class="NavMenu-service-link">Muntatge mobles</a>
@@ -208,7 +207,6 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 							</div>
 						</div>
 
-
 						<div class="header-links">
 							<a href="#" class="header-link header-link-active">Oferir serveis</a>
 							<a href="#" class="header-link">
@@ -216,9 +214,10 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 								<img class="image-fluid header-user-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/header-user-icon.svg" alt="user icon" />
 							</a>
 						</div>
+						<div id="weglot_here"></div>
 						<div class="header-lang-wrapper dropdown">
 							<button type="button" class="header-lang dropdown-toggle" id="header-lang-dropdown" data-bs-toggle="dropdown" aria-expanded="false" >
-								CA
+									CA
 								<img class="image-fluid header-lang-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-down.png" alt="lang chevron" />
 							</button>
 							<div class="header-lang-content dropdown-menu" aria-labelledby="header-lang-dropdown">
@@ -281,7 +280,7 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 								<a href="/categoria/fontaneria" class="NavMenu-service-link">Lampista</a>
 								<a href="/categoria/limpieza" class="NavMenu-service-link">Neteja</a>
 								<a href="/categoria/pintura" class="NavMenu-service-link">Pintura</a>
-								<a href="/categoria/mudanzas" class="NavMenu-service-link">Mudança</a>
+								<a href="/categoria/mudanza" class="NavMenu-service-link">Mudança</a>
 								<a href="/categoria/obras" class="NavMenu-service-link">Obres</a>
 								<a href="/categoria/electricidad" class="NavMenu-service-link">Electricitat</a>
 								<a href="/categoria/montaje-muebles" class="NavMenu-service-link">Muntatge mobles</a>
