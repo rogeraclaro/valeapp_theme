@@ -37,57 +37,61 @@ get_header();
     </section>
     <section class="Ayuda">
         <div class="Ayuda-container">
-
-            <ul>
-                <li class="Ayuda-item">
-                <a href="#" class="Ayuda-link head">
-                    Mi cuenta 
-                    <img class="Ayuda-iconArrowLeft "
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-chevron-bold.png"
-                    alt="ValeApp"/>
-                </a>
-                </li>
-                <li class="Ayuda-item">
-                <a href="#" class="Ayuda-link">
-                    Contacto 
-                    <img class="Ayuda-iconArrow"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
-                    alt="ValeApp"/>
-                </a>
-                </li>
-                <li class="Ayuda-item">
-                <a href="#" class="Ayuda-link">
-                    Puntuaciones 
-                    <img class="Ayuda-iconArrow"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
-                    alt="ValeApp"/>
-                </a>
-                </li>
-                <li class="Ayuda-item">
-                    <a href="#" class="Ayuda-link">
-                    Mis reservas 
-                    <img class="Ayuda-iconArrow"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
-                    alt="ValeApp"/>
-                </a>
-                </li>
-                <li class="Ayuda-item">
-                <a href="#" class="Ayuda-link">
-                    Mis solicitudes 
-                    <img class="Ayuda-iconArrow"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
-                    alt="ValeApp"/>
-                </a>
-                </li>
-            </ul>
-            <div class="Ayuda-footer">
-                <a class="Ayuda-help" href="/contacto">
-                    ¿Necesitas ayuda?
-                </a>
-                <a class="Ayuda-delete" href="eliminar-cuenta">
-                    Eliminar cuenta
-                </a>
-        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul>
+                        <li class="Ayuda-item">
+                        <a href="#" class="Ayuda-link head">
+                            Mi cuenta 
+                            <img class="Ayuda-iconArrowLeft "
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-chevron-bold.png"
+                            alt="ValeApp"/>
+                        </a>
+                        </li>
+                        <li class="Ayuda-item">
+                        <a href="/contacto" class="Ayuda-link">
+                            Contacto 
+                            <img class="Ayuda-iconArrow"
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
+                            alt="ValeApp"/>
+                        </a>
+                        </li>
+                        <li class="Ayuda-item">
+                        <a href="#" class="Ayuda-link">
+                            Puntuaciones 
+                            <img class="Ayuda-iconArrow"
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
+                            alt="ValeApp"/>
+                        </a>
+                        </li>
+                        <li class="Ayuda-item">
+                            <a href="#" class="Ayuda-link">
+                            Mis reservas 
+                            <img class="Ayuda-iconArrow"
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
+                            alt="ValeApp"/>
+                        </a>
+                        </li>
+                        <li class="Ayuda-item">
+                        <a href="#" class="Ayuda-link">
+                            Mis solicitudes 
+                            <img class="Ayuda-iconArrow"
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
+                            alt="ValeApp"/>
+                        </a>
+                        </li>
+                    </ul>
+                    <div class="Ayuda-footer">
+                        <a class="Ayuda-help" href="/contacto">
+                            ¿Necesitas ayuda?
+                        </a>
+                        <a class="Ayuda-delete" href="eliminar-cuenta">
+                            Eliminar cuenta
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

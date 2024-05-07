@@ -287,7 +287,8 @@ section.section2.CategorySub {
     }
 }
 
-/* html {
+/* 
+html {
     background-image: url("../img/Interior\ categoría.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -297,4 +298,5 @@ body {
     opacity: 0.6;
     margin: 0;
     padding: 0;
-} */
+} 
+*/

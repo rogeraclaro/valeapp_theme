@@ -227,10 +227,11 @@ get_header();
       <h2 class="title">El que diuen els nostres clients sobre Vale</h2>
       <div id="reviews" class="swiper">
 
-    <?php
-      $slides = get_field('section5');
-      if( $slides ): 
-    ?>
+      <?php
+        $slides = get_field('section5');
+        if( $slides ): 
+      ?>
+      
       <!-- Swiper -->
       <div class="swiper-wrapper">
         <?php foreach( $slides as $slide ): ?>

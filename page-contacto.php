@@ -29,41 +29,44 @@ get_header();
                 </div>
                 <div class="col-12">
                     <h2 class="title">
-                        Ayuda
+                        Contacto
                     </h2>
                 </div>
             </div>
         </div>
     </section>
-    <section class="Contacto">
-        <div class="Contacto-container">
-            <a href="#" class="Ayuda-link head">
-                        Contacto 
-                        <img class="Ayuda-iconArrowLeft "
-                        src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-chevron-bold.png"
-                        alt="ValeApp"/>
-            </a>
-            <p class="Contacto-text">
-            Mantén siempre tus datos actualizados para 
-            poder ponernos en contacto tanto nosotros 
-            como el proveedor del Servicio. Por favor no 
-            compartas tu contraseña de acceso a tu perfil. 
-            Sólo te pedimos tu nombre, teléfono y email para
-             contactarte si fuera necesario y verificar tu perfil, 
-             todos debemos estar seguros! Además si quieres
-              buscar Servicios en la zona o a domicilio, tienes
-               que decirnos dónde vives. 
-            </p>
-            <div class="Ayuda-footer">
-                <a class="Ayuda-help">
-                    ¿Necesitas ayuda?
-                </a>
-                <a class="Ayuda-delete">
-                    Eliminar cuenta
-                </a>
-        </div>
-        </div>
 
+    <section class="Contacto">
+        <div class="Contacto-container container">
+            <div class="row">
+                <div class="col-12">
+                    <a href="/ayuda" class="Ayuda-link head">
+                            Ayuda
+                            <img class="Ayuda-iconArrowLeft "
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-chevron-bold.png"
+                            alt="ValeApp"/>
+                    </a>
+                    <p class="Contacto-text">
+                    Mantén siempre tus datos actualizados para 
+                    poder ponernos en contacto tanto nosotros 
+                    como el proveedor del Servicio.</p> 
+                    <p class="Contacto-text">
+                    Por favor no 
+                    compartas tu contraseña de acceso a tu perfil. 
+                    Sólo te pedimos tu nombre, teléfono y email para
+                    contactarte si fuera necesario y verificar tu perfil, 
+                    todos debemos estar seguros!</p> 
+                    <p class="Contacto-text">
+                    Además si quieres
+                    buscar Servicios en la zona o a domicilio, tienes
+                    que decirnos dónde vives. 
+                    </p>
+                    <div class="Ayuda-footer">
+                        <?php echo do_shortcode( '[contact-form-7 id="a1f8f59" title="contacto"]' ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
