@@ -3,32 +3,32 @@
 function category_search_filter($category_search, $category_group, &$subcategory){
     if ($category_search) {
         switch ($category_search) {
-            case "Hogar":
-                $subcategory = $category_group['hogar'];
+            case "Llar":
+                $subcategory = $category_group['llar'];
                 break;
-            case "Aprende":
-                $subcategory = $category_group['aprende'];
+            case "Aprèn":
+                $subcategory = $category_group['apren'];
                 break;
-            case "Deporte":
-                $subcategory = $category_group['deporte'];
+            case "Esport":
+                $subcategory = $category_group['esport'];
                 break;
-            case "Mente":
-                $subcategory = $category_group['mente'];
+            case "Ment":
+                $subcategory = $category_group['ment'];
                 break;
-            case "Cuidados":
-                $subcategory = $category_group['cuidados'];
+            case "Cuida els teus":
+                $subcategory = $category_group['cuida els teus'];
                 break;
-            case "Belleza":
-                $subcategory = $category_group['belleza'];
+            case "Bellesa":
+                $subcategory = $category_group['bellesa'];
                 break;
-            case "Contrata":
-                $subcategory = $category_group['contrata'];
+            case "Contracta":
+                $subcategory = $category_group['contracta'];
                 break;
-            case "Comparte":
-                $subcategory = $category_group['comparte'];
+            case "Comparteix":
+                $subcategory = $category_group['comparteix'];
                 break;
-            case "Eventos":
-                $subcategory = $category_group['eventos'];
+            case "Esdeveniments":
+                $subcategory = $category_group['esdeveniments'];
                 break;
         }
     }
