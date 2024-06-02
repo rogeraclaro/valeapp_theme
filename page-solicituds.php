@@ -101,7 +101,7 @@ get_header();
 							src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
 							alt="ValeApp">
                     </button>
-                    <a type="button" href="https://valeapp.com/ayuda/" class="JodRequests-item-footerBtn">
+                    <a type="button" href="https://valeapp.com/ajuda/" class="JodRequests-item-footerBtn">
                     ¿Necesitas ayuda? <img class="img-fluid"
 							src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
 							alt="ValeApp">

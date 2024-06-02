@@ -36,7 +36,7 @@
         $result = add_provider_front_metaboxes($first_name, $last_name, $email, $password, $phone_number, $address, $cd_postal, $city, $country, $schedule, $enterprise, $enterprise_name, $enterprise_logo, $profile_photo, $description, $membership,);
 
         if($result === true) {
-            wp_redirect('/inicio-sesion-proveedores');
+            wp_redirect('/iniciar-sessio-proveidors');
             exit;
         }
         else {

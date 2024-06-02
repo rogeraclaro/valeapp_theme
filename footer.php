@@ -81,19 +81,19 @@
 						</p> -->
 						<ul class="accordion-links row">
 							<li class="col-12">
-								<a href="/preguntas-frecuentes">Preguntes frequents</a>
+								<a href="/preguentes-frequents">Preguntes frequents</a>
 							</li>
 							<li class="col-12">
 								<a href="#">Professionals</a>
 							</li>
 							<li class="col-12">
-								<a href="/iniciar-sesion-profesional-o-usuario">Registrar-se/Iniciar sessió</a>
+								<a href="/iniciar-sessio-professional-o-usuari">Registrar-se/Iniciar sessió</a>
 							</li>
 							<li class="col-12">
 								<a href="#">Blog</a>
 							</li>
 							<li class="col-12">
-								<a href="/ayuda">Ajuda</a>
+								<a href="/ajuda">Ajuda</a>
 							</li>
 						</ul>
 					</div>

@@ -41,7 +41,7 @@ if (current_user_can('clientevaleapp') || current_user_can('administrator')) {
                     ],
                     'submit_value'  => 'Continuar',
                     'updated_message' => '¡Formulario actualizado!',
-                    'return' => '/mis-ofertas',
+                    'return' => '/les-meves-ofertes',
                 ]);
             ?>
         </div>

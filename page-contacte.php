@@ -40,7 +40,7 @@ get_header();
         <div class="Contacto-container container">
             <div class="row">
                 <div class="col-12">
-                    <a href="/ayuda" class="Ayuda-link head">
+                    <a href="/ajuda" class="Ayuda-link head">
                             Ayuda
                             <img class="Ayuda-iconArrowLeft "
                             src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-chevron-bold.png"

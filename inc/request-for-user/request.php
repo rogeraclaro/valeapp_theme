@@ -21,7 +21,7 @@ function all_request(){
     
             // Imprimir o trabajar con los datos del post
             ?>
-            <a href="/solicitar-servicio/<?php echo($post_slug) ?>">
+            <a href="/solicitar-servei/<?php echo($post_slug) ?>">
                 <span>Id Post: <?php echo($post_id) ?></span><br>
                 <span>Categoria: <?php echo($group_category['categoria']) ?></span><br><br>
             </a>

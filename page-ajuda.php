@@ -50,7 +50,7 @@ get_header();
                         </a>
                         </li>
                         <li class="Ayuda-item">
-                        <a href="/contacto" class="Ayuda-link">
+                        <a href="/contacte" class="Ayuda-link">
                             Contacto 
                             <img class="Ayuda-iconArrow"
                             src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
@@ -83,7 +83,7 @@ get_header();
                         </li>
                     </ul>
                     <div class="Ayuda-footer">
-                        <a class="Ayuda-help" href="/contacto">
+                        <a class="Ayuda-help" href="/contacte">
                             ¿Necesitas ayuda?
                         </a>
                         <a class="Ayuda-delete" href="eliminar-cuenta">

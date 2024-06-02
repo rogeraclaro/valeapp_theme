@@ -36,7 +36,7 @@ get_header();
     </div>
 </section>
 <section class="NeedHelp">
-    <a class="NeedHelp-goBack" href="/ayuda">
+    <a class="NeedHelp-goBack" href="/ajuda">
         <img class="Ayuda-iconArrow" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png" alt="ValeApp" /> ¿Necesitas Ayuda?
     </a>
     <div class="NeedHelp-card">

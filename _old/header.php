@@ -280,10 +280,10 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 				if (!is_user_logged_in()) {
 				?>
 					<div class="NavMenu-section">
-						<a class="NavMenu-link" href="/crear-cuenta-profesional-o-usuario/">
+						<a class="NavMenu-link" href="/crear-compte-professional-o-usuari/">
 							Registrarse
 						</a>
-						<a class="NavMenu-link" href="/iniciar-sesion-profesional-o-usuario">
+						<a class="NavMenu-link" href="/iniciar-sessio-professional-o-usuari">
 							Iniciar sesión
 						</a>
 					</div>

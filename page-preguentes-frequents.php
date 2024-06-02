@@ -79,10 +79,10 @@ get_header();
                 </button>
             </div>
             <div class="Ayuda-footer">
-                <a class="Ayuda-help" href="/ayuda">
+                <a class="Ayuda-help" href="/ajuda">
                     ¿Necesitas ayuda?
                 </a>
-                <a class="Ayuda-delete" href="/eliminar-cuenta">
+                <a class="Ayuda-delete" href="/dades-proveidor">
                     Eliminar cuenta
                 </a>
             </div>
