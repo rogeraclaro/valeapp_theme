@@ -1,18 +1,32 @@
 <?php
-    function personalizar_pantalla_de_inicio() {
-        // Reemplaza 'nombre-de-tu-pagina' con el slug o título de tu página personalizada
-        $pagina_personalizada = get_page_by_title('home');
+function personalizar_pantalla_de_inicio() {
     
-        if ($pagina_personalizada) {
-            // Obtiene el ID de la página personalizada
-            $pagina_id = $pagina_personalizada->ID;
+    $titulo_pagina = 'home';
+
     
-            // Actualiza la opción de la página de inicio en WordPress
-            update_option('page_on_front', $pagina_id);
-            update_option('show_on_front', 'page');
-        }
+    $args = [
+        'post_type' => 'page',
+        'title' => $titulo_pagina,
+        'posts_per_page' => 1,
+    ];
+
+    
+    $query = new WP_Query($args);
+
+    
+    if ($query->have_posts()) {
+        $query->the_post();
+        $pagina_id = get_the_ID();
+
+        
+        update_option('page_on_front', $pagina_id);
+        update_option('show_on_front', 'page');
+        
+        
+        wp_reset_postdata();
     }
-    
-    // Ejecuta la función al activar el tema
-    add_action('after_setup_theme', 'personalizar_pantalla_de_inicio');
+}
+
+
+add_action('after_setup_theme', 'personalizar_pantalla_de_inicio');
 ?>

@@ -3593,7 +3593,7 @@ footer .footer-logos.carte-logos .footer-separator {
   .section2 .card {
     max-width: 622px;
     margin: 0 auto;
-    background-color: #a00d1a;
+    /* background-color: #a00d1a; */
     padding: 1rem 0 0.4rem 0;
     border-radius: 25px;
     -webkit-box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.2);

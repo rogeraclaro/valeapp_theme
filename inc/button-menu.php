@@ -48,7 +48,7 @@ function change_button_menu_header() {
                 if($rol == "cliente"){
                     ?>  
                         <div class="NavMenu-section">
-                            <a class="HomeOffer-btn" href="/solicitar-servicio">
+                            <a class="HomeOffer-btn" href="/solicitar-servei">
                                 Solicitar servicio
                             </a>
                         </div>
@@ -57,7 +57,7 @@ function change_button_menu_header() {
                 if($rol == "proveedor"){
                     ?>  
                         <div class="NavMenu-section">
-                            <a class="HomeOffer-btn" href="/publicar-servicio">
+                            <a class="HomeOffer-btn" href="/publicar-servei">
                                 Publicar servicio
                             </a>
                         </div>
@@ -94,7 +94,7 @@ function button_for_user() {
         if ( current_user_can( 'proveedorvaleapp' ) ) {
             ?>
             <div class="NavMenu-section">
-                <a class="NavMenu-link" href="/publicar-servicio">
+                <a class="NavMenu-link" href="/publicar-servei">
             <?php
                 echo 'Publicar servicio';
             ?>
@@ -104,7 +104,7 @@ function button_for_user() {
         } elseif ( current_user_can( 'clientevaleapp' ) ) {
             ?>
             <div class="NavMenu-section">
-                <a class="NavMenu-link" href="/solicitar-servicio">
+                <a class="NavMenu-link" href="/solicitar-servei">
             <?php
                 echo 'Solicitar servicio';
             ?>

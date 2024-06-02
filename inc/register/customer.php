@@ -24,7 +24,7 @@ if (isset($_POST['registro_submit'])) {
             echo "Hubo un error en el registro. Por favor, inténtalo de nuevo.";
         } 
         else {
-            wp_redirect(home_url('/inicio-sesion-clientes')); 
+            wp_redirect(home_url('/iniciar-sessio-clients')); 
             exit;
         }
     }

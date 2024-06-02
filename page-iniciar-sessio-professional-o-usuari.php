@@ -23,13 +23,13 @@ get_header();
             <div class="CreateAccountUserOrProfessional-card">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/page-crear-cuenta-profesional-o-usuario/card2-img1.png" alt="valeapp" class="img-fluid CreateAccountUserOrProfessional-cardImg" />
                 <div class="CreateAccountUserOrProfessional-cardText">
-                    <a href="/inicio-sesion-clientes" class="CreateAccountUserOrProfessional-cardBtn">Iniciar como Cliente</a>
+                    <a href="/iniciar-sessio-clients" class="CreateAccountUserOrProfessional-cardBtn">Iniciar como Cliente</a>
                 </div>
             </div>
             <div class="CreateAccountUserOrProfessional-card">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/page-crear-cuenta-profesional-o-usuario/card2-img2.png" alt="valeapp" class="img-fluid CreateAccountUserOrProfessional-cardImg" />
                 <div class="CreateAccountUserOrProfessional-cardText">
-                    <a href="/inicio-sesion-proveedores" class="CreateAccountUserOrProfessional-cardBtn">Iniciar como Profesional</a>
+                    <a href="/iniciar-sessio-proveidors" class="CreateAccountUserOrProfessional-cardBtn">Iniciar como Profesional</a>
                 </div>
             </div>
         </div>

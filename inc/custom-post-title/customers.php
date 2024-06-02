@@ -4,7 +4,7 @@ add_action('acf/save_post', 'set_custom_title_from_acf_customers');
 add_action('template_redirect', 'page_verify_customers');
 
 function page_verify_customers() {
-    if(is_page('datos-cliente')) {
+    if(is_page('dades-client')) {
         if (is_user_logged_in()) {
             global $post;
             
