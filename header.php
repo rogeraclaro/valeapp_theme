@@ -196,12 +196,12 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 										Esdeveniments
 									</button>
 									<div class="collapse" id="collapsedService9">
-										<a href="/categories/empresas" class="NavMenu-service-link">Empreses</a>
-										<a href="/categories/bodas" class="NavMenu-service-link">Noces</a>
-										<a href="/categories/despedidas-o-cumpleanos" class="NavMenu-service-link">Comiats / anniversari</a>
-										<a href="/categories/dj-o-musica-en-vivo" class="NavMenu-service-link">DJ / Musica en viu</a>
-										<a href="/categories/promocionales" class="NavMenu-service-link">Promocionals</a>
-										<a href="/categories/sin-animo-de-lucro" class="NavMenu-service-link">Sense ànim de lucre</a>
+										<a href="/categories/empreses" class="NavMenu-service-link">Empreses</a>
+										<a href="/categories/noces" class="NavMenu-service-link">Noces</a>
+										<a href="/categories/comiats_o_aniversari" class="NavMenu-service-link">Comiats / anniversari</a>
+										<a href="/categories/dj_o_musica_en_viu" class="NavMenu-service-link">DJ / Musica en viu</a>
+										<a href="/categories/promocionals" class="NavMenu-service-link">Promocionals</a>
+										<a href="/categories/sense_animo_de_lucre" class="NavMenu-service-link">Sense ànim de lucre</a>
 									</div>
 								</div>
 							</div>
@@ -393,12 +393,12 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 								Esdeveniments
 							</button>
 							<div class="collapse" id="collapsedService9">
-								<a href="/categories/empresas" class="NavMenu-service-link">Empreses</a>
-								<a href="/categories/bodas" class="NavMenu-service-link">Noces</a>
-								<a href="/categories/despedidas-o-cumpleanos" class="NavMenu-service-link">Comiats / anniversari</a>
-								<a href="/categories/dj-o-musica-en-vivo" class="NavMenu-service-link">DJ / Musica en viu</a>
-								<a href="/categories/promocionales" class="NavMenu-service-link">Promocionals</a>
-								<a href="/categories/sin-animo-de-lucro" class="NavMenu-service-link">Sense ànim de lucre</a>
+								<a href="/categories/empreses" class="NavMenu-service-link">Empreses</a>
+								<a href="/categories/noces" class="NavMenu-service-link">Noces</a>
+								<a href="/categories/comiats_o_aniversari" class="NavMenu-service-link">Comiats / anniversari</a>
+								<a href="/categories/dj_o_musica_en_viu" class="NavMenu-service-link">DJ / Musica en viu</a>
+								<a href="/categories/promocionals" class="NavMenu-service-link">Promocionals</a>
+								<a href="/categories/sense_animo_de_lucre" class="NavMenu-service-link">Sense ànim de lucre</a>
 							</div>
 						</div>
 					</div>

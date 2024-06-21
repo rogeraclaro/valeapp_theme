@@ -372,22 +372,22 @@ function menu_reuse(){
                                 <div class="accordion-body">
                                     <ul class="list">
                                         <li class="item">
-                                            <a class="event" href="/categories/empresas">Empresas</a>
+                                            <a class="event" href="/categories/empreses">Empresas</a>
                                         </li>
                                         <li class="item">
-                                            <a class="event" href="/categories/bodas">Bodas</a>
+                                            <a class="event" href="/categories/noces">Bodas</a>
                                         </li>
                                         <li class="item">
-                                            <a class="event" href="/categories/despedidas-o-cumpleaños">Despedidas / cumpleaños</a>
+                                            <a class="event" href="/categories/comiats_o_aniversari">Despedidas / cumpleaños</a>
                                         </li>
                                         <li class="item">
-                                            <a class="event" href="/categories/dj-o-musica-en-vivo">DJ / Musica en vivo</a>
+                                            <a class="event" href="/categories/dj_o_musica_en_viu">DJ / Musica en vivo</a>
                                         </li>
                                         <li class="item">
-                                            <a class="event" href="/categories/promocionales">Promocionales</a>
+                                            <a class="event" href="/categories/promocionals">Promocionales</a>
                                         </li>
                                         <li class="item">
-                                            <a class="event" href="/categories/sin-animo-de-lucro">Sin ánimo de lucro</a>
+                                            <a class="event" href="/categories/sense_animo_de_lucre">Sin ánimo de lucro</a>
                                         </li>
                                     </ul>
                                 </div>
