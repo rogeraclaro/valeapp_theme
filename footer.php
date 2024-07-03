@@ -33,31 +33,31 @@
 					<div class="accordion-body">
 						<ul class="accordion-links row">
 							<li class="col-12 col-md-5">
-								<a href="/categoria/hogar">Llar</a>
+								<a href="/categories/hogar">Llar</a>
 							</li>
 							<li class="col-12 col-md-7">
-								<a href="/categoria/belleza">Bellesa</a>
+								<a href="/categories/belleza">Bellesa</a>
 							</li>
 							<li class="col-12 col-md-5">
-								<a href="/categoria/aprende">Aprèn</a>
+								<a href="/categories/aprende">Aprèn</a>
 							</li>
 							<li class="col-12 col-md-7">
-								<a href="/categoria/contrata">Contracta</a>
+								<a href="/categories/contrata">Contracta</a>
 							</li>
 							<li class="col-12 col-md-5">
-								<a href="/categoria/deporte">Esport</a>
+								<a href="/categories/deporte">Esport</a>
 							</li>
 							<li class="col-12 col-md-7">
-								<a href="/categoria/alquila">Lloga</a>
+								<a href="/categories/alquila">Lloga</a>
 							</li>
 							<li class="col-12 col-md-5">
-								<a href="/categoria/mente">Ment</a>
+								<a href="/categories/mente">Ment</a>
 							</li>
 							<li class="col-12 col-md-7">
-								<a href="/categoria/eventos">Esdeveniments</a>
+								<a href="/categories/eventos">Esdeveniments</a>
 							</li>
 							<li class="col-12">
-								<a href="/categoria/cuida-los-tuyos">Cuida els teus</a>
+								<a href="/categories/cuida-los-tuyos">Cuida els teus</a>
 							</li>
 						</ul>
 					</div>
@@ -81,19 +81,19 @@
 						</p> -->
 						<ul class="accordion-links row">
 							<li class="col-12">
-								<a href="/preguntas-frecuentes">Preguntes frequents</a>
+								<a href="/preguentes-frequents">Preguntes frequents</a>
 							</li>
 							<li class="col-12">
 								<a href="#">Professionals</a>
 							</li>
 							<li class="col-12">
-								<a href="/iniciar-sesion-profesional-o-usuario">Registrar-se/Iniciar sessió</a>
+								<a href="/iniciar-sessio-professional-o-usuari">Registrar-se/Iniciar sessió</a>
 							</li>
 							<li class="col-12">
 								<a href="#">Blog</a>
 							</li>
 							<li class="col-12">
-								<a href="/ayuda">Ajuda</a>
+								<a href="/ajuda">Ajuda</a>
 							</li>
 						</ul>
 					</div>

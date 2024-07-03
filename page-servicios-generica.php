@@ -41,7 +41,7 @@ menu_reuse();
         <img class="OfferService-image" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-HomeOffer.png" alt="valeapp">
         <h2 class="OfferService-title">¿Quieres ofrecer tus <br class="xs-br"/> servicios en Vale?</h2>
         <p class="OfferService-text">Lorem ipsum dolor sit amet <br class="xs-br"/> consectetur adipisicing elit, sed do <br class="xs-br"/> eiusmond tempor indicidunt ut labore. <br class="xs-br"/> et dolore magna aliqua. Ut enim ad</p>
-        <a class="HomeOffer-btn d-block" href="/iniciar-sesion-profesional-o-usuario">Ofrecer servicios</a>
+        <a class="HomeOffer-btn d-block" href="/iniciar-sessio-professional-o-usuari">Ofrecer servicios</a>
     </section>
 
 <?php

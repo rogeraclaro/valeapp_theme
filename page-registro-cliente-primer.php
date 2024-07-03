@@ -32,7 +32,7 @@
 //         $result = add_customer_front_metaboxes($first_name_customer, $last_name_customer, $date_customer, $email_customer, $password_customer, $phone_number_customer, $address_customer, $cd_postal_customer, $city_customer, $country_customer, $interests_customer, $profile_photo_customer, $description_customer);
 
 //         if($result === true) {
-//             wp_redirect('/inicio-sesion-clientes');
+//             wp_redirect('/iniciar-sessio-clients');
 //             exit;
 //         }
 //         else {

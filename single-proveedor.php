@@ -54,13 +54,13 @@ $balance = get_field('field_65f167b6d716e', $post_id);
                              <span class="option-text">Catálogo de servicios</span>
                          </li>
                      </a>
-                     <a class="link" href="/publicaciones">
+                     <a class="link" href="/publicacions">
                          <li class="option">
                              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-requests-icon.png" alt="ValeApp" class="img-fluid option-icon">
                              <span class="option-text">Solicitudes</span>
                          </li>
                      </a>
-                     <a class="link" href="/publicaciones">
+                     <a class="link" href="/publicacions">
                          <li class="option">
                              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-task-icon.png" alt="ValeApp" class="img-fluid option-icon">
                              <span class="option-text">Mis tareas</span>
@@ -79,13 +79,13 @@ $balance = get_field('field_65f167b6d716e', $post_id);
                              <span class="option-text">Mi saldo</span>
                          </li>
                      </a>
-                     <a class="link" href="/membresia">
+                     <a class="link" href="/fer-se-membre">
                          <li class="option">
                              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-membership-icon.png" alt="ValeApp" class="img-fluid option-icon">
                              <span class="option-text">Membresía</span>
                          </li>
                      </a>
-                     <a class="link" href="/promociones">
+                     <a class="link" href="/promocions">
                          <li class="option">
                              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-promotion-icon.png" alt="ValeApp" class="img-fluid option-icon promotions">
                              <span class="option-text promotionsText">Promociones</span>

@@ -6,7 +6,7 @@ add_action('template_redirect', 'page_verify_post');
 add_action('template_redirect', 'page_verify_request');
 
 function page_verify_post() {
-    if(is_page('publicar-servicio')) {
+    if(is_page('publicar-servei')) {
         add_action('acf/save_post', 'custom_acf_form_submission_post', 1);
     }
 }
@@ -30,7 +30,7 @@ function custom_acf_form_submission_post($post_id) {
 }
 
 function set_custom_title_from_acf_post($post_id) {    
-    if ('publicar-servicio' === get_post_type($post_id)) {
+    if ('publicar-servei' === get_post_type($post_id)) {
         
         $current_user = wp_get_current_user();
         $user_email = $current_user->user_email;
@@ -51,13 +51,13 @@ function set_custom_title_from_acf_post($post_id) {
 }
 
 function page_verify_request() {
-    if(is_page('solicitar-servicio')) {
+    if(is_page('solicitar-servei')) {
         add_action('acf/save_post', 'custom_acf_form_submission_request', 1);
     }
 }
 
 function set_custom_title_from_acf_request($post_id) {    
-    if ('solicitar-servicio' === get_post_type($post_id)) {
+    if ('solicitar-servei' === get_post_type($post_id)) {
         
         $current_user = wp_get_current_user();
         $user_email = $current_user->user_email;

@@ -12,10 +12,10 @@ function custom_login_redirect($user_login, $user) {
                 wp_redirect(admin_url());
                 break;
             case in_array('clientevaleapp', $user_roles):
-                wp_redirect('/datos-cliente');
+                wp_redirect('/dades-client');
                 break;
             case in_array('proveedorvaleapp', $user_roles):
-                wp_redirect('/datos-proveedor');
+                wp_redirect('/dades-proveidor');
                 break;
             default:
                 wp_redirect(home_url());

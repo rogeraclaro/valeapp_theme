@@ -4,7 +4,7 @@ add_action('save_post', 'set_custom_title_from_acf_providers');
 add_action('template_redirect', 'page_verify_providers');
 
 function page_verify_providers() {
-    if(is_page('datos-proveedor')) {
+    if(is_page('dades-proveidor')) {
         if(is_user_logged_in()) {
             global $post;
 

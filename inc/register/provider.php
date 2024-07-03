@@ -28,7 +28,7 @@ if (isset($_POST['register_provider_submit'])) {
             echo "Hubo un error en el registro. Por favor, inténtalo de nuevo.";
         } 
         else {
-            wp_redirect(home_url('/inicio-sesion-proveedores')); 
+            wp_redirect(home_url('/iniciar-sessio-proveidors')); 
             exit;
         }
     }
