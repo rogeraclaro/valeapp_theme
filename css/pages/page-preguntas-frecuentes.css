@@ -1,6 +1,7 @@
 .PreguntasFrecuentes{
     padding-top: 1.4rem;
 }
+
 .PreguntasFrecuentes-container{
 display: flex;
 flex-direction: column;
@@ -25,13 +26,13 @@ padding-right: 1.2rem;
 }
 .PreguntasFrecuentes-btn{
     border: none;
-    width: 11.5rem;
+    width: 9.5rem;
     border-radius: 1.7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3.5rem 1rem;
+    padding: 1.5rem 1rem;
     font-size: 1.2rem;
     font-family: "Open Sans";
     font-weight: 600;
