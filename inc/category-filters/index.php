@@ -40,11 +40,17 @@ if (in_array($last_part, $category_array)) {
             $query->the_post();
             $id = $post->ID;
             $id_category = $id;
-
         }
         wp_reset_postdata();
     }
 }
+
+?>
+<script>
+console.log('last_part:', '<?php echo $last_part; ?>');
+console.log('category:', '<?php echo $id_category; ?>');
+</script>
+<?php
 
 // $id = search_category($posts);
 $title = get_field('field_65ef43396b388', $id_category);
@@ -83,7 +89,7 @@ switch ($title) {
     case "Belleza":
         $title_cat = "Bellesa";
         break;
-}
+    }
 ;
 
 if (!$title_cat) {
@@ -289,7 +295,7 @@ if (!$posts) {
             <?php
         } else {
             ?>
-            <h1>No hay Proveedores por el momento</h1>
+            <h1>Encara no hi ha proveïdors</h1>
             <?php
             // render_providers($users);
         }
