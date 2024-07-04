@@ -36,7 +36,7 @@ get_header();
 <div class="AddTokens">
     <div class="AddTokens-paymentMethod">
         <div class="AddTokens-title">
-            Mètode de Dipòsit
+            Mètode de Diposit
         </div>
         <div class="AddTokens-paymentMethod-selectedMethod">
             <span class="AddTokens-paymentMethod-optionIcon">
@@ -67,7 +67,7 @@ get_header();
     </div>
     <div class="AddTokens-info">
         <div class="AddTokens-title">
-            Introdueix l'import i fes clic a "Dipositar"
+            Introdueix l'import i fés clic a "Dipositar"
         </div>
         <div class="AddTokens-description">
         Un cop introduït l'import, se us redirigirà a una pàgina<br/> segura del lloc web per introduir la informació bancària.
