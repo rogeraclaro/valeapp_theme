@@ -189,6 +189,10 @@ i.bi.bi-search {
 	content: none;
 }
 
+.header-links div#servicesCollapse {
+    width: 14rem;
+}
+
 /* Form */
 
 .login input,
