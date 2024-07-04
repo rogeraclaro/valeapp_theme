@@ -291,7 +291,7 @@ if (!$posts) {
             ?>
             <h1>No hay Proveedores por el momento</h1>
             <?php
-            render_providers($users);
+            // render_providers($users);
         }
     }
 

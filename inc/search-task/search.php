@@ -50,7 +50,7 @@ function search_task() {
 function handler_search_form() {
     if (isset($_GET['search_label'])) {
         $search = sanitize_text_field($_GET['search_label']);
-        wp_redirect(home_url("/categoria/$search"));
+        wp_redirect(home_url("/categories/$search"));
     }
 }
 

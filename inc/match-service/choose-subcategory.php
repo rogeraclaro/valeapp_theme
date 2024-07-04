@@ -4,31 +4,19 @@
 
 if ($category_provider) {
     switch ($category_provider) {
-        case "Hogar":
-            $subcategory_provider = $group_category['hogar'];
-            $subcategory_search = 'hogar';
-            $subcategory_result = $group_category_publisher['hogar'];
+        case "Llar":
+            $subcategory_provider = $group_category['llar'];
+            $subcategory_search = 'llar';
+            $subcategory_result = $group_category_publisher['llar'];
 
             //Price
             $price = $group_profesional['precio_maximo_por_hora'];
             $price_search = 'precio_por_hora';
             break;
-        case "Aprende":
-            $subcategory_provider = $group_category['aprende'];
-            $subcategory_search = 'aprende';
-            $subcategory_result = $group_category_publisher['aprende'];
-
-            //Price
-            $price = $group_profesional['precio_maximo_por_hora'];
-            $price_search = 'precio_por_hora';
-
-            //Level
-            $level_boolean = true;
-            break;
-        case "Deporte":
-            $subcategory_provider = $group_category['deporte'];
-            $subcategory_search = 'deporte';
-            $subcategory_result = $group_category_publisher['deporte'];
+        case "Aprèn":
+            $subcategory_provider = $group_category['apren'];
+            $subcategory_search = 'apren';
+            $subcategory_result = $group_category_publisher['apren'];
 
             //Price
             $price = $group_profesional['precio_maximo_por_hora'];
@@ -37,22 +25,34 @@ if ($category_provider) {
             //Level
             $level_boolean = true;
             break;
-        case "Mente":
-            $subcategory_provider = $group_category['mente'];
-            $subcategory_search = 'mente';
-            $subcategory_result = $group_category_publisher['mente'];
+        case "Esport":
+            $subcategory_provider = $group_category['esport'];
+            $subcategory_search = 'esport';
+            $subcategory_result = $group_category_publisher['esport'];
+
+            //Price
+            $price = $group_profesional['precio_maximo_por_hora'];
+            $price_search = 'precio_por_hora';
+
+            //Level
+            $level_boolean = true;
+            break;
+        case "Ment":
+            $subcategory_provider = $group_category['ment'];
+            $subcategory_search = 'ment';
+            $subcategory_result = $group_category_publisher['ment'];
 
             //Price
             $price = $group_profesional['precio_maximo_por_hora'];
             $price_search = 'precio_por_hora';
             break;
-        case "Cuidados":
-            $subcategory_provider = $group_category['cuidados'];
-            $subcategory_search = 'cuidados';
-            $subcategory_result = $group_category_publisher['cuidados'];
+        case "Cuida els teus":
+            $subcategory_provider = $group_category['cuida_els_teus'];
+            $subcategory_search = 'cuida_els_teus';
+            $subcategory_result = $group_category_publisher['cuida_els_teus'];
 
             //Price
-            if ($subcategory_provider == 'Seguridad' || $subcategory_provider == 'Dietas') {
+            if ($subcategory_provider == 'Seguretat' || $subcategory_provider == 'Dietes') {
                 $price = $group_profesional['precio_maximo_por_hora'];
                 $price_search = 'precio_por_hora';
             } else {
@@ -60,15 +60,15 @@ if ($category_provider) {
                 $price_search = 'precio_por_servicio';
             }
             break;
-        case "Belleza":
-            $subcategory_provider = $group_category['belleza'];
-            $subcategory_search = 'belleza';
-            $subcategory_result = $group_category_publisher['belleza'];
+        case "Bellesa":
+            $subcategory_provider = $group_category['bellesa'];
+            $subcategory_search = 'bellesa';
+            $subcategory_result = $group_category_publisher['bellesa'];
             $gender = $group_category['sexo'];
             $nails = $group_category['unas'];
             $hair_removal = $group_category['depilacion_con'];
             //Price
-            if ($subcategory_provider == 'Maquillaje') {
+            if ($subcategory_provider == 'Maquillatge') {
                 $price = $group_profesional['precio_maximo_por_hora'];
                 $price_search = 'precio_por_hora';
             } else {
@@ -76,28 +76,28 @@ if ($category_provider) {
                 $price_search = 'precio_por_servicio';
             }
             break;
-        case "Contrata":
-            $subcategory_provider = $group_category['contrata'];
-            $subcategory_search = 'contrata';
-            $subcategory_result = $group_category_publisher['contrata'];
+        case "Contracta":
+            $subcategory_provider = $group_category['contracta'];
+            $subcategory_search = 'contracta';
+            $subcategory_result = $group_category_publisher['contracta'];
 
             //Price
             $price = $group_profesional['precio_maximo_por_hora'];
             $price_search = 'precio_por_hora';
             break;
-        case "Comparte":
-            $subcategory_provider = $group_category['comparte'];
-            $subcategory_search = 'comparte';
-            $subcategory_result = $group_category_publisher['comparte'];
+        case "Comparteix":
+            $subcategory_provider = $group_category['comparteix'];
+            $subcategory_search = 'comparteix';
+            $subcategory_result = $group_category_publisher['comparteix'];
 
             //Price
             $price = $group_profesional['precio_maximo_por_hora'];
             $price_search = 'precio_por_hora';
             break;
-        case "Eventos":
-            $subcategory_provider = $group_category['eventos'];
-            $subcategory_search = 'eventos';
-            $subcategory_result = $group_category_publisher['eventos'];
+        case "Esdeveniments":
+            $subcategory_provider = $group_category['esdeveniments'];
+            $subcategory_search = 'esdeveniments';
+            $subcategory_result = $group_category_publisher['esdeveniments'];
 
             //Price
             $price = $group_profesional['precio_maximo_por_hora'];
