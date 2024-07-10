@@ -209,8 +209,8 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 
 						<div class="header-links">
 							<a href="/fer-se-membre" class="header-link header-link-active">Oferir serveis</a>
-							<a href="#" class="header-link">
-								Registrar-se/Iniciar sessió
+							<a href="/crear-compte-professional-o-usuari" class="header-link">Registrar-se</a>
+							<a href="/iniciar-sessio-professional-o-usuari" class="header-link">Iniciar sessió
 								<img class="image-fluid header-user-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/header-user-icon.svg" alt="user icon" />
 							</a>
 						</div>
