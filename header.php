@@ -206,13 +206,35 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 								</div>
 							</div>
 						</div>
-
 						<div class="header-links">
 							<a href="/fer-se-membre" class="header-link header-link-active">Oferir serveis</a>
+
+							<?php
+							if (!is_user_logged_in()) {
+							?>
+								<a href="/crear-compte-professional-o-usuari" class="header-link">Registrar-se</a>
+								<a href="/iniciar-sessio-professional-o-usuari" class="header-link">Iniciar sessió
+									<img class="image-fluid header-user-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/header-user-icon.svg" alt="user icon" />
+								</a>
+							<?php
+							}
+							//change_button_menu_header()
+							?>
+							<?php
+							if (is_user_logged_in()) {
+							?>
+								<a class="header-link" href="<?php echo wp_logout_url(home_url()); ?>">
+									Tancar sessió
+								</a>
+							<?php
+							}
+							?>
+
+							<!-- <a href="/fer-se-membre" class="header-link header-link-active">Oferir serveis</a>
 							<a href="/crear-compte-professional-o-usuari" class="header-link">Registrar-se</a>
 							<a href="/iniciar-sessio-professional-o-usuari" class="header-link">Iniciar sessió
 								<img class="image-fluid header-user-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/header-user-icon.svg" alt="user icon" />
-							</a>
+							</a> -->
 						</div>
 						<div id="weglot_here"></div>
 					</div>
@@ -408,8 +430,7 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 						Idioma
 					</button>
 					<div class="collapse" id="langCollapse">
-						<a href="#" class="NavMenu-link ml-2">Espanyol</a>
-						<a href="#" class="NavMenu-link ml-2">Anglès</a>
+						<div id="weglot_here"></div>
 					</div>
 				</div>
 				<div class="NavMenu-section">

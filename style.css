@@ -404,6 +404,13 @@ footer .accordion-links a{
 	text-decoration: none;
 }
 
+#langCollapse .country-selector {
+	height: 75px !important;
+}
+#langCollapse .country-selector.weglot-dropdown ul {
+	display: block !important;
+}
+
 @media (min-width: 768px) {
 	header.header-desktop{
 		overflow: visible;
@@ -458,6 +465,9 @@ footer .accordion-links a{
 		color: #575550;
 		font-size: clamp(0.8rem , 1.1vw, 1rem);
 	}
+	.header-link:last-child {
+		padding-left: 0;
+	}
 	.header-lang-wrapper{
 		position: relative;
 		padding: 0.2rem clamp(0.5rem, 1.6vw, 1.5rem);;
@@ -468,7 +478,6 @@ footer .accordion-links a{
 		font-weight: bold;
 		outline: none !important;
 		padding: 0;
-
 		align-items: center;
 		display: flex;
 	}
