@@ -150,11 +150,6 @@ if ($query) {
 			<div class="title">Altres categories</div>
 			<div class="row justify-content-center">
 				<div class="firstrow">
-					<!-- <a href="<?php echo home_url(); ?>/categoria/hogar" class="category">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-category1-white.png"
-							alt="valeapp" class="img-fluid category-icon" />
-						<p class="category-name">Llar</p>
-					</a> -->
 					<?php
 						$hero = get_field('hero-section', 153);
 						$categor = $hero['category']; 

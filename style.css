@@ -404,6 +404,12 @@ footer .accordion-links a{
 	text-decoration: none;
 }
 
+.accordion-links .category-name {
+    color: #575550;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
 #langCollapse .country-selector {
 	height: 75px !important;
 }

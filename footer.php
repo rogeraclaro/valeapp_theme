@@ -25,39 +25,61 @@
 					projectes especialitzats, a prop teu.
 				</div>
 			</div>
-			<div class="accordion-item">
+			<div class="acc-item">
 				<h2 id="headingPoints" class="accordion-header">
 					<button type="button" class="accordion-button event collapsed" data-label="collapsefaq" data-bs-toggle="collapse" data-bs-target="#collapsefaq" aria-expanded="false" aria-controls="collapsefaq">Categorías <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png" alt="ValeApp"></button>
 				</h2>
-				<div id="collapsefaq" class="accordion-collapse collapse" aria-labelledby="headingPoints" data-bs-parent="#accordionfqa">
-					<div class="accordion-body">
+				<div id="colla" class="accordion-collapse collapse">
+					<div class="acc-body">
 						<ul class="accordion-links row">
+							<?php
+								$hero = get_field('hero-section', 153);
+								$categor = $hero['category']; 
+							?>
 							<li class="col-12 col-md-5">
-								<a href="/categories/hogar">Llar</a>
+								<a href="<?php echo $categor['cat1_link']; ?>" class="category">
+									<p class="category-name"><?php echo $categor['cat1']; ?></p>
+								</a>
 							</li>
 							<li class="col-12 col-md-7">
-								<a href="/categories/belleza">Bellesa</a>
+							<a href="<?php echo $categor['cat6_link']; ?>" class="category">
+									<p class="category-name"><?php echo $categor['cat6']; ?></p>
+								</a>
 							</li>
 							<li class="col-12 col-md-5">
-								<a href="/categories/aprende">Aprèn</a>
+								<a href="<?php echo $categor['cat2_link']; ?>" class="category">
+									<p class="category-name"><?php echo $categor['cat2']; ?></p>
+								</a>
 							</li>
 							<li class="col-12 col-md-7">
-								<a href="/categories/contrata">Contracta</a>
+								<a href="<?php echo $categor['cat7_link']; ?>" class="category">
+									<p class="category-name"><?php echo $categor['cat7']; ?></p>
+								</a>							
 							</li>
 							<li class="col-12 col-md-5">
-								<a href="/categories/deporte">Esport</a>
+								<a href="<?php echo $categor['cat3_link']; ?>" class="category">
+									<p class="category-name"><?php echo $categor['cat3']; ?></p>
+								</a>
 							</li>
 							<li class="col-12 col-md-7">
-								<a href="/categories/alquila">Lloga</a>
+								<a href="<?php echo $categor['cat8_link']; ?>" class="category">
+										<p class="category-name"><?php echo $categor['cat8']; ?></p>
+								</a>							
 							</li>
 							<li class="col-12 col-md-5">
-								<a href="/categories/mente">Ment</a>
+								<a href="<?php echo $categor['cat4_link']; ?>" class="category">
+									<p class="category-name"><?php echo $categor['cat4']; ?></p>
+								</a>
 							</li>
 							<li class="col-12 col-md-7">
-								<a href="/categories/eventos">Esdeveniments</a>
+							<a href="<?php echo $categor['cat9_link']; ?>" class="category">
+									<p class="category-name"><?php echo $categor['cat9']; ?></p>
+								</a>							
 							</li>
 							<li class="col-12">
-								<a href="/categories/cuida-los-tuyos">Cuida els teus</a>
+								<a href="<?php echo $categor['cat5_link']; ?>" class="category">
+									<p class="category-name"><?php echo $categor['cat5']; ?></p>
+								</a>
 							</li>
 						</ul>
 					</div>
