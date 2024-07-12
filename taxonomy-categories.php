@@ -150,6 +150,7 @@ if ($query) {
 			<div class="title">Altres categories</div>
 			<div class="row justify-content-center">
 				<div class="firstrow">
+					<!-- Changed hardcoded urls -->
 					<?php
 						$hero = get_field('hero-section', 153);
 						$categor = $hero['category']; 
