@@ -6840,6 +6840,52 @@ footer .accordion-button {
     transition: all 0.3s;
   }
 
+  a.CreateAccountUserOrProfessional-cardBtn {
+    background-color: #5aab9f;
+    width: 14.4rem;
+    border: 0;
+    border-radius: 2rem;
+    padding: 0.9rem 2.5rem 1rem 2.5rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  a.CreateAccountUserOrProfessional-cardBtn:hover {
+    border: 2px solid #5aab9f;
+    background-color: #fff;
+    color: #5aab9f;
+    transition: all 0.3s;
+  }
+
+  .login input[type=submit] {
+    background-color: #5aab9f;
+    width: 14.4rem;
+    border: 0;
+    border-radius: 2rem;
+    padding: 0.9rem 2.5rem 1rem 2.5rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .login input[type=submit]:hover {
+    border: 2px solid #5aab9f;
+    background-color: #fff;
+    color: #5aab9f;
+    transition: all 0.3s;
+  }
+  
+  .login input, .login select, .login textarea .login span {
+    border-radius: 30px;
+  }
+
   .HomeDoesWork .title {
     font-size: 1.4rem;
   }

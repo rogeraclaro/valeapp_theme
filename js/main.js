@@ -1,4 +1,31 @@
 jQuery(document).ready(function () {
+
+    const swiper = new Swiper('#reviews', {
+    slidesPerView: 1,
+    spaceBetween: 25,
+    allowTouchMove: true,
+    centeredSlides: false,
+    pagination: true,
+    mousewheel: false,
+    loop: false,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+      },
+    },
+  });
+
   // Burger menu
   // var Menu = {
   //   el: {

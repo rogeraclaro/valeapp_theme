@@ -417,6 +417,19 @@ footer .accordion-links a{
 	display: block !important;
 }
 
+.CreateAccountUserOrProfessional .title {
+    text-align: center;
+    font-size: 1.65rem;
+    width: 90%;
+    margin: 0 auto 1.8rem;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+}
+
+/* .regprov, .regclient {
+	margin-bottom: 3rem;
+} */
+
 @media (min-width: 768px) {
 	header.header-desktop{
 		overflow: visible;

@@ -127,7 +127,7 @@ get_header();
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-membership-success.png" alt="valeapp" />
               </p>
             </div>
-            <?php echo do_shortcode('[asp_product id="1327"]'); ?>
+            <!-- <?php echo do_shortcode('[asp_product id="1327"]'); ?> -->
             <!-- <button class="Membership-plan-button">Continuar</button> -->
           </div>
         </div>
@@ -172,7 +172,7 @@ get_header();
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-membership-success.png" alt="valeapp" />
               </p>
             </div>
-            <?php echo do_shortcode('[asp_product id="1328"]'); ?>
+            <!-- <?php echo do_shortcode('[asp_product id="1328"]'); ?> -->
           </div>
         </div>
         <div class="col-12 col-sm-4">
@@ -216,7 +216,7 @@ get_header();
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-membership-success.png" alt="valeapp" />
               </p>
             </div>
-            <?php echo do_shortcode('[asp_product id="1329"]'); ?>
+            <!-- <?php echo do_shortcode('[asp_product id="1329"]'); ?> -->
           </div>
         </div>
       </div>
