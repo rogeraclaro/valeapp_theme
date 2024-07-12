@@ -147,7 +147,7 @@ if ($query) {
 <section class="section5 Homecategories">
 	<div class="Homecategories-content">
 		<div class="container">
-			<div class="title">Altres ccategories</div>
+			<div class="title">Altres categories</div>
 			<div class="row justify-content-center">
 				<div class="firstrow">
 					<!-- Changed hardcoded urls -->
