@@ -6861,7 +6861,7 @@ footer .accordion-button {
     transition: all 0.3s;
   }
 
-  .login input[type=submit] {
+  .login input[type=submit], button.btn.btn-brand[type=submit] {
     background-color: #5aab9f;
     width: 14.4rem;
     border: 0;
@@ -6875,12 +6875,16 @@ footer .accordion-button {
     transition: all 0.3s;
   }
 
-  .login input[type=submit]:hover {
+  .login input[type=submit]:hover, button.btn.btn-brand[type=submit]:hover {
     border: 2px solid #5aab9f;
     background-color: #fff;
     color: #5aab9f;
     transition: all 0.3s;
   }
+
+  form {
+    margin-bottom: 3rem;
+}
   
   .login input, .login select, .login textarea .login span {
     border-radius: 30px;
