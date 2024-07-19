@@ -3548,6 +3548,34 @@ footer .footer-logos.carte-logos .footer-separator {
     border-radius: 50%;
   }
 
+  .userlogin i.bi.bi-person-circle {
+    display: none;
+  }
+
+  .PreguntasFrecuentes-headerBtn {
+    display: none;
+  }
+
+  .publicar {
+    position: relative;
+    width: 140px;
+    font-size: clamp(0.8rem , 1.1vw, 1rem);
+  }
+
+  .header-links .publicar .NavMenu-section {
+    border-top: 0;
+    padding-bottom: 0.5rem;
+    position: absolute;
+    top: -1.75rem;
+    left: 1rem;
+    z-index: 999;
+    width: 180px;
+  }
+  
+  .userlogin {
+    padding-left: 3.5rem;
+  }
+
   .downarrow .downarrow-arrow::after {
     content: "";
     display: inline-block;

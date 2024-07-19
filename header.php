@@ -30,6 +30,7 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'io'); ?></a>
+
 		<header class="site-header header-desktop d-none d-md-block">
 			<!-- <div class="site-branding">
 				
@@ -223,6 +224,15 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 							<?php
 							if (is_user_logged_in()) {
 							?>
+								<div class="publicar">
+									<?php button_for_user(); ?>
+								</div>
+								<div class="userlogin">
+									<i class="bi bi-person-circle"></i>
+										<?php
+										add_photo_profile_header();
+										?>
+								</div>
 								<a class="header-link" href="<?php echo wp_logout_url(home_url()); ?>">
 									Tancar sessió
 								</a>
