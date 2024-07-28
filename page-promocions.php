@@ -85,8 +85,8 @@ if($promotion_query->have_posts()) :
     $subtitle = get_field("field_65b1694f5abe3")['subtitulo'];
     ?>
     <section class="promociones">
+        <div class="container">
         <div class="promociones-content">
-            
             <a class="promociones-card" href="#">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeap-arrow-promociones.png" alt="valeapp" class="promociones-arrow">
                 <div class="promociones-cardContent">
@@ -99,6 +99,7 @@ if($promotion_query->have_posts()) :
                 </div>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-promociones-icon.png" alt="valeapp" class="promociones-icon">
             </a>
+        </div>
         </div>
     </section>
     <?php            

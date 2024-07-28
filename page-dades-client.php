@@ -22,7 +22,7 @@ if(current_user_can('clientevaleapp') || current_user_can('administrator')) {
 <div class="container login mt-5">
     <div class="row justify-content-center align-items-center">
         <div class="col-12">
-            <h2 class="title">Mi cuenta</h2>
+            <h2 class="title">El meu compte</h2>
             <?php
                 acf_form([
                     'post_id'       => 'new_post',

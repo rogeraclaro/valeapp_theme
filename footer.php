@@ -103,17 +103,17 @@
 						</p> -->
 						<ul class="accordion-links row">
 							<li class="col-12">
-								<a href="/preguentes-frequents">Preguntes frequents</a>
+								<a href="/preguentes-frequents">Preguntes freqüents</a>
 							</li>
 							<li class="col-12">
-								<a href="#">Professionals</a>
+								<a href="/fer-se-membre">Professionals</a>
 							</li>
 							<li class="col-12">
 								<a href="/iniciar-sessio-professional-o-usuari">Registrar-se/Iniciar sessió</a>
 							</li>
-							<li class="col-12">
+							<!-- <li class="col-12">
 								<a href="#">Blog</a>
-							</li>
+							</li> -->
 							<li class="col-12">
 								<a href="/ajuda">Ajuda</a>
 							</li>

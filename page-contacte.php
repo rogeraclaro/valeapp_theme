@@ -22,14 +22,14 @@ get_header();
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Mi cuenta</a></li>
-                            <li class="breadcrumb-item"><a href="#">Centro de soporte</a></li>
+                        <li class="breadcrumb-item"><a href="#">El meu compte</a></li>
+                        <li class="breadcrumb-item"><a href="#">Centre de suport</a></li>
                         </ol>
                     </nav>
                 </div>
                 <div class="col-12">
                     <h2 class="title">
-                        Contacto
+                        Contacte
                     </h2>
                 </div>
             </div>
@@ -41,28 +41,16 @@ get_header();
             <div class="row">
                 <div class="col-12">
                     <a href="/ajuda" class="Ayuda-link head">
-                            Ayuda
+                            Necessites ajuda?
                             <img class="Ayuda-iconArrowLeft "
                             src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-chevron-bold.png"
                             alt="ValeApp"/>
                     </a>
                     <p class="Contacto-text">
-                    Mantén siempre tus datos actualizados para 
-                    poder ponernos en contacto tanto nosotros 
-                    como el proveedor del Servicio.</p> 
-                    <p class="Contacto-text">
-                    Por favor no 
-                    compartas tu contraseña de acceso a tu perfil. 
-                    Sólo te pedimos tu nombre, teléfono y email para
-                    contactarte si fuera necesario y verificar tu perfil, 
-                    todos debemos estar seguros!</p> 
-                    <p class="Contacto-text">
-                    Además si quieres
-                    buscar Servicios en la zona o a domicilio, tienes
-                    que decirnos dónde vives. 
+                    Pots posar-te en contacte amb nosaltres perquè resolguem qualsevol dubte o problema que tinguis. Si la vostra consulta està relacionada amb alguna reserva, si us plau indica el número de la teva reserva.
                     </p>
                     <div class="Ayuda-footer">
-                        <?php echo do_shortcode( '[contact-form-7 id="a1f8f59" title="contacto"]' ); ?>
+                        <?php echo do_shortcode( '[contact-form-7 id="2f3db4f" title="Ajuda"]' ); ?>
                     </div>
                 </div>
             </div>

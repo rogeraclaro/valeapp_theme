@@ -27,13 +27,14 @@ get_header();
             </div>
             <div class="col-12">
                 <h2 class="title">
-                    Tareas contratadas
+                    Tasques contractades
                 </h2>
             </div>
         </div>
     </div>
 </section>
 <div class="contracted-tasks">
+    <div class="container">
     <ul class="nav nav-pills contracted-tasks-pills mb-3" id="pills-tab-contracted-tasks" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="contracted-tasks-pill active" id="pills-contracted-tasks-tab-active" data-bs-toggle="pill" data-bs-target="#pills-contracted-tasks-active" type="button" role="tab" aria-controls="pills-contracted-tasks-active" aria-selected="true">Activas</button>
@@ -192,6 +193,7 @@ get_header();
             </div>
         </div>
     </div>
+</div>
 </div>
 <?php
 get_footer();

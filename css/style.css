@@ -6709,6 +6709,69 @@ footer .accordion-button {
   border: 0;
 }
 
+form.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+form.wpcf7-form p {
+  text-align: left;
+  font-family: "Open Sans";
+  font-weight: 700;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #575550;
+  line-height: 1.3rem;
+  width: min-content;
+}
+
+span.red {
+  color: #ff0000;
+} 
+
+input.wpcf7-form-control.wpcf7-text, textarea {
+  border-color: #5aab9f;
+  border-top: 2px solid #5aab9f;
+  border-left: 2px solid #5aab9f;
+  border-bottom: 2px solid #5aab9f;
+  border-right: 2px solid #5aab9f;
+  border-radius: 7px;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.5rem;
+}
+
+input.wpcf7-form-control.wpcf7-submit {
+  background: #5aab9f;
+  border: none;
+  padding: 0.5rem 3rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: 700;
+}
+
+.PreguntasFrecuentes-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+.reg-modal {
+  display: block;
+  font-family: 'Century Gothic';
+  color: #575550;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 2px solid #575550;
+  border-radius: 10px;
+  padding: 3rem 2rem;
+}
+
 @media (min-width: 768px) {
 	.Homecategories-content {
     width: auto;

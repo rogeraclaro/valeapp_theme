@@ -30,13 +30,14 @@ get_header();
             </div>
             <div class="col-12">
                 <h2 class="title">
-                    Solicitudes
+                    Solicituds
                 </h2>
             </div>
         </div>
     </div>
 </section>
 <div class="JodRequests">
+    <div class="container">
     <ul class="nav nav-pills JodRequests-pills " id="pills-tab-JodRequests" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="JodRequests-pill active" id="pills-JodRequests-tab-active" data-bs-toggle="pill" data-bs-target="#pills-JodRequests-active" type="button" role="tab" aria-controls="pills-JodRequests-active" aria-selected="true">Nuevas</button>
@@ -207,6 +208,7 @@ get_header();
             </div>
         </div>
     </div>
+</div>
 </div>
 
     <?php

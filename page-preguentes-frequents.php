@@ -21,15 +21,15 @@ get_header();
             <div class="row">
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#"="#">Mi cuenta</a></li>
-                            <li class="breadcrumb-item"><a href="#"="#">Centro de soporte</a></li>
+                    <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">El meu compte</a></li>
+                            <li class="breadcrumb-item"><a href="#">Centre de suport</a></li>
                         </ol>
                     </nav>
                 </div>
                 <div class="col-12">
                     <h2 class="title">
-                        Ayuda
+                        Ajuda
                     </h2>
                 </div>
             </div>
@@ -38,7 +38,7 @@ get_header();
     <section class="PreguntasFrecuentes">
         <div class="PreguntasFrecuentes-container">
             <h3 class=PreguntasFrecuentes-title>
-                Preguntas frecuentes
+                Preguntes freqüents
             </h3>
             <div class="PreguntasFrecuentes-modal" id="questionTextBox">
             <div class="PreguntasFrecuentes-close" id="questionCloseBtn">
@@ -54,7 +54,7 @@ get_header();
             <div class="PreguntasFrecuentes-content">
                 <button class="PreguntasFrecuentes-btn">
                 <img class="img-fluid PreguntasFrecuentes-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-icon1-cards-help.png" alt="valeapp">
-                Mi cuenta
+                El meu compte
                 </button>
                 <button class="PreguntasFrecuentes-btn">
                 <div class="PreguntasFrecuentes-boxImg">
@@ -63,27 +63,27 @@ get_header();
                         ?
                     </span>
                 </div>
-                Mis Vales
+                Els meus Vales
                 </button>
                 <button class="PreguntasFrecuentes-btn">
                 <img class="img-fluid PreguntasFrecuentes-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-icon3-cards-help.png" alt="valeapp">
-                Mis reservas
+                Les meves reserves
                 </button>
                 <button class="PreguntasFrecuentes-btn">
                 <img class="img-fluid PreguntasFrecuentes-icon icon2" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-icon4-cards-help.png" alt="valeapp">
-                Importante
+                Important<br><br>
                 </button>
                 <button class="PreguntasFrecuentes-btn">
                 <img class="img-fluid PreguntasFrecuentes-icon icon2" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-icon5-cards-help.png" alt="valeapp">
-                Qué pasa si?
+                Què passa si?
                 </button>
             </div>
             <div class="Ayuda-footer">
                 <a class="Ayuda-help" href="/ajuda">
-                    ¿Necesitas ayuda?
+                    ¿Necessites ajuda?
                 </a>
                 <a class="Ayuda-delete" href="/dades-proveidor">
-                    Eliminar cuenta
+                    Eliminar compte
                 </a>
             </div>
         </div>

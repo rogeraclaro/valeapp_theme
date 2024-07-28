@@ -12,7 +12,7 @@ if (isset($_POST['register_provider_submit'])) {
     $last_name = $_POST['last_name'];
 
     if (username_exists($username) || email_exists($email)) {
-        echo "El usuario o el correo electrónico ya existen. Por favor, inicia sesión.";
+        echo "<div class='reg-modal'>L'usuari o l'email ja existeixen. Si us plau, inicieu sessió.</div>";
     } else {
 
         $user_id = wp_insert_user([
@@ -25,7 +25,7 @@ if (isset($_POST['register_provider_submit'])) {
         ]);
 
         if (is_wp_error($user_id)) {
-            echo "Hubo un error en el registro. Por favor, inténtalo de nuevo.";
+            echo "<div class='reg-modal'>Error de registre. Si us plau, torneu-ho a intentar.</div>";
         } 
         else {
             wp_redirect(home_url('/iniciar-sessio-proveidors')); 

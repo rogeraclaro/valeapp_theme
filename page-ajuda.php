@@ -22,14 +22,14 @@ get_header();
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#"="#">Mi cuenta</a></li>
-                            <li class="breadcrumb-item"><a href="#"="#">Centro de soporte</a></li>
+                            <li class="breadcrumb-item"><a href="#">El meu compte</a></li>
+                            <li class="breadcrumb-item"><a href="#">Centre de suport</a></li>
                         </ol>
                     </nav>
                 </div>
                 <div class="col-12">
                     <h2 class="title">
-                        Ayuda
+                        Ajuda
                     </h2>
                 </div>
             </div>
@@ -43,7 +43,7 @@ get_header();
                     <ul>
                         <li class="Ayuda-item">
                         <a href="#" class="Ayuda-link head">
-                            Mi cuenta 
+                            El meu compte 
                             <img class="Ayuda-iconArrowLeft "
                             src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-chevron-bold.png"
                             alt="ValeApp"/>
@@ -51,7 +51,7 @@ get_header();
                         </li>
                         <li class="Ayuda-item">
                         <a href="/contacte" class="Ayuda-link">
-                            Contacto 
+                            Contacte 
                             <img class="Ayuda-iconArrow"
                             src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
                             alt="ValeApp"/>
@@ -59,7 +59,7 @@ get_header();
                         </li>
                         <li class="Ayuda-item">
                         <a href="#" class="Ayuda-link">
-                            Puntuaciones 
+                            Puntuacions 
                             <img class="Ayuda-iconArrow"
                             src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
                             alt="ValeApp"/>
@@ -67,15 +67,15 @@ get_header();
                         </li>
                         <li class="Ayuda-item">
                             <a href="#" class="Ayuda-link">
-                            Mis reservas 
+                            Les meves reserves 
                             <img class="Ayuda-iconArrow"
                             src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
                             alt="ValeApp"/>
                         </a>
                         </li>
                         <li class="Ayuda-item">
-                        <a href="#" class="Ayuda-link">
-                            Mis solicitudes 
+                        <a href="/solicituds" class="Ayuda-link">
+                            Les meves solicituds 
                             <img class="Ayuda-iconArrow"
                             src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
                             alt="ValeApp"/>
@@ -84,10 +84,10 @@ get_header();
                     </ul>
                     <div class="Ayuda-footer">
                         <a class="Ayuda-help" href="/contacte">
-                            ¿Necesitas ayuda?
+                            ¿Necessites ajuda?
                         </a>
-                        <a class="Ayuda-delete" href="eliminar-cuenta">
-                            Eliminar cuenta
+                        <a class="Ayuda-delete" href="/esborrar-compte">
+                            Eliminar compte
                         </a>
                     </div>
                 </div>

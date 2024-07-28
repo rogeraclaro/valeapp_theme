@@ -35,6 +35,7 @@ get_header();
         </div>
     </section>
     <section class="Messages">
+        <div class="container">
         <div class="Messages-row">
             <div class="Messages-count">
                 <p class="Messages-count-label">Nuevos</p>
@@ -217,6 +218,7 @@ get_header();
                 </div>
             </li>
         </ul>
+    </div>
     </section>
 <?php
 get_footer();
