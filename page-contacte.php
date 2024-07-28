@@ -50,7 +50,8 @@ get_header();
                     Pots posar-te en contacte amb nosaltres perquè resolguem qualsevol dubte o problema que tinguis. Si la vostra consulta està relacionada amb alguna reserva, si us plau indica el número de la teva reserva.
                     </p>
                     <div class="Ayuda-footer">
-                        <?php echo do_shortcode( '[contact-form-7 id="2f3db4f" title="Ajuda"]' ); ?>
+                        <!-- <?php echo do_shortcode( '[contact-form-7 id="2f3db4f" title="Ajuda"]' ); ?> -->
+                        <?php echo do_shortcode('[contact-form-7 id="6609f0a" title="Ajuda"]'); ?>
                     </div>
                 </div>
             </div>
