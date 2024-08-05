@@ -14,6 +14,8 @@
  */
 
 get_header();
+//Utilizando el plugin better message
+echo do_shortcode('[better_messages]');
 ?>
     <section class="section2 messages">
         <div class="container">
