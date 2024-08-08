@@ -89,7 +89,7 @@ get_header();
         <div class="col-12 col-sm-4">
           <!-- Silver -->
           <div class="Membership-plan">
-            <div class="Membership-plan-name">Bàsic</div>
+            <div class="Membership-plan-name">Silver</div>
             <div class="Membership-plan-price">10<span>€</span></div>
             <div class="Membership-plan-row">
               <p class="Membership-plan-text">Àrees</p>
@@ -134,7 +134,7 @@ get_header();
         <div class="col-12 col-sm-4">
           <!-- Gold -->
           <div class="Membership-plan">
-            <div class="Membership-plan-name">Premium</div>
+            <div class="Membership-plan-name">Gold</div>
             <div class="Membership-plan-price">25<span>€</span></div>
             <div class="Membership-plan-row">
               <p class="Membership-plan-text">Àrees</p>
@@ -178,7 +178,7 @@ get_header();
         <div class="col-12 col-sm-4">
           <!-- Platinum -->
           <div class="Membership-plan">
-            <div class="Membership-plan-name">VIP</div>
+            <div class="Membership-plan-name">Platinum</div>
             <div class="Membership-plan-price">50<span>€</span></div>
             <div class="Membership-plan-row">
               <p class="Membership-plan-text">Àrees</p>

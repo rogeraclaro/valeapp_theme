@@ -87,7 +87,7 @@ get_header();
           <p class="text">
             <?php echo($descriptionS1); ?>
           </p>
-          <a class="HomeOffer-btn" href="/servicios-generica"><?php echo($buttonS1); ?></a>
+          <a class="HomeOffer-btn" href="/fer-se-membre"><?php echo($buttonS1); ?></a>
         </div>
       </div>
     </div>
@@ -328,7 +328,7 @@ get_header();
               </div>
             </div>
           </div>
-      <button class="button">Veure tots els articles</button>
+      <!-- <button class="button">Veure tots els articles</button> -->
     </div>
         <?php
           }

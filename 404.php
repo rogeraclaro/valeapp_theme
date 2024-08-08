@@ -21,7 +21,9 @@ get_header();
 
 			<div class="page-content" style="display: flex;align-items: center;justify-content: center;height:50vh;">
 				<p>
-					<h3 class="page-title"><?php esc_html_e( 'Error 404. Pàgina no trobada.', 'valeapp' ); ?></h3>
+					<h3 class="page-title"><?php esc_html_e( 'Ho sentim, no hem trobat la pàgina sol·licitada', 'valeapp' ); ?></h3>
+					<br><br>
+					<h5 class="page-title"><a href="/">Inici</a></h5>
 				</p>
 				<!-- <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'valeapp' ); ?></p>
 
