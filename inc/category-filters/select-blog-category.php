@@ -26,7 +26,7 @@ function select_category($filter)
         'Contracta' => [
             'Publicitat', 'Desenvolupament_i_app', 'Analisi_de_dades', 
             'Legal', 'Traduccions', 'Xarxes_socials', 
-            'Foto_video', 'Hostaleria', 'Guia_turistic', 
+            'Foto_o_video', 'Hostaleria', 'Guia_turistic', 
             'Agent_viatges', 'Influencers'
         ],
         'Bellesa' => [

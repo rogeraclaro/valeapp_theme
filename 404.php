@@ -13,12 +13,17 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'valeapp' ); ?></h1>
-			</header><!-- .page-header -->
+			<!-- <header class="page-header" style="text-align:center; justify-content: center;">
+				<p>
+				<h3 class="page-title"><?php esc_html_e( '404. Pàgina no trobada.', 'valeapp' ); ?></h3>
+				</p>
+			</header> -->
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'valeapp' ); ?></p>
+			<div class="page-content" style="display: flex;align-items: center;justify-content: center;height:50vh;">
+				<p>
+					<h3 class="page-title"><?php esc_html_e( 'Error 404. Pàgina no trobada.', 'valeapp' ); ?></h3>
+				</p>
+				<!-- <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'valeapp' ); ?></p>
 
 					<?php
 					get_search_form();
@@ -41,15 +46,14 @@ get_header();
 							);
 							?>
 						</ul>
-					</div><!-- .widget -->
+					</div> -->
 
-					<?php
-					/* translators: %1$s: smiley */
+					<!-- <?php
 					$valeapp_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'valeapp' ), convert_smilies( ':)' ) ) . '</p>';
 					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$valeapp_archive_content" );
 
 					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+					?> -->
 
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->

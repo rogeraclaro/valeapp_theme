@@ -177,7 +177,7 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 										<a href="/categories/legal" class="NavMenu-service-link">Legal</a>
 										<a href="/categories/traduccions" class="NavMenu-service-link">Traduccions</a>
 										<a href="/categories/xarxes_socials" class="NavMenu-service-link">Xarxes socials</a>
-										<a href="/categories/foto-video" class="NavMenu-service-link">Foto / Video</a>
+										<a href="/categories/foto_o_video" class="NavMenu-service-link">Foto / Video</a>
 										<a href="/categories/hostaleria" class="NavMenu-service-link">Hostaleria</a>
 										<a href="/categories/guia_turistic" class="NavMenu-service-link">Guia turistic</a>
 										<a href="/categories/agent_viatges" class="NavMenu-service-link">Agent viatges</a>
