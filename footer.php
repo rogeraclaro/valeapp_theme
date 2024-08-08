@@ -152,19 +152,19 @@
 						</p> -->
 						<ul class="accordion-links row">
 							<li class="col-12">
-								<a href="#">Termes i condicions</a>
+								<a href="/termes-i-condicions">Termes i condicions</a>
 							</li>
 							<li class="col-12">
-								<a href="#">Política de privacitat</a>
+								<a href="/politica-de-privacitat">Política de privacitat</a>
 							</li>
 							<li class="col-12">
-								<a href="#">Política de cookies</a>
+								<a href="/politica-de-cookies">Política de cookies</a>
 							</li>
 							<li class="col-12">
-								<a href="#">Política de cancel.lació</a>
+								<a href="/politica-de-cancel-lacio">Política de cancel.lació</a>
 							</li>
 							<li class="col-12">
-								<a href="#">Avís Legal</a>
+								<a href="/avis-legal">Avís Legal</a>
 							</li>
 						</ul>
 					</div>

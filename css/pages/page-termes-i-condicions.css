@@ -1,0 +1,19 @@
+.align-text-left {
+  text-align: left !important;
+}
+
+section.section2.policy {
+  padding-top: 0;
+  background-color: #fff;
+
+  ul {
+    padding-left: 3rem;
+  }
+}
+
+@media (min-width: 767.98px) {
+  section.section2.policy {
+    background-color: #fff;
+    padding-top: 4rem;
+  }
+}
