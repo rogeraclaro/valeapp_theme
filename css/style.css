@@ -6775,10 +6775,10 @@ input.wpcf7-form-control.wpcf7-submit {
 
 .menu-serveis #accordionCategories {
   display: flex;
-  flex-wrap: wrap;
   align-content: center;
-  justify-content: center;
+  justify-content: flex-start !important;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .menu-serveis #accordionCategories ul.list {
