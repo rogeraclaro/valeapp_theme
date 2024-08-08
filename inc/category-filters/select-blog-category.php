@@ -10,7 +10,7 @@ function select_category($filter)
         'Cuida_els_teus' => 'Cuidados',
         'Ment' => 'Mente',
         'Esport' => 'Deporte',
-        'Aprèn' => 'Aprende',
+        'Apren' => 'Aprende',
         'Llar' => 'Hogar'
     ];
 
@@ -47,7 +47,7 @@ function select_category($filter)
             'Amb_pilota', 'Amb_raqueta', 'Al_aigua', 
             'Al_aire', 'Sobre_rodes'
         ],
-        'Aprèn' => [
+        'Apren' => [
             'Idiomes', 'Instruments', 'Classes_de_repas', 
             'Ball', 'Inversions', 'Pintura', 
             'Fotografia', 'Jocs', 'Poquer', 'Cuina'

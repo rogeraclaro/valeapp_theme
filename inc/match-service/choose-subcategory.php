@@ -13,7 +13,7 @@ if ($category_provider) {
             $price = $group_profesional['precio_maximo_por_hora'];
             $price_search = 'precio_por_hora';
             break;
-        case "Aprèn":
+        case "Apren":
             $subcategory_provider = $group_category['apren'];
             $subcategory_search = 'apren';
             $subcategory_result = $group_category_publisher['apren'];

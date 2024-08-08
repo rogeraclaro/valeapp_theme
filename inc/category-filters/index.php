@@ -81,7 +81,7 @@ switch ($title) {
         $title_cat = "Esport";
         break;
     case "Aprende":
-        $title_cat = "Aprèn";
+        $title_cat = "Apren";
         break;
     case "Hogar":
         $title_cat = "Llar";
