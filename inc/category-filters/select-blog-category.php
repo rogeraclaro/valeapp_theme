@@ -16,8 +16,8 @@ function select_category($filter)
 
     $specific_filters = [
         'Esdeveniments' => [
-            'Empreses', 'Noces', 'Comiats_o_aniversari', 
-            'Dj_o_musica_en_viu', 'Promocionals', 'Sense_animo_de_lucre'
+            'Empreses', 'Noces', 'Comiats_o_anniversari', 
+            'Dj_o_musica_en_viu', 'Promocionals', 'Sense_anim_de_lucre'
         ],
         'Comparteix' => [
             'Espai', 'Estudi', 'Consulta', 
@@ -53,7 +53,7 @@ function select_category($filter)
             'Fotografia', 'Jocs', 'Poquer', 'Cuina'
         ],
         'Llar' => [
-            'Fontaneria', 'Neteja', 'Pintar_cases', 
+            'Lampista', 'Neteja', 'Pintar_cases', 
             'Mudanca', 'Obres', 'Electricitat', 
             'Muntatge_mobles', 'Mecanic', 'Solucions_eco'
         ]

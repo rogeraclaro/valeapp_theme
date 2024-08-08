@@ -1,5 +1,5 @@
 <?php
-
+ 
 /**
  * The header for our theme
  *
@@ -23,6 +23,13 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 	<meta name="facebook-domain-verification" content="" />
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta name="google-site-verification" content="" />
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<?php wp_head(); ?>
 </head>
 
@@ -202,7 +209,7 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
 										<a href="/categories/comiats_o_anniversari" class="NavMenu-service-link">Comiats / anniversari</a>
 										<a href="/categories/dj_o_musica_en_viu" class="NavMenu-service-link">DJ / Musica en viu</a>
 										<a href="/categories/promocionals" class="NavMenu-service-link">Promocionals</a>
-										<a href="/categories/sense_animo_de_lucre" class="NavMenu-service-link">Sense ànim de lucre</a>
+										<a href="/categories/sense_anim_de_lucre" class="NavMenu-service-link">Sense ànim de lucre</a>
 									</div>
 								</div>
 							</div>
