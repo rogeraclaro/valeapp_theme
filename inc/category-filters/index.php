@@ -244,21 +244,23 @@ if (!$posts) {
             <section class="section3 pages users" id="page3">
                 <div class="section3">
                     <form method="GET">
-                        <label for="sort_order">Sort by:</label>
+                        <label for="sort_order">Ordena:</label>
                         <select name="sort_order" id="sort_order" onchange="this.form.submit()">
-                            <option value="">Default</option>
+                            <option value="">Per defecte</option>
                             <option value="price_asc" <?php if ($sort_order == 'price_asc')
-                                echo 'selected'; ?>>Price: Low to High
+                                echo 'selected'; ?>>Preu: de més baix a més alt
+                            </option>
+                            <option value="price_desc" <?php if ($sort_order == 'price_desc')
+                                echo 'selected'; ?>>Preu: de més alt a més baix
                             </option>
                             <option value="ranking_desc" <?php if ($sort_order == 'ranking_desc')
-                                echo 'selected'; ?>>Ranking: High to
-                                Low</option>
+                                echo 'selected'; ?>>Ranking: de més alt a més baix</option>
                         </select>
                     </form>
                     <form method="GET">
-                        <label for="place_order">Place by:</label>
+                        <label for="place_order">Lloc:</label>
                         <select name="place_order" id="place_order" onchange="this.form.submit()">
-                            <option value="">Default</option>
+                            <option value="">Per defecte</option>
                             <?php foreach ($placeItems as $place): ?>
                                 <option value="<?= $place; ?>" <?php if ($place_order == $place)
                                       echo 'selected'; ?>><?= $place; ?>
