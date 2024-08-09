@@ -10,14 +10,14 @@ function select_category($filter)
         'Cuida_els_teus' => 'Cuidados',
         'Ment' => 'Mente',
         'Esport' => 'Deporte',
-        'Aprèn' => 'Aprende',
+        'Apren' => 'Aprende',
         'Llar' => 'Hogar'
     ];
 
     $specific_filters = [
         'Esdeveniments' => [
-            'Empreses', 'Noces', 'Comiats_o_aniversari', 
-            'Dj_o_musica_en_viu', 'Promocionals', 'Sense_animo_de_lucre'
+            'Empreses', 'Noces', 'Comiats_o_anniversari', 
+            'Dj_o_musica_en_viu', 'Promocionals', 'Sense_anim_de_lucre'
         ],
         'Comparteix' => [
             'Espai', 'Estudi', 'Consulta', 
@@ -26,7 +26,7 @@ function select_category($filter)
         'Contracta' => [
             'Publicitat', 'Desenvolupament_i_app', 'Analisi_de_dades', 
             'Legal', 'Traduccions', 'Xarxes_socials', 
-            'Foto_video', 'Hostaleria', 'Guia_turistic', 
+            'Foto_o_video', 'Hostaleria', 'Guia_turistic', 
             'Agent_viatges', 'Influencers'
         ],
         'Bellesa' => [
@@ -47,13 +47,13 @@ function select_category($filter)
             'Amb_pilota', 'Amb_raqueta', 'Al_aigua', 
             'Al_aire', 'Sobre_rodes'
         ],
-        'Aprèn' => [
+        'Apren' => [
             'Idiomes', 'Instruments', 'Classes_de_repas', 
             'Ball', 'Inversions', 'Pintura', 
             'Fotografia', 'Jocs', 'Poquer', 'Cuina'
         ],
         'Llar' => [
-            'Fontaneria', 'Neteja', 'Pintar_cases', 
+            'Lampista', 'Neteja', 'Pintar_cases', 
             'Mudanca', 'Obres', 'Electricitat', 
             'Muntatge_mobles', 'Mecanic', 'Solucions_eco'
         ]

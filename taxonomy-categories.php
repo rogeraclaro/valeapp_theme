@@ -27,14 +27,14 @@ get_header();
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="<?php echo home_url(); ?>">Inici</a></li>
-						<li class="breadcrumb-item"><a href="#">Serveis</a></li>
-						<li class="breadcrumb-item"><a href="#"><?php echo $title_cat; ?></a></li>
+						<li class="breadcrumb-item"><a href="/categories">Serveis</a></li>
+						<li class="breadcrumb-item"><a href="/categories/<?php echo strtolower($title_cat) ?>"><?php echo $title_catecho; ?></a></li>
 					</ol>
 				</nav>
 			</div>
 			<div class="col-12">
 				<h2 class="title">
-					<?php echo $title_cat; ?>
+					<?php echo $title_catecho; ?>
 				</h2>
 			</div>
 		</div>
@@ -97,7 +97,7 @@ if ($query) {
 				<p class="text">
 					<?php echo ($textP); ?>
 				</p>
-				<a class="HomeOffer-btn" href="#"><?php echo ($botoP); ?></a>
+				<a class="HomeOffer-btn" href="/fer-se-membre"><?php echo ($botoP); ?></a>
 			</div>
 		</div>
 	</div>

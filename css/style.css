@@ -2810,7 +2810,7 @@ header .overlay {
 
 .section7 .list {
   list-style: none;
-  padding-left: 4.7rem;
+  padding-left: 0;
   margin-bottom: 0;
 }
 
@@ -6030,7 +6030,7 @@ a.HomeOffer-btn {
 
 .section7.servicio-generica{
   padding-top: 0rem;
-  margin-top: 4.6rem;
+  margin-top: 0rem;
 }
 
 .section7.servicio-generica .accordion-button:not(.collapsed) {
@@ -7213,6 +7213,98 @@ input.wpcf7-form-control.wpcf7-submit {
     background-color: #fff;
     color: #5aab9f;
     transition: all 0.3s;
+  }
+
+  .menu-serveis #accordionCategories {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start !important;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .menu-serveis #accordionCategories ul.list {
+    list-style: none;
+    padding-left: 4.7rem;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .menu-serveis #accordionCategories .accordion-button.collapsed {
+    padding-left: 2.2rem;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    color: #575550;
+    font-weight: 700;
+    font-family: "Open Sans";
+    margin-top: 1rem;
+  }
+  
+  .menu-serveis #accordionCategories .accordion-button.collapsed a {
+    padding-left: 2.2rem;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    color: #575550;
+    font-weight: 700;
+    font-family: "Open Sans";
+  }
+  
+  .menu-serveis #accordionCategories a {
+    color: #575550;
+    border: 1px solid #e2eeec;
+    font-weight: 500;
+    font-family: "Open Sans";
+    text-decoration: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    display: block;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    width: auto;
+    height: 4.4rem;
+    margin-bottom: 0;
+    border-radius: 35px;
+  }
+  
+  .menu-serveis #accordionCategories a:hover {
+    background-color: #e2eeec;
+    padding: 1rem;
+    border-radius: 35px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .menu-serveis #accordionCategories .accordion-button.collapsed:hover {
+    background-color: #e2eeec;
+    border-radius: 35px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .menu-serveis #accordionCategories .accordion-button:not(.collapsed) {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  .espai {
+    height: 7rem;
+  }
+
+  .section7.servicio-generica{
+    padding-top: 0rem;
+    margin-top: 4.6rem;
+  }
+  
+  .section7 .list {
+    list-style: none;
+    padding-left: 4.7rem;
+    margin-bottom: 0;
   }
 }
 

@@ -6,7 +6,7 @@ function category_search_filter($category_search, $category_group, &$subcategory
             case "Llar":
                 $subcategory = $category_group['llar'];
                 break;
-            case "Aprèn":
+            case "Apren":
                 $subcategory = $category_group['apren'];
                 break;
             case "Esport":

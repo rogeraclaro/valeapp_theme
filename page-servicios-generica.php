@@ -21,28 +21,43 @@ get_header();
 				<div class="col-12">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-						  <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-						  <li class="breadcrumb-item"><a href="#">Servicios</a></li>
+						  <li class="breadcrumb-item"><a href="/">Inici</a></li>
+						  <li class="breadcrumb-item"><a href="#">Serveis</a></li>
 						</ol>
 					  </nav>
 				</div>
 				<div class="col-12">
 					<h2 class="title">
-						Categorías
+						Categories
 					</h2>
 				</div>
 			</div>
 		</div>
     </section>
-<?php
-menu_reuse();
-?>
-    <section class="OfferService">
-        <img class="OfferService-image" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-HomeOffer.png" alt="valeapp">
-        <h2 class="OfferService-title">¿Quieres ofrecer tus <br class="xs-br"/> servicios en Vale?</h2>
-        <p class="OfferService-text">Lorem ipsum dolor sit amet <br class="xs-br"/> consectetur adipisicing elit, sed do <br class="xs-br"/> eiusmond tempor indicidunt ut labore. <br class="xs-br"/> et dolore magna aliqua. Ut enim ad</p>
-        <a class="HomeOffer-btn d-block" href="/iniciar-sessio-professional-o-usuari">Ofrecer servicios</a>
-    </section>
+	<section class="menu-serveis">
+		<?php
+			menu_reuse();
+		?>
+	</section> 
+	<section class="section3 Promo HomeOffer">
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-12 col-sm-6">
+					<img class="img-fluid offer" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-HomeOffer.png" alt="valeapp">
+				</div>
+				<div class="col-12 col-sm-6 ps-sm-4">
+					<h2 class="title">Vols oferir els teus serveis a Vale?</h2>
+					<p class="text">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
+						Sed do eiusmod tempor incididunt ut labore.				
+					</p>
+					<a class="HomeOffer-btn" href="/fer-se-membre">Oferir serveis</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="espai">
+	</div>
 
 <?php
 get_footer();

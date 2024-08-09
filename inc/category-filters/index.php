@@ -81,7 +81,7 @@ switch ($title) {
         $title_cat = "Esport";
         break;
     case "Aprende":
-        $title_cat = "Aprèn";
+        $title_cat = "Apren";
         break;
     case "Hogar":
         $title_cat = "Llar";
@@ -95,6 +95,8 @@ switch ($title) {
 if (!$title_cat) {
     $last_part = ucfirst($last_part);
     $title_cat = $last_part;
+    $title_catecho = str_ireplace(["al_a", "_o_", "_", "-", "mudanca"], ["a l'a", " / ", " ", " ", "mudança"], $last_part);
+
 }
 
 //Renderizado para los filtros/Categorias
@@ -295,7 +297,7 @@ if (!$posts) {
             <?php
         } else {
             ?>
-            <h1>Encara no hi ha proveïdors</h1>
+            <h5>Malauradament encara no tenim proveïdors registrats en aquest servei.<br /></h5>
             <?php
             // render_providers($users);
         }
