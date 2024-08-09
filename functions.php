@@ -251,11 +251,11 @@ require_once plugin_dir_path(__FILE__) . 'inc/login/redirection-page.php';
 require_once plugin_dir_path(__FILE__) . 'inc/delete-user.php';
 require_once plugin_dir_path(__FILE__) . 'inc/menu-reuse.php';
 require_once plugin_dir_path(__FILE__) . 'inc/functions-reuse/subcategory-search.php';
+require_once plugin_dir_path(__FILE__) . 'inc/functions-reuse/user-post-id.php';
 require_once plugin_dir_path(__FILE__) . 'inc/redirections-breadcrumbs/my-account.php';
 require_once plugin_dir_path(__FILE__) . 'inc/match-service/search_author.php';
 require_once plugin_dir_path(__FILE__) . 'inc/send-message-match/send_email.php';
 require_once plugin_dir_path(__FILE__) . 'inc/search-task/search.php';
-require_once plugin_dir_path(__FILE__) . 'inc/customer-supplier-requests.php';
 
 // function obtener_valor_de_correo() {
 //     if (is_user_logged_in()) {
@@ -280,39 +280,39 @@ add_filter('post_thumbnail_html', 'add_css_class_to_thumbnail', 10, 5);
 
 
 //Creating the CPT config for requests
-function create_cpt_requests() {
-    $labels = array(
-        'name' => 'Solicitudes',
-        'singular_name' => 'Solicitud',
-        'menu_name' => 'Solicitudes',
-        'name_admin_bar' => 'Solicitud',
-        'add_new' => 'Añadir Nueva',
-        'add_new_item' => 'Añadir Nueva Solicitud',
-        'new_item' => 'Nueva Solicitud',
-        'edit_item' => 'Editar Solicitud',
-        'view_item' => 'Ver Solicitud',
-        'all_items' => 'Todas las Solicitudes',
-        'search_items' => 'Buscar Solicitudes',
-        'parent_item_colon' => 'Solicitud Padre:',
-        'not_found' => 'No se encontraron solicitudes.',
-        'not_found_in_trash' => 'No se encontraron solicitudes en la papelera.',
-    );
+// function create_cpt_requests() {
+//     $labels = array(
+//         'name' => 'Solicitudes',
+//         'singular_name' => 'Solicitud',
+//         'menu_name' => 'Solicitudes',
+//         'name_admin_bar' => 'Solicitud',
+//         'add_new' => 'Añadir Nueva',
+//         'add_new_item' => 'Añadir Nueva Solicitud',
+//         'new_item' => 'Nueva Solicitud',
+//         'edit_item' => 'Editar Solicitud',
+//         'view_item' => 'Ver Solicitud',
+//         'all_items' => 'Todas las Solicitudes',
+//         'search_items' => 'Buscar Solicitudes',
+//         'parent_item_colon' => 'Solicitud Padre:',
+//         'not_found' => 'No se encontraron solicitudes.',
+//         'not_found_in_trash' => 'No se encontraron solicitudes en la papelera.',
+//     );
 
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'publicly_queryable' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'query_var' => true,
-        'rewrite' => array('slug' => 'solicitudes'),
-        'capability_type' => 'post',
-        'has_archive' => true,
-        'hierarchical' => false,
-        'menu_position' => null,
-        'supports' => array('title','author'),
-    );
+//     $args = array(
+//         'labels' => $labels,
+//         'public' => true,
+//         'publicly_queryable' => true,
+//         'show_ui' => true,
+//         'show_in_menu' => true,
+//         'query_var' => true,
+//         'rewrite' => array('slug' => 'solicitudes'),
+//         'capability_type' => 'post',
+//         'has_archive' => true,
+//         'hierarchical' => false,
+//         'menu_position' => null,
+//         'supports' => array('title','author'),
+//     );
 
-    register_post_type('solicitudes', $args);
-}
-add_action('init', 'create_cpt_requests');
+//     register_post_type('solicitudes', $args);
+// }
+// add_action('init', 'create_cpt_requests');
