@@ -1,4 +1,5 @@
 <?php
+require_once plugin_dir_path(__FILE__) . 'requests-post-actions.php';
 $all_requests = [
     'confirmed_requests' => [],
     'available_requests' => [],
@@ -66,6 +67,7 @@ function load_client_requests($post_id, &$all_requests)
 {
     $args = array(
         'post_type' => 'solicitudes',
+        'post_status' => 'publish',
         'meta_query' => array(
             array(
                 'key' => 'cliente',
@@ -112,38 +114,9 @@ function load_client_requests($post_id, &$all_requests)
 
 function load_provider_requests($post_id, &$all_requests)
 {
-    $args = array(
-        'post_type' => 'solicitar-servicio',
-        'posts_per_page' => -1,
-        'meta_query' => array(
-            array(
-                'key' => 'estado',
-                'value' => 'disponible',
-                'compare' => '='
-            )
-        )
-    );
-
-    $query = new WP_Query($args);
-
-    if ($query->have_posts()) {
-        while ($query->have_posts()) {
-            $query->the_post();
-            $custom_request = (object) [
-                'post_title' => get_the_title(),
-                'ID' => get_the_ID(),
-                'author' => get_the_author_meta('ID')
-            ];
-            $client_id = get_the_author_meta('ID');
-            $client_post_id = get_user_post_id($client_id, 'cliente');
-            $status = get_field('estado') ?? 'disponible';
-            $request_data = build_request_detail($custom_request, $client_id, $client_post_id, $status, 'client', 0);
-            $all_requests['available_requests'][] = $request_data;
-        }
-    }
-
     $requests_args = array(
         'post_type' => 'solicitudes',
+        'post_status' => 'publish',
         'meta_query' => array(
             array(
                 'key' => 'proveedor',
@@ -159,6 +132,7 @@ function load_provider_requests($post_id, &$all_requests)
     );
 
     $query = new WP_Query($requests_args);
+    $all_related_requests = [];
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
@@ -166,7 +140,7 @@ function load_provider_requests($post_id, &$all_requests)
             $solicitud = get_field('solicitud servicio');
             $provider_request_data = get_field('cliente');
             $request_data = build_request_detail($solicitud, $provider_request_data->post_author, $provider_request_data->ID, $status, 'client', get_the_ID());
-
+            $all_related_requests[] = $solicitud->ID;
             switch ($status) {
                 case 'activo':
                     $all_requests['actived_requests'][] = $request_data;
@@ -182,6 +156,40 @@ function load_provider_requests($post_id, &$all_requests)
                     break;
                 default:
                     break;
+            }
+        }
+    }
+
+
+    $args = array(
+        'post_type' => 'solicitar-servicio',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+        'meta_query' => array(
+            array(
+                'key' => 'estado',
+                'value' => 'disponible',
+                'compare' => '='
+            )
+        )
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            if(!in_array(get_the_ID(), $all_related_requests)){
+                $custom_request = (object) [
+                    'post_title' => get_the_title(),
+                    'ID' => get_the_ID(),
+                    'author' => get_the_author_meta('ID')
+                ];
+                $client_id = get_the_author_meta('ID');
+                $client_post_id = get_user_post_id($client_id, 'cliente');
+                $status = get_field('estado') ?? 'disponible';
+                $request_data = build_request_detail($custom_request, $client_id, $client_post_id, $status, 'client', 0);
+                $all_requests['available_requests'][] = $request_data;
             }
         }
     }
@@ -209,27 +217,28 @@ function render_requests($requests, $perms)
         $provider_photo = isset($request['provider_photo']) ? $request['provider_photo'] : null;
         $provider_name = isset($request['provider']['name']) ? esc_html($request['provider']['name']) : 'Nombre no disponible';
         $solicitud_title = isset($request['solicitud']->post_title) ? esc_html($request['solicitud']->post_title) : 'Título no disponible';
+        $solicitud_id = isset($request['solicitud']->ID) ? ($request['solicitud']->ID) : 0;
         $provider_photo_url = $provider_photo && isset($provider_photo['url']) ? esc_url($provider_photo['url']) : get_stylesheet_directory_uri() . '/img/valeapp-providers-ervice-user.png';
         $btns = "";
         $footer_options = "";
         if ($perms) {
             //BUTTONS
             if (isset($perms['confirm'])) {
-                $btns = $btns . '<button class="JodRequests-accept">
+                $btns = $btns . '<button class="JodRequests-accept" type="submit" name="action" value="request_confirm_submit">
                         <span>
                             Confirmar
                         </span>
                     </button>';
             }
             if (isset($perms['delete'])) {
-                $btns = $btns . '<button class="JodRequests-deny">
+                $btns = $btns . '<button class="JodRequests-deny" type="submit" name="action" value="request_cancel_submit">
                         <span>
                             Denegar
                         </span>
                     </button>';
             }
             if (isset($perms['request'])) {
-                $btns = $btns . '<button class="JodRequests-accept">
+                $btns = $btns . '<button class="JodRequests-accept" type="submit" name="action" value="request_create_submit">
                         <span>
                             Postularse
                         </span>
@@ -237,12 +246,14 @@ function render_requests($requests, $perms)
             }
             //FOOTER
             if (isset($perms['edit'])) {
-                $footer_options = $footer_options . '<button type="button" class="contracted-tasks-item-footerBtn">
-                    Editar reserva <img class="img-fluid" src="' . get_stylesheet_directory_uri() . '/img/valeapp-providers-chevron-faq.png" alt="ValeApp">
-                </button>';
+                $footer_options = $footer_options . '<a type="button" href="/solicitar-servicio/' . $solicitud_id . '" class="JodRequests-item-footerBtn">
+                    Editar reserva <img class="img-fluid"
+                        src="' . get_stylesheet_directory_uri() . '/img/valeapp-providers-chevron-faq.png"
+                        alt="ValeApp">
+                </a>';
             }
             if (isset($perms['watch_detail'])) {
-                $footer_options = $footer_options . '<a type="button" href="/solicitudes/'. $request['id'] .'" class="JodRequests-item-footerBtn">
+                $footer_options = $footer_options . '<a type="button" href="/solicitud/' . $request['id'] . '" class="JodRequests-item-footerBtn">
                     Ver detalles <img class="img-fluid"
                         src="' . get_stylesheet_directory_uri() . '/img/valeapp-providers-chevron-faq.png"
                         alt="ValeApp">
@@ -301,9 +312,16 @@ function render_requests($requests, $perms)
                 <div class="JodRequests-item-body-itemState">
                     <?php echo esc_html(ucfirst($request['status'] ?? 'estado no disponible')); ?>
                 </div>
-                <div class="JodRequests-btnContent">
-                    <?php echo $btns; ?>
-                </div>
+                <form method="post" action="" enctype="multipart/form-data">
+                    <input type="hidden" name="action" value="change_request_status">
+                    <input type="hidden" name="post_id" value="<?php echo $request['id']; ?>">
+                    <input type="hidden" name="solicitud_id" value="<?php echo $solicitud_id; ?>">
+                    <input type="hidden" name="new_status" value="confirmado">
+                    <div class="JodRequests-btnContent">
+                        <?php echo $btns; ?>
+                    </div>
+                    <?php wp_nonce_field('requests_action', 'requests_nonce'); ?>
+                </form>
             </div>
             <div class="JodRequests-item-footer">
                 <?php echo $footer_options; ?>
@@ -412,4 +430,7 @@ function render_ended_requests()
         render_requests($all_requests['ended_requests'], $perms);
     }
 }
+
+
+
 ?>
