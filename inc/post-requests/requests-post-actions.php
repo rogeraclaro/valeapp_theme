@@ -32,22 +32,29 @@ if (isset($_POST['action']) && wp_verify_nonce($_POST['requests_nonce'], 'reques
             $client_id = get_post_field('post_author', $solicitud_id);
             $post_client_id = get_user_post_id($client_id, 'cliente');
             $post_provider_id = get_current_user_post_id();
+            // $post_client_id = get_user_post_id(83, 'cliente');
+            // $post_provider_id = get_user_post_id(84, 'proveedor');
+            $author =  get_current_user_id();
+            // $author = get_userdata(84);
             $new_post = [
                 'post_title'    => 'prueba',
                 'estado'  => 'activo',
                 'post_status'   => 'publish',
                 'post_type'     => 'solicitudes',
-                'post_author'   => get_current_user_id(),
+                'post_author'   => $author,
             ];
             $new_request_post_id = wp_insert_post($new_post);
             if (is_wp_error($new_request_post_id)) {
                 wp_die('Solicitud inválida.');
             } else {
                 $creation_datetime = current_time('mysql');
-                add_post_meta('cliente', $post_client_id, $new_request_post_id);
-                add_post_meta('proveedor', $post_provider_id, $new_request_post_id);
+                update_field('estado', 'activo', $new_request_post_id);
+                update_field('cliente', $post_client_id, $new_request_post_id);
+                update_field('proveedor', $post_provider_id, $new_request_post_id);
                 update_field('fecha_de_creacion', $creation_datetime, $new_request_post_id);
-                add_post_meta('solicitud servicio', $solicitud_id, $new_request_post_id);
+                update_field('solicitud servicio', $solicitud_id, $new_request_post_id);
+
+                // wp_update_post(['ID' => $new_request_post_id]);
             }
             break;
 

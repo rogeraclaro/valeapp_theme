@@ -63,29 +63,35 @@ function build_request_detail($service_request, $profile_id, $post_id, $status, 
     return $solicitud_detalles;
 }
 
-function load_client_requests($post_id, &$all_requests)
+function get_request_query($post_id, $post_type)
 {
     $args = array(
         'post_type' => 'solicitudes',
         'post_status' => 'publish',
         'meta_query' => array(
             array(
-                'key' => 'cliente',
+                'key' => $post_type,
                 'value' => $post_id,
                 'compare' => '='
             )
         )
     );
+    return $args;
+}
 
+function load_client_requests($post_id, &$all_requests)
+{
+    $args = get_request_query($post_id, 'cliente');
     $query = new WP_Query($args);
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
             $status = get_field('estado');
             $solicitud = get_field('solicitud servicio');
-            $provider_request_data = get_field('proveedor');
-            $request_data = build_request_detail($solicitud, $provider_request_data->post_author, $provider_request_data->ID, $status, 'provider', get_the_ID());
-
+            $provider_post_id = get_field('proveedor');
+            $provider_id = get_post_field('post_author', $provider_post_id);
+            $request_data = build_request_detail($solicitud, $provider_id, $provider_post_id, $status, 'provider', get_the_ID());
+            echo json_encode($status);
             switch ($status) {
                 case 'activo':
                     $all_requests['actived_requests'][] = $request_data;
@@ -109,18 +115,7 @@ function load_client_requests($post_id, &$all_requests)
 
 function load_provider_requests($post_id, &$all_requests)
 {
-    $requests_args = array(
-        'post_type' => 'solicitudes',
-        'post_status' => 'publish',
-        'meta_query' => array(
-            array(
-                'key' => 'proveedor',
-                'value' => $post_id,
-                'compare' => '='
-            )
-        )
-    );
-
+    $requests_args = get_request_query($post_id, 'proveedor');
     $query = new WP_Query($requests_args);
     $all_related_requests = [];
     if ($query->have_posts()) {
@@ -128,8 +123,11 @@ function load_provider_requests($post_id, &$all_requests)
             $query->the_post();
             $status = get_field('estado');
             $solicitud = get_field('solicitud servicio');
-            $provider_request_data = get_field('cliente');
-            $request_data = build_request_detail($solicitud, $provider_request_data->post_author, $provider_request_data->ID, $status, 'client', get_the_ID());
+            $client_post_id = get_field('cliente');
+            $client_id = get_post_field('post_author', $client_post_id);
+            // $provider_request_data = get_field('cliente');
+            echo json_encode($client_id);
+            $request_data = build_request_detail($solicitud, $client_id, $client_post_id, $status, 'client', get_the_ID());
             $all_related_requests[] = $solicitud->ID;
             switch ($status) {
                 case 'activo':
@@ -151,6 +149,7 @@ function load_provider_requests($post_id, &$all_requests)
     }
 
 
+    $today = current_time('Y-m-d');
     $args = array(
         'post_type' => 'solicitar-servicio',
         'post_status' => 'publish',
@@ -171,15 +170,22 @@ function load_provider_requests($post_id, &$all_requests)
                 'value' => '',
                 'compare' => '='
             )
+        ),
+        'date_query' => array(
+            array(
+                'column' => 'post_date', 
+                'after'  => $today,      
+                'inclusive' => true     
+            )
         )
     );
-
+    echo json_encode($all_related_requests);
     $query = new WP_Query($args);
 
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
-            if(!in_array(get_the_ID(), $all_related_requests)){
+            if (!in_array(get_the_ID(), $all_related_requests)) {
                 $custom_request = (object) [
                     'post_title' => get_the_title(),
                     'ID' => get_the_ID(),
