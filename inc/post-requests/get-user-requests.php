@@ -117,11 +117,6 @@ function load_provider_requests($post_id, &$all_requests)
                 'key' => 'proveedor',
                 'value' => $post_id,
                 'compare' => '='
-            ),
-            array(
-                'key' => 'estado',
-                'value' => 'confirmado',
-                'compare' => '!='
             )
         )
     );

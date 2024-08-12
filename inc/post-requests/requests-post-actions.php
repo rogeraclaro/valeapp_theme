@@ -44,10 +44,10 @@ if (isset($_POST['action']) && wp_verify_nonce($_POST['requests_nonce'], 'reques
                 wp_die('Solicitud inválida.');
             } else {
                 $creation_datetime = current_time('mysql');
-                update_field('cliente', $post_client_id, $new_request_post_id);
-                update_field('proveedor', $post_provider_id, $new_request_post_id);
+                add_post_meta('cliente', $post_client_id, $new_request_post_id);
+                add_post_meta('proveedor', $post_provider_id, $new_request_post_id);
                 update_field('fecha_de_creacion', $creation_datetime, $new_request_post_id);
-                update_field('solicitud servicio', $solicitud_id, $new_request_post_id);
+                add_post_meta('solicitud servicio', $solicitud_id, $new_request_post_id);
             }
             break;
 
