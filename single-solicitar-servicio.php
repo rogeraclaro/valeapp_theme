@@ -6,36 +6,40 @@
  *
  * @package ValeApp
  */
-include 'inc/match-service/index.php';
+acf_form_head();
 
 get_header();
 
+$post_id = get_the_ID();
+if (current_user_can('clientevaleapp') || current_user_can('administrator')) {
 ?>
-
-<div class="cards">
-    <div class="cards-title">
-        A continuación encontrarás los profesionales que mejor se adaptan a tu búsqueda.
-    </div>
-    <div class="cards-items">
-        <!-- Consulta -->
-        <?php 
-            if ($query->have_posts()) {
-                while ($query->have_posts()) {
-                    $query->the_post();
-                    $user = get_the_author();
-
-                    search_user($user);
-                }
-                wp_reset_postdata();
-            } else {
-                echo 'No se encontraron resultados.';
-            }
-        ?>
+<div class="service-request-form forms-default container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12">
+            <?php
+                acf_form([
+                    'post_id'       => $post_id,
+                    'field_groups'  => ['group_64dcf8a7a89d8'],
+                    'fields' => [
+                        'field_656f483c90876',
+                        'field_656f507890877',
+                        'field_656f517290878',
+                        'field_656f51d690879',
+                        'field_656f52929087a',
+                        'field_656f53019087b'
+                    ],
+                    'submit_value'  => 'Actualizar',
+                    'updated_message' => '¡Formulario actualizado!',
+                    'return' => '/les-meves-ofertes',
+                ]);
+            ?>
+        </div>
     </div>
 </div>
 
 <?php
-get_sidebar();
+}
+ else {
+     echo do_shortcode('[no_authorization_page]');
+ }
 get_footer();
-
-?>

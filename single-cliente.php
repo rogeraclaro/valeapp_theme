@@ -55,6 +55,12 @@ $balance = get_field('field_65f1677e65100', $post_id);
                              <span class="option-text">Publicar Ofertes</span>
                          </li>
                      </a>
+                     <a class="link" href="/solicituds">
+                         <li class="option">
+                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-requests-icon.png" alt="ValeApp" class="img-fluid option-icon">
+                             <span class="option-text">Solicituds</span>
+                         </li>
+                     </a>
                      <a class="link" href="/les-meves-ofertes">
                          <li class="option">
                              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-task-icon.png" alt="ValeApp" class="img-fluid option-icon">

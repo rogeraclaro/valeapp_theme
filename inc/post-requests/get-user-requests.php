@@ -372,7 +372,7 @@ function render_confirmed_requests()
                 'appreciate' => true
             ];
         }
-        render_requests($all_requests['actived_requests'], $perms);
+        render_requests($all_requests['confirmed_requests'], $perms);
     }
 }
 function render_actived_requests()
