@@ -20,14 +20,29 @@ if (isset($_POST['action']) && wp_verify_nonce($_POST['requests_nonce'], 'reques
                 wp_die('Solicitud inválida.');
             }
             break;
-        case 'request_cancel_submit':
+        case 'request_finish_submit':
             if (intval($post_id)) {
-                update_post_meta($post_id, 'estado', 'cancelado');
+                update_post_meta($post_id, 'estado', 'finalizado');
+                update_post_meta($solicitud_id, 'estado', 'terminado');
             } else {
                 wp_die('Solicitud inválida.');
             }
             break;
-
+        case 'request_cancel_submit':
+            if (intval($post_id)) {
+                update_post_meta($post_id, 'estado', 'cancelado');
+                update_post_meta($solicitud_id, 'estado', 'cancelado');
+            } else {
+                wp_die('Solicitud inválida.');
+            }
+            break;
+        case 'request_denied_submit':
+            if (intval($post_id)) {
+                update_post_meta($post_id, 'estado', 'eliminado');
+            } else {
+                wp_die('Solicitud inválida.');
+            }
+            break;
         case 'request_create_submit':
             $client_id = get_post_field('post_author', $solicitud_id);
             $post_client_id = get_user_post_id($client_id, 'cliente');
@@ -53,8 +68,6 @@ if (isset($_POST['action']) && wp_verify_nonce($_POST['requests_nonce'], 'reques
                 update_field('proveedor', $post_provider_id, $new_request_post_id);
                 update_field('fecha_de_creacion', $creation_datetime, $new_request_post_id);
                 update_field('solicitud servicio', $solicitud_id, $new_request_post_id);
-
-                // wp_update_post(['ID' => $new_request_post_id]);
             }
             break;
 

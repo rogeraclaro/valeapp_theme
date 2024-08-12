@@ -12,7 +12,7 @@
  *
  * @package ValeApp
  */
-include 'inc/post-requests/get-user-requests.php';
+include 'inc/post-requests/requests-main.php';
 get_header();
 ?>
 <section class="section2 servicio-generica">
