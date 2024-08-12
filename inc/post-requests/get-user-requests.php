@@ -73,11 +73,6 @@ function load_client_requests($post_id, &$all_requests)
                 'key' => 'cliente',
                 'value' => $post_id,
                 'compare' => '='
-            ),
-            array(
-                'key' => 'estado',
-                'value' => 'confirmado',
-                'compare' => '!='
             )
         )
     );
@@ -166,9 +161,19 @@ function load_provider_requests($post_id, &$all_requests)
         'post_status' => 'publish',
         'posts_per_page' => -1,
         'meta_query' => array(
+            'relation' => 'OR',
             array(
                 'key' => 'estado',
                 'value' => 'disponible',
+                'compare' => '='
+            ),
+            array(
+                'key' => 'estado',
+                'compare' => 'NOT EXISTS'
+            ),
+            array(
+                'key' => 'estado',
+                'value' => '',
                 'compare' => '='
             )
         )

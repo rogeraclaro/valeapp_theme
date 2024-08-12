@@ -29,7 +29,8 @@ if (isset($_POST['action']) && wp_verify_nonce($_POST['requests_nonce'], 'reques
             break;
 
         case 'request_create_submit':
-            $post_client_id = get_post_field('post_author', $solicitud_id);
+            $client_id = get_post_field('post_author', $solicitud_id);
+            $post_client_id = get_user_post_id($client_id, 'cliente');
             $post_provider_id = get_current_user_post_id();
             $new_post = [
                 'post_title'    => 'prueba',
