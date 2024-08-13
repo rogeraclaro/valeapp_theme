@@ -16,7 +16,7 @@ acf_form_head();
 get_header();
 $post_id = get_current_user_post_id();
 
-if($post_id) {
+if ($post_id) {
     if (current_user_can('proveedorvaleapp') || current_user_can('administrator')) {
         mostrar_formulario_proveedor_acf($post_id);
     } elseif (current_user_can('clientevaleapp') || current_user_can('administrator')) {
@@ -24,7 +24,7 @@ if($post_id) {
     } else {
         echo do_shortcode('[no_authorizatiojn_page]');
     }
-}else{
+} else {
     echo do_shortcode('[no_authorizatiojn_page]');
 }
 

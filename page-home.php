@@ -80,7 +80,7 @@ get_header();
     <div class="container">
       <div class="row justify-content-center align-items-center">
         <div class="col-12 col-sm-6">
-          <img class="img-fluid offer" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-HomeOffer.png" alt="valeapp" />
+          <img class="img-fluid offer" src="<?php echo get_stylesheet_directory_uri(); ?>/img/home/valeapp-home-homeoffer.jpg" alt="valeapp" />
         </div>
         <div class="col-12 col-sm-6 ps-sm-4">
           <h2 class="title"> <?php echo($titleS1); ?></h2>
@@ -98,7 +98,7 @@ get_header();
       <h2 class="title"><?php echo($titleS2); ?></h2>
       <div class="row justify-content align-items-top">
         <div class="col-12 col-sm-4 mb-5">
-          <img class="img-fluid offer" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-homedoeswork-image1.png" alt="valeapp" />
+          <img class="img-fluid offer" src="<?php echo get_stylesheet_directory_uri(); ?>/img//home/incio-amplia-serveis.png" alt="valeapp" />
           <h3 class="subtitle"><?php echo($subtitle1S2); ?></h3>
           <p class="text">
             <?php echo($description1S2); ?>
@@ -112,7 +112,7 @@ get_header();
           </p>
         </div>
         <div class="col-12 col-sm-4 mb-5">
-          <img class="img-fluid offer" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-homedoeswork-image3.png" alt="valeapp" />
+          <img class="img-fluid offer" src="<?php echo get_stylesheet_directory_uri(); ?>/img/home/dit-fet.png" alt="valeapp" />
           <h3 class="subtitle"><?php echo($subtitle3S2); ?></h3>
           <p class="text">
             <?php echo($description3S2); ?>
