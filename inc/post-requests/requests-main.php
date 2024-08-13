@@ -14,6 +14,11 @@ function build_request_detail($service_request, $profile_id, $post_id, $status, 
     $ubication = get_field('ubicacion-card', $service_request->ID);
     $date_data = get_field('programa_tu_tarea-card', $service_request->ID);
     $prices = get_field('encuentra_tu_profesional-card', $service_request->ID);
+    $categories = get_field('servicio-card', $service_request->ID);
+    $detail_link = '';
+    if ($request_id){
+        $detail_link = get_permalink($request_id);
+    }
     $item_photo_field = "foto_de_perfil";
     if ($role === 'provider') {
         $item_photo_field = "fotos_de_perfil";
@@ -35,14 +40,15 @@ function build_request_detail($service_request, $profile_id, $post_id, $status, 
         }
         $solicitud_detalles = [
             'id' => $request_id,
-            'title' => get_field('title', $service_request->ID),
+            'title' => $categories['categoria'],
             'profile' => $profile_details,
             'profile_photo' => get_field($item_photo_field, $post_id),
             'solicitud' => $service_request,
             'ubicacion' => $ubication,
             'date' => $date_data,
             'prices' => $prices,
-            'status' => $status
+            'status' => $status,
+            'detail_link' => $detail_link,
         ];
     } else {
         $solicitud_detalles = [
@@ -58,7 +64,8 @@ function build_request_detail($service_request, $profile_id, $post_id, $status, 
             'ubicacion' => 'Ubicación no disponible',
             'date' => 'Fecha no disponible',
             'prices' => 'Precios no disponibles',
-            'status' => 'Estado no disponible'
+            'status' => 'Estado no disponible',
+            'detail_link' => ''
         ];
     }
     return $solicitud_detalles;
@@ -147,8 +154,7 @@ function load_provider_requests($post_id, &$all_requests)
         }
     }
 
-
-    $today = current_time('Y-m-d');
+    // $today = current_time('Y-m-d');
     $args = array(
         'post_type' => 'solicitar-servicio',
         'post_status' => 'publish',
@@ -170,13 +176,13 @@ function load_provider_requests($post_id, &$all_requests)
                 'compare' => '='
             )
         ),
-        'date_query' => array(
-            array(
-                'column' => 'post_date',
-                'after'  => $today,
-                'inclusive' => true
-            )
-        )
+        // 'date_query' => array(
+        //     array(
+        //         'column' => 'post_date',
+        //         'after'  => $today,
+        //         'inclusive' => true
+        //     )
+        // )
     );
     $query = new WP_Query($args);
 
@@ -204,7 +210,7 @@ function load_provider_requests($post_id, &$all_requests)
 // $post_id = get_user_post_id(84, 'proveedor');
 $post_id = get_current_user_post_id();
 if ($post_id) {
-    if (current_user_can('proveedorvaleapp')  || current_user_can('administrator')) {
+    if (current_user_can('proveedorvaleapp') || current_user_can('administrator')) {
         load_provider_requests($post_id, $all_requests);
     } elseif (current_user_can('clientevaleapp') || current_user_can('administrator')) {
         load_client_requests($post_id, $all_requests);

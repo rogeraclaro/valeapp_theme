@@ -13,7 +13,7 @@
  * @package ValeApp
  */
 include 'inc/match-service/index.php';
-include 'inc/post-requests/get-user-requests.php';
+include 'inc/post-requests/requests-main.php';
 
 get_header();
 ?>
