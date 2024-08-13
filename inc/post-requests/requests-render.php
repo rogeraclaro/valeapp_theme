@@ -5,7 +5,8 @@ function render_requests($requests, $perms)
         $profile_photo = isset($request['profile_photo']) ? $request['profile_photo'] : null;
         $profile_name = isset($request['profile']['name']) ? esc_html($request['profile']['name']) : 'Nombre no disponible';
         $profile_id = isset($request['profile']['user_id']) ? esc_html($request['profile']['user_id']) : '';
-        $solicitud_title = isset($request['solicitud']->post_title) ? esc_html($request['solicitud']->post_title) : 'Título no disponible';
+        // $solicitud_title = isset($request['solicitud']->post_title) ? esc_html($request['solicitud']->post_title) : 'Título no disponible';
+        $solicitud_title = isset($request['title']) ? esc_html($request['title']) : 'Título no disponible';
         $solicitud_id = isset($request['solicitud']->ID) ? ($request['solicitud']->ID) : 0;
         $profile_photo_url = $profile_photo && isset($profile_photo['url']) ? esc_url($profile_photo['url']) : get_stylesheet_directory_uri() . '/img/valeapp-providers-ervice-user.png';
         $btns = "";
@@ -55,8 +56,8 @@ function render_requests($requests, $perms)
                         alt="ValeApp">
                 </a>';
             }
-            if (isset($perms['watch_detail'])) {
-                $footer_options = $footer_options . '<a type="button" href="/solicitud/' . $request['id'] . '" class="JodRequests-item-footerBtn">
+            if (isset($perms['watch_detail']) && isset($request['detail_link'])) {
+                $footer_options = $footer_options . '<a type="button" href="'. $request['detail_link'] .'" class="JodRequests-item-footerBtn">
                     Ver detalles <img class="img-fluid"
                         src="' . get_stylesheet_directory_uri() . '/img/valeapp-providers-chevron-faq.png"
                         alt="ValeApp">

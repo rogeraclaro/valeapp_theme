@@ -82,7 +82,7 @@ $balance = get_field('field_65f1677e65100', $post_id);
                      <a class="link" href="/missatgeria">
                          <li class="option">
                              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-messages-icon.png" alt="ValeApp" class="img-fluid option-icon">
-                             <span class="count">1</span>
+                             <!-- <span class="count">1</span> -->
                              <span class="option-text">Missatges</span>
                          </li>
                      </a>
