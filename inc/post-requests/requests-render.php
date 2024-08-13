@@ -118,6 +118,7 @@ function render_requests($requests, $perms)
                 </div>
                 <form method="post" action="" enctype="multipart/form-data">
                     <input type="hidden" name="action" value="change_request_status">
+                    <input type="hidden" name="title" value="<?php echo $solicitud_title; ?>">
                     <input type="hidden" name="post_id" value="<?php echo $request['id']; ?>">
                     <input type="hidden" name="solicitud_id" value="<?php echo $solicitud_id; ?>">
                     <input type="hidden" name="new_status" value="confirmado">

@@ -15,11 +15,11 @@ function build_request_detail($service_request, $profile_id, $post_id, $status, 
     $date_data = get_field('programa_tu_tarea-card', $service_request->ID);
     $prices = get_field('encuentra_tu_profesional-card', $service_request->ID);
     $categories = get_field('servicio-card', $service_request->ID);
-    $item_photo_field = "foto_de_perfil";
     $detail_link = '';
     if ($request_id){
         $detail_link = get_permalink($request_id);
     }
+    $item_photo_field = "foto_de_perfil";
     if ($role === 'provider') {
         $item_photo_field = "fotos_de_perfil";
     }
@@ -154,8 +154,7 @@ function load_provider_requests($post_id, &$all_requests)
         }
     }
 
-
-    $today = current_time('Y-m-d');
+    // $today = current_time('Y-m-d');
     $args = array(
         'post_type' => 'solicitar-servicio',
         'post_status' => 'publish',
@@ -177,13 +176,13 @@ function load_provider_requests($post_id, &$all_requests)
                 'compare' => '='
             )
         ),
-        'date_query' => array(
-            array(
-                'column' => 'post_date',
-                'after'  => $today,
-                'inclusive' => true
-            )
-        )
+        // 'date_query' => array(
+        //     array(
+        //         'column' => 'post_date',
+        //         'after'  => $today,
+        //         'inclusive' => true
+        //     )
+        // )
     );
     $query = new WP_Query($args);
 

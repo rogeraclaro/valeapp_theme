@@ -10,6 +10,7 @@ if (isset($_POST['action']) && wp_verify_nonce($_POST['requests_nonce'], 'reques
     $action = $_POST['action'];
     $post_id = sanitize_text_field($_POST['post_id']);
     $solicitud_id = sanitize_text_field($_POST['solicitud_id']);
+    $title = sanitize_text_field($_POST['title']);
 
     switch ($action) {
         case 'request_confirm_submit':
@@ -52,7 +53,7 @@ if (isset($_POST['action']) && wp_verify_nonce($_POST['requests_nonce'], 'reques
             $author =  get_current_user_id();
             // $author = get_userdata(84);
             $new_post = [
-                'post_title'    => 'prueba',
+                'post_title'    => $title,
                 'estado'  => 'activo',
                 'post_status'   => 'publish',
                 'post_type'     => 'solicitudes',
