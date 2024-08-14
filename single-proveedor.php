@@ -49,7 +49,7 @@ $balance = get_field('field_65f167b6d716e', $post_id);
                             <span class="option-text">Compte i dades personals</span>
                         </li>
                     </a>
-                     <a class="link" href="">
+                     <a class="link" href="/mis-servicios">
                          <li class="option">
                              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-catalogue-icon.png" alt="ValeApp" class="img-fluid option-icon">
                              <span class="option-text">Catàleg de serveis</span>
