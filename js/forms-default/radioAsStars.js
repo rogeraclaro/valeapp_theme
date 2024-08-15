@@ -3,7 +3,8 @@ jQuery(document).ready(function ($) {
         let stopCheckMarks = false;
         $(radioWrapper).find("ul label").each((__, radioLabel) => {
             if (!stopCheckMarks) {
-                stopCheckMarks = $(radioLabel).is(".selected");
+                // stopCheckMarks = $(radioLabel).is(".selected") || $(radioLabel).is(':checked');
+                $(radioLabel).find("input").each((__, radioBtn) => stopCheckMarks = !!$(radioBtn).is(':checked'))
                 $(radioLabel).removeClass("radioAsStars-unchecked")
                 $(radioLabel).addClass("radioAsStars-checked")
             } else {

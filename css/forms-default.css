@@ -151,6 +151,7 @@ ul.acf-checkbox-list {
   flex-direction: row;
   justify-content: center;
   gap: 0.1rem;
+  list-style: none;
 }
 .radioAsStars ul.acf-radio-list::before,
 .radioAsStars ul.acf-radio-list::after {
@@ -161,6 +162,7 @@ ul.acf-checkbox-list {
 }
 .radioAsStars ul.acf-radio-list li label {
   color: transparent;
+  cursor: pointer;
   display: block;
   height: 24px;
   overflow: hidden;

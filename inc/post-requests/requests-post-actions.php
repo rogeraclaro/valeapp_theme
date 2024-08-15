@@ -11,7 +11,6 @@ if (isset($_POST['action']) && wp_verify_nonce($_POST['requests_nonce'], 'reques
     $post_id = sanitize_text_field($_POST['post_id']);
     $solicitud_id = sanitize_text_field($_POST['solicitud_id']);
     $title = sanitize_text_field($_POST['title']);
-
     switch ($action) {
         case 'request_confirm_submit':
             if (intval($post_id)) {
@@ -40,6 +39,20 @@ if (isset($_POST['action']) && wp_verify_nonce($_POST['requests_nonce'], 'reques
         case 'request_denied_submit':
             if (intval($post_id)) {
                 update_post_meta($post_id, 'estado', 'eliminado');
+            } else {
+                wp_die('Solicitud inválida.');
+            }
+            break;
+        case 'request_appreciate_submit':
+            if (intval($post_id)) {
+                $stars_name = sanitize_text_field($_POST['stars_name']);
+                $stars_value = '';
+                if(isset($_POST[$stars_name])){
+                    $stars_value = sanitize_text_field($_POST[$stars_name]);
+                }
+                $start_text = sanitize_text_field($_POST['provider_rate_text']);
+                update_field('provider_rate', $stars_value, $post_id);
+                update_field('provider_rate_text', $start_text, $post_id);
             } else {
                 wp_die('Solicitud inválida.');
             }

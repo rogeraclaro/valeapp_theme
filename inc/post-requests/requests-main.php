@@ -15,6 +15,8 @@ function build_request_detail($service_request, $profile_id, $post_id, $status, 
     $date_data = get_field('programa_tu_tarea-card', $service_request->ID);
     $prices = get_field('encuentra_tu_profesional-card', $service_request->ID);
     $categories = get_field('servicio-card', $service_request->ID);
+    $provider_rate = get_field('provider_rate', $request_id);
+    $provider_rate_text = get_field('provider_rate_text', $request_id);
     $detail_link = '';
     if ($request_id){
         $detail_link = get_permalink($request_id);
@@ -49,6 +51,10 @@ function build_request_detail($service_request, $profile_id, $post_id, $status, 
             'prices' => $prices,
             'status' => $status,
             'detail_link' => $detail_link,
+            'rate' => [
+                'provider_rate' => $provider_rate,
+                'provider_rate_text' => $provider_rate_text,
+            ]
         ];
     } else {
         $solicitud_detalles = [
@@ -65,7 +71,11 @@ function build_request_detail($service_request, $profile_id, $post_id, $status, 
             'date' => 'Fecha no disponible',
             'prices' => 'Precios no disponibles',
             'status' => 'Estado no disponible',
-            'detail_link' => ''
+            'detail_link' => '',
+            'rate' => [
+                'provider_rate' => 0,
+                'provider_rate_text' => '',
+            ]
         ];
     }
     return $solicitud_detalles;
@@ -241,7 +251,6 @@ function render_available_requests()
         global $all_requests;
         $perms = [
             "request" => true,
-            "watch_detail" => true
         ];
         render_requests($all_requests['available_requests'], $perms);
     }
