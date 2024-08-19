@@ -14,6 +14,11 @@
  */
 
 get_header();
+$is_user_logged_in = is_user_logged_in();
+
+$selected_membership = get_user_selected_membership(); // Esta es la membresía actual del usuario
+$memberships = get_all_memberships(); // Obtener todos los planes de membresía
+
 
 ?>
 
@@ -26,7 +31,8 @@ get_header();
     <div class="container">
       <div class="row justify-content-center align-items-start">
         <div class="col-12">
-          <img class="img-fluid offer" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-HomeOffer.png" alt="valeapp" />
+          <img class="img-fluid offer"
+            src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-home-HomeOffer.png" alt="valeapp" />
         </div>
         <div class="col-12 col-sm-3 ps-sm-4 mt-sm-5">
           <div class="Membership-content">
@@ -78,147 +84,38 @@ get_header();
       </div>
     </div>
   </div>
-  
+
   <div class="Membership-frequency">
     <h2 class="Membership-frequency-title">Comença ara mateix!</h2>
   </div>
   <div class="Membership-plans">
-
     <div class="container">
       <div class="row justify-content-center align-items-start">
-        <div class="col-12 col-sm-4">
-          <!-- Silver -->
-          <div class="Membership-plan">
-            <div class="Membership-plan-name">Silver</div>
-            <div class="Membership-plan-price">10<span>€</span></div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Àrees</p>
-              <p class="Membership-plan-value">3</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Treballs</p>
-              <p class="Membership-plan-value">25</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Comissió</p>
-              <p class="Membership-plan-value">15%</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Treballs sense Comissió</p>
-              <p class="Membership-plan-value">3</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Notificació</p>
-              <p class="Membership-plan-value">10 minuts</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Informes</p>
-              <p class="Membership-plan-value">Mensualment</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Butlletí patrocinat</p>
-              <p class="Membership-plan-cancel">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-membership-cancel.png" alt="valeapp" />
-              </p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Gold Vale user (10%)</p>
-              <p class="Membership-plan-success">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-membership-success.png" alt="valeapp" />
-              </p>
-            </div>
-            <!-- <?php echo do_shortcode('[asp_product id="1327"]'); ?> -->
-            <!-- <button class="Membership-plan-button">Continuar</button> -->
+        <?php foreach ($memberships as $fields): ?>
+          <div class="col-12 col-sm-4">
+            <?php
+            // Verificar si el plan es el mismo que la membresía activa del usuario
+            $is_current_plan = ($fields['titulo'] === $selected_membership);
+            if ($is_user_logged_in) {
+              $membership_class = $is_current_plan ? 'active-plan' : 'desactivate';
+            } else {
+              $membership_class = ''; // No agregar ninguna clase si el usuario no está logueado
+            }
+            // Definir el texto del botón
+            $button_text = $is_current_plan ? 'Membresía Activa' : 'Contractar';
+
+            // Usar las variables globales
+            global $membership_fields, $membership_class, $button_text, $is_current_plan;
+            $membership_fields = $fields;
+            $membership_class = $membership_class;
+            $button_text = $button_text;
+            $is_current_plan = $is_current_plan;
+
+            // Llamar al partial
+            get_template_part('template-parts/membership/membership', 'plan');
+            ?>
           </div>
-        </div>
-        <div class="col-12 col-sm-4">
-          <!-- Gold -->
-          <div class="Membership-plan">
-            <div class="Membership-plan-name">Gold</div>
-            <div class="Membership-plan-price">25<span>€</span></div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Àrees</p>
-              <p class="Membership-plan-value">10</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Treballs</p>
-              <p class="Membership-plan-value">50</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Comissió</p>
-              <p class="Membership-plan-value">8,5%</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Treballs sense Comissió</p>
-              <p class="Membership-plan-value">5</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Notificació</p>
-              <p class="Membership-plan-value">5 minutos</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Informes</p>
-              <p class="Membership-plan-value">Quinzenal</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Butlletí patrocinat</p>
-              <p class="Membership-plan-cancel">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-membership-cancel.png" alt="valeapp" />
-              </p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Gold Vale user (10%)</p>
-              <p class="Membership-plan-success">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-membership-success.png" alt="valeapp" />
-              </p>
-            </div>
-            <!-- <?php echo do_shortcode('[asp_product id="1328"]'); ?> -->
-          </div>
-        </div>
-        <div class="col-12 col-sm-4">
-          <!-- Platinum -->
-          <div class="Membership-plan">
-            <div class="Membership-plan-name">Platinum</div>
-            <div class="Membership-plan-price">50<span>€</span></div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Àrees</p>
-              <p class="Membership-plan-value">Ilimitado</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Treballs</p>
-              <p class="Membership-plan-value">Ilimitado</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Comissió</p>
-              <p class="Membership-plan-value">7%</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Treballs sense Comissió</p>
-              <p class="Membership-plan-value">8</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Notificació</p>
-              <p class="Membership-plan-value">1 minuto</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Informes</p>
-              <p class="Membership-plan-value">Setmanal</p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Butlletí patrocinat</p>
-              <p class="Membership-plan-success">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-membership-success.png" alt="valeapp" />
-              </p>
-            </div>
-            <div class="Membership-plan-row">
-              <p class="Membership-plan-text">Gold Vale user (10%)</p>
-              <p class="Membership-plan-success">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-membership-success.png" alt="valeapp" />
-              </p>
-            </div>
-            <!-- <?php echo do_shortcode('[asp_product id="1329"]'); ?> -->
-          </div>
-        </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
@@ -228,28 +125,28 @@ get_header();
       <h2 class="title">El que diuen els nostres clients sobre Vale</h2>
       <div id="reviews" class="swiper">
 
-    <?php
-      $slides = get_field('reviews');
-      if( $slides ): 
-    ?>
-      
-      <!-- Swiper -->
-      <div class="swiper-wrapper">
-        <?php foreach( $slides as $slide ): ?>
-            <div class="swiper-slide">
-              <div class="content">
-                <p class="text">
-                  <?php echo $slide['texto']; ?>
-                </p>
-                <div class="rate">
-                  <span>
-                    <?php echo $slide['autor']; ?>
-                  </span>
-                  <img class="img-fluid rate" src="<?php echo $slide['stars']; ?>" alt="valeapp">
+        <?php
+        $slides = get_field('reviews');
+        if ($slides):
+        ?>
+
+          <!-- Swiper -->
+          <div class="swiper-wrapper">
+            <?php foreach ($slides as $slide): ?>
+              <div class="swiper-slide">
+                <div class="content">
+                  <p class="text">
+                    <?php echo $slide['texto']; ?>
+                  </p>
+                  <div class="rate">
+                    <span>
+                      <?php echo $slide['autor']; ?>
+                    </span>
+                    <img class="img-fluid rate" src="<?php echo $slide['stars']; ?>" alt="valeapp">
+                  </div>
                 </div>
               </div>
-            </div>
-          <?php endforeach; ?>
+            <?php endforeach; ?>
           </div>
         <?php endif; ?>
         <div class="swiper-pagination event" data-label="swiper_pagination"></div>
@@ -262,46 +159,36 @@ get_header();
     <div class="container">
       <h2 class="title">Preguntes freqüents</h2>
       <div id="accordionfqa" class="accordion accordion-buttons">
-      
-      <?php
+
+        <?php
         $questions = get_field('preguntes_frequents');
-        if( $questions ): 
-      ?>
-      <!-- Faq repeater -->
-      <?php $counter = 0; foreach( $questions as $question ):?>
-        <div class="accordion-item">
-          <h2 id="headingPoints<?php echo $counter;?>" class="accordion-header">
-            <button
-              type="button"
-              class="accordion-button event collapsed"
-              data-label="collapsefaq"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapsefaq<?php echo $counter;?>"
-              aria-expanded="false"
-              aria-controls="collapsefaq<?php echo $counter;?>"
-            >
-              <?php echo $question['pregunta'];?>
-              <img
-                class="img-fluid"
-                src="<?php echo get_stylesheet_directory_uri();?>/img/valeapp-providers-chevron-faq.png"
-                alt="ValeApp"
-              />
-            </button>
-          </h2>
-          <div
-            id="collapsefaq<?php echo $counter;?>"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingPoints<?php echo $counter;?>"
-            data-bs-parent="#accordionfqa"
-          >
-            <div class="accordion-body">
-              <?php echo $question['resposta'];?>
+        if ($questions):
+        ?>
+          <!-- Faq repeater -->
+          <?php $counter = 0;
+          foreach ($questions as $question): ?>
+            <div class="accordion-item">
+              <h2 id="headingPoints<?php echo $counter; ?>" class="accordion-header">
+                <button type="button" class="accordion-button event collapsed" data-label="collapsefaq"
+                  data-bs-toggle="collapse" data-bs-target="#collapsefaq<?php echo $counter; ?>" aria-expanded="false"
+                  aria-controls="collapsefaq<?php echo $counter; ?>">
+                  <?php echo $question['pregunta']; ?>
+                  <img class="img-fluid"
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
+                    alt="ValeApp" />
+                </button>
+              </h2>
+              <div id="collapsefaq<?php echo $counter; ?>" class="accordion-collapse collapse"
+                aria-labelledby="headingPoints<?php echo $counter; ?>" data-bs-parent="#accordionfqa">
+                <div class="accordion-body">
+                  <?php echo $question['resposta']; ?>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      <?php $counter++; endforeach;?>
-      <!-- End Faq repeater -->
-      <?php endif; ?>
+          <?php $counter++;
+          endforeach; ?>
+          <!-- End Faq repeater -->
+        <?php endif; ?>
 
       </div>
     </div>
