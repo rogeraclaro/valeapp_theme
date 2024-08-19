@@ -57,6 +57,31 @@ if (isset($_POST['action']) && wp_verify_nonce($_POST['requests_nonce'], 'reques
                 wp_die('Solicitud inválida.');
             }
             break;
+        case 'request_hire_submit':
+            $post_provider_id = sanitize_text_field($_POST['provider_id']);
+            $post_client_id = get_current_user_post_id();
+            $author =  get_current_user_id();
+            $new_post = [
+                'post_title'    => $title,
+                'estado'  => 'activo',
+                'post_status'   => 'publish',
+                'post_type'     => 'solicitudes',
+                'post_author'   => $author,
+            ];
+            $new_request_post_id = wp_insert_post($new_post);
+            if (is_wp_error($new_request_post_id)) {
+                wp_die('Solicitud inválida.');
+            } else {
+                $creation_datetime = current_time('mysql');
+                update_field('estado', 'activo', $new_request_post_id);
+                update_field('cliente', $post_client_id, $new_request_post_id);
+                update_field('proveedor', $post_provider_id, $new_request_post_id);
+                update_field('fecha_de_creacion', $creation_datetime, $new_request_post_id);
+                update_field('solicitud servicio', $solicitud_id, $new_request_post_id);
+
+                wp_redirect(home_url('/solicituds')); 
+            }
+            break;
         case 'request_create_submit':
             $client_id = get_post_field('post_author', $solicitud_id);
             $post_client_id = get_user_post_id($client_id, 'cliente');
