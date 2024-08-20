@@ -23,11 +23,11 @@ if (current_user_can('administrator') || current_user_can('proveedorvaleapp')) {
 
 ?>
 <div class="PublishService">
-    <div class="container mt-5">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12">
-            <h2 class="title">Catálogo de servicios</h2>
-                <?php
+  <div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+        <h2 class="title">Catàleg de serveis</h2>
+        <?php
                     acf_form([
                         'post_id'       => 'new_post',
                         'field_groups'  => ['group_64e3cd0b38f67'],
@@ -41,9 +41,9 @@ if (current_user_can('administrator') || current_user_can('proveedorvaleapp')) {
                         'return' => '/home',
                     ]);
                 ?>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <?php

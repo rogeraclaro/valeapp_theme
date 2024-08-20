@@ -37,16 +37,16 @@ function breadcrumb_my_account() {
                 $id = get_the_ID();
 
                 ?>
-                    <a href="/<?php echo($rol); ?>/<?php echo($id); ?>">
-                        Mi cuenta
-                    </a>
-                <?php
+<a href="/<?php echo($rol); ?>/<?php echo($id); ?>">
+  El meu compte
+</a>
+<?php
             endwhile;
             wp_reset_postdata();
         else:
             ?>
-                <a href="#">Mi cuenta</a>
-            <?php
+<a href="#">El meu compte</a>
+<?php
         endif;
     }
 }

@@ -22,14 +22,14 @@ get_header();
             <div class="col-12">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#"="#">Mi cuenta</a></li>
-                        <li class="breadcrumb-item"><a href="#"="#">Tareas contratadas</a></li>
+                        <li class="breadcrumb-item"><a href="#"="#">El meu compte</a></li>
+                        <li class="breadcrumb-item"><a href="#"="#">Tasques contractades</a></li>
                     </ol>
                 </nav>
             </div>
             <div class="col-12">
                 <h2 class="title">
-                    Ayuda
+                    Ajuda
                 </h2>
             </div>
         </div>
@@ -37,7 +37,7 @@ get_header();
 </section>
 <section class="NeedHelp">
     <a class="NeedHelp-goBack" href="/ajuda">
-        <img class="Ayuda-iconArrow" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png" alt="ValeApp" /> ¿Necesitas Ayuda?
+        <img class="Ayuda-iconArrow" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png" alt="ValeApp" /> Necessites Ajuda?
     </a>
     <div class="NeedHelp-card">
         <span class="NeedHelp-cardTitle">Selecciona</span>
@@ -45,23 +45,23 @@ get_header();
             <label class="NeedHelp-option">
                 <input type="radio" name="NeedHelpOpt" checked />
                 <span class="NeedHelp-optionLabel">
-                    Tengo una pregunta
+                    Tinc una pregunta
                 </span>
             </label>
             <label class="NeedHelp-option">
                 <input type="radio" name="NeedHelpOpt" />
                 <span class="NeedHelp-optionLabel">
-                    Quiero reportar un problema
+                    Vull reportar un problema
                 </span>
             </label>
             <label class="NeedHelp-option">
                 <input type="radio" name="NeedHelpOpt" />
                 <span class="NeedHelp-optionLabel">
-                    Tengo sugerencias de mejora
+                    Tinc suggeriments de millora
                 </span>
             </label>
         </div>
-        <button class="HairSalon-btn" id="btnSubmit">Confirmar</button>
+        <button class="HairSalon-btn" id="btnSubmit">Confirma</button>
     </div>
 </section>
 

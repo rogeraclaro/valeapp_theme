@@ -121,21 +121,24 @@ function render_dates($schedule)
 {
     foreach ($schedule as $date) {
 ?>
-        <div class="JodRequests-item-body-item">
-            <img class="JodRequests-item-body-itemIcon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/calendar-icon.svg" alt="JodRequests-item-body-itemIcon">
-            <span class="JodRequests-item-body-itemName">
-                <?php echo esc_html($date['label'] ?? 'Fecha no disponible'); ?>
-            </span>
-        </div>
-        <div class="JodRequests-item-body-item">
-            <img class="JodRequests-item-body-itemIcon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/page-confirmar-y-pagar/clock-icon.svg" alt="JodRequests-item-body-itemIcon">
-            <span class="JodRequests-item-body-itemName">
-                <?php echo esc_html($date['init'] ?? '--'); ?>
-                -
-                <?php echo esc_html($date['end'] ?? '--'); ?>
-            </span>
-        </div>
-    <?php
+<div class="JodRequests-item-body-item">
+  <img class="JodRequests-item-body-itemIcon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/calendar-icon.svg"
+    alt="JodRequests-item-body-itemIcon">
+  <span class="JodRequests-item-body-itemName">
+    <?php echo esc_html($date['label'] ?? 'Fecha no disponible'); ?>
+  </span>
+</div>
+<div class="JodRequests-item-body-item">
+  <img class="JodRequests-item-body-itemIcon"
+    src="<?php echo get_stylesheet_directory_uri(); ?>/img/page-confirmar-y-pagar/clock-icon.svg"
+    alt="JodRequests-item-body-itemIcon">
+  <span class="JodRequests-item-body-itemName">
+    <?php echo esc_html($date['init'] ?? '--'); ?>
+    -
+    <?php echo esc_html($date['end'] ?? '--'); ?>
+  </span>
+</div>
+<?php
     }
 }
 
@@ -147,74 +150,75 @@ function render_my_services()
         $subtitle = isset($service['categories'][strtolower($title)]) ? esc_html($service['categories'][strtolower($title)]) : 'Subtítulo no disponible';
         $description = isset($service['details']['detalles_del_servicio']) ? esc_html($service['details']['detalles_del_servicio']) : 'Sin descripcion';
     ?>
-        <div class="col-12 col-md-6 my-2">
-            <div class="JodRequests-item">
-                <div class="JodRequests-item-header">
-                    <p class="JodRequests-item-header-text">
-                        <?php echo $title; ?>
-                        <span>
-                            <?php echo $subtitle;  ?>
-                        </span>
-                    </p>
-                </div>
-                <div class="JodRequests-item-body">
-                    <div class="JodRequests-item-body-item">
-                        <img class="JodRequests-item-body-itemIcon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/page-confirmar-y-pagar/ubication-icon.svg" alt="JodRequests-item-body-itemIcon">
-                        <span class="JodRequests-item-body-itemName">
-                            <?php echo esc_html($service['details']['zonas_de_trabajo'] ?? 'Dirección no disponible'); ?>
-                        </span>
-                    </div>
-                    <div class="JodRequests-item-body-item">
-                        <span class="JodRequests-item-body-itemName">
-                            <?php echo $description; ?>
-                        </span>
-                    </div>
-                    <div class="JodRequests-item-body-item">
-                        <span class="JodRequests-item-body-itemName">
-                            Tipo de servicio: <?php echo esc_html($service['details']['tipo_de_servicio']); ?>
-                        </span>
-                    </div>
-                    <?php echo render_dates($service['schedule']) ?>
-                    <div class="JodRequests-item-body-itemPrice">
-                        <?php echo esc_html($service['details']['precio_por_hora'] ?? 'Precio no disponible'); ?>
-                        <span>€/h</span>
-                    </div>
-                </div>
-                <div class="JodRequests-item-footer">
-                    <a type="button" href="/publicar-servicio/<?php echo $service['id'] ?>" class="JodRequests-item-footerBtn">
-                        Editar <img class="img-fluid"
-                            src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
-                            alt="ValeApp">
-                    </a>
-                </div>
-            </div>
-        </div>
+<div class="col-12 col-md-6 my-2">
+  <div class="JodRequests-item">
+    <div class="JodRequests-item-header">
+      <p class="JodRequests-item-header-text">
+        <?php echo $title; ?>
+        <span>
+          <?php echo $subtitle;  ?>
+        </span>
+      </p>
+    </div>
+    <div class="JodRequests-item-body">
+      <div class="JodRequests-item-body-item">
+        <img class="JodRequests-item-body-itemIcon"
+          src="<?php echo get_stylesheet_directory_uri(); ?>/img/page-confirmar-y-pagar/ubication-icon.svg"
+          alt="JodRequests-item-body-itemIcon">
+        <span class="JodRequests-item-body-itemName">
+          <?php echo esc_html($service['details']['zonas_de_trabajo'] ?? 'Dirección no disponible'); ?>
+        </span>
+      </div>
+      <div class="JodRequests-item-body-item">
+        <span class="JodRequests-item-body-itemName">
+          <?php echo $description; ?>
+        </span>
+      </div>
+      <div class="JodRequests-item-body-item">
+        <span class="JodRequests-item-body-itemName">
+          Tipus de servei: <?php echo esc_html($service['details']['tipo_de_servicio']); ?>
+        </span>
+      </div>
+      <?php echo render_dates($service['schedule']) ?>
+      <div class="JodRequests-item-body-itemPrice">
+        <?php echo esc_html($service['details']['precio_por_hora'] ?? 'Precio no disponible'); ?>
+        <span>€/h</span>
+      </div>
+    </div>
+    <div class="JodRequests-item-footer">
+      <a type="button" href="/publicar-servicio/<?php echo $service['id'] ?>" class="JodRequests-item-footerBtn">
+        Edita <img class="img-fluid"
+          src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png" alt="ValeApp">
+      </a>
+    </div>
+  </div>
+</div>
 <?php
     }
 }
 ?>
 <section class="section2 servicio-generica">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Mi cuenta</a></li>
-                        <li class="breadcrumb-item"><a href="#"></a></li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="col-12">
-                <h2 class="title">Mis servicios</h2>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">El meu compte</a></li>
+            <li class="breadcrumb-item"><a href="#"></a></li>
+          </ol>
+        </nav>
+      </div>
+      <div class="col-12">
+        <h2 class="title">Els meus serveis</h2>
+      </div>
     </div>
+  </div>
 </section>
 <div class="container">
-    <div class="row">
-        <!-- <div class="col-12">Todos mis servicios</div> -->
-        <?php echo render_my_services() ?>
-    </div>
+  <div class="row">
+    <!-- <div class="col-12">Todos mis servicios</div> -->
+    <?php echo render_my_services() ?>
+  </div>
 
 </div>
 <?php

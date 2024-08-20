@@ -276,14 +276,14 @@ if ((current_user_can('clientevaleapp') || current_user_can('administrator')) &&
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Mi cuenta</a></li>
+                            <li class="breadcrumb-item"><a href="#">El meu compte</a></li>
                             <li class="breadcrumb-item"><a href="#"></a></li>
                         </ol>
                     </nav>
                 </div>
                 <div class="col-12">
                     <h2 class="title">
-                        Mis ofertas
+                        Les meves ofertes
                     </h2>
                 </div>
             </div>
@@ -291,7 +291,7 @@ if ((current_user_can('clientevaleapp') || current_user_can('administrator')) &&
     </section>
     <div class="container my-2">
         <div class="cards-title">
-            A continuación encontrarás los profesionales<br /> que mejor se adaptan a tus búsquedas.
+            A continuació trobaràs els professionals<br /> que millor s'adapten a les teves cerques.
         </div>
         <div class="row">
             <?php
@@ -314,8 +314,8 @@ if ((current_user_can('clientevaleapp') || current_user_can('administrator')) &&
                                 <img class="img-fluid" src="<?php echo $profile->photo; ?>" alt="<?php echo esc_attr($profile->name ?? 'Foto del proveedor'); ?>">
                                 <p class="JodRequests-item-header-text">
                                     <?php echo $profile->name ?? 'Nombre no disponible'; ?>
-                                    <span>Proveedor relacionado a su servicio</span>
-                                    <span>Valoracion de <?php echo esc_html(number_format($average_rate, 2)); ?></span>
+                                    <span>Proveïdor relacionat al vostre servei</span>
+                                    <span>Valoració de <?php echo esc_html(number_format($average_rate, 2)); ?></span>
                                 </p>
                             </div>
                             <div class="JodRequests-item-body">
