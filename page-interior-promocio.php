@@ -36,7 +36,7 @@ $description = $group_promotion['descripcion'];
             </div>
             <div class="col-12">
                 <h2 class="title">
-                    Promociones
+                    Promocions
                 </h2>
             </div>
         </div>
@@ -60,7 +60,7 @@ $description = $group_promotion['descripcion'];
             <?php echo($description); ?>
         </p>
         <a class="interiorPromociones-button" href="#">
-            Añadir Saldo
+            Afegir Saldo
         </a>
     </div>
 </section>

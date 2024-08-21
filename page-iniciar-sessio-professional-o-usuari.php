@@ -18,7 +18,7 @@ get_header();
     <div class="CreateAccountUserOrProfessional">
     <div class="container">
         <div class="CreateAccountUserOrProfessional-title">
-            ¿Cómo deseas iniciar tu sesión?
+            Com vols iniciar la sessió?
         </div>
         <div class="CreateAccountUserOrProfessional-cards">
         <div class="row justify-content-center">
@@ -26,7 +26,7 @@ get_header();
             <div class="CreateAccountUserOrProfessional-card">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/page-crear-cuenta-profesional-o-usuario/card2-img1.png" alt="valeapp" class="img-fluid CreateAccountUserOrProfessional-cardImg" />
                 <div class="CreateAccountUserOrProfessional-cardText">
-                    <a href="/iniciar-sessio-clients" class="CreateAccountUserOrProfessional-cardBtn">Iniciar como Cliente</a>
+                    <a href="/iniciar-sessio-clients" class="CreateAccountUserOrProfessional-cardBtn">Iniciar com a Client</a>
                 </div>
             </div>
 </div>
@@ -34,7 +34,7 @@ get_header();
             <div class="CreateAccountUserOrProfessional-card">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/page-crear-cuenta-profesional-o-usuario/card2-img2.png" alt="valeapp" class="img-fluid CreateAccountUserOrProfessional-cardImg" />
                 <div class="CreateAccountUserOrProfessional-cardText">
-                    <a href="/iniciar-sessio-proveidors" class="CreateAccountUserOrProfessional-cardBtn">Iniciar como Profesional</a>
+                    <a href="/iniciar-sessio-proveidors" class="CreateAccountUserOrProfessional-cardBtn">Iniciar com a Professional</a>
                 </div>
             </div>
 </div>

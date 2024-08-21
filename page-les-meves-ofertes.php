@@ -30,7 +30,7 @@ get_header();
 				</div>
 				<div class="col-12">
 					<h2 class="title">
-						Mis ofertas
+						Les meves ofertes
 					</h2>
 				</div>
 			</div>
@@ -38,7 +38,7 @@ get_header();
     </section>
     <div class="cards myOffers">
         <div class="cards-title">
-            A continuación encontrarás los profesionales<br /> que mejor se adaptan a tus búsquedas. 
+            A continuació trobaràs els professionals<br /> que millor s'adapten a les cerques.
         </div>
     </div>
 
