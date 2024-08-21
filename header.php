@@ -345,7 +345,7 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
                 Llar
               </button>
               <div class="collapse" id="collapsedService1">
-                <a href="/categories/fontaneria" class="NavMenu-service-link">Lampistas</a>
+                <a href="/categories/fontaneria" class="NavMenu-service-link">Lampista</a>
                 <a href="/categories/limpieza" class="NavMenu-service-link">Neteja</a>
                 <a href="/categories/pintura" class="NavMenu-service-link">Pintura</a>
                 <a href="/categories/mudanza" class="NavMenu-service-link">Mudança</a>
