@@ -67,7 +67,7 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
         <div class="row">
           <div class="col-2">
             <a href="<?php echo home_url(); ?>"><img class="image-fluid image header-logo-img"
-                src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-desktop-logo.png" alt="ValeApp"></a>
+                src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/valeapp-desktop-logo.png" alt="ValeApp"></a>
           </div>
           <div class="col-10 header-links">
 
