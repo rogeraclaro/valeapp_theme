@@ -5,19 +5,19 @@ if(! defined('ABSPATH')) exit;
 //Validation so that the date of the appointment is not less than the current date
 // add_filter('acf/validate_value/key=field_64e3e82db5efd', 'validate_date_appointment', 10, 4);
 // add_filter('acf/validate_value/key=field_64e4c6040e2be', 'validate_date_appointment', 10, 4);
-// add_filter('acf/validate_value/key=field_64dd040e8b15b', 'validate_date_appointment', 10, 4);
-// function validate_date_appointment($valid, $value, $field, $input) {
-//     if(empty($value)) {
-//         return $valid;
-//     }
+add_filter('acf/validate_value/key=field_64dd040e8b15b', 'validate_date_appointment', 10, 4);
+function validate_date_appointment($valid, $value, $field, $input) {
+    if(empty($value)) {
+        return $valid;
+    }
 
-//     $date_selected = new DateTime($value);
-//     $date = new DateTime();
-//     if ($date_selected < $date) {
-//         $valid = 'La fecha seleccionada no puede ser anterior a la fecha actual.';
-//     }
-//     return $valid;
-// }
+    $date_selected = new DateTime($value);
+    $date = new DateTime();
+    if ($date_selected < $date) {
+        $valid = 'La fecha seleccionada no puede ser anterior a la fecha actual.';
+    }
+    return $valid;
+}
 
 //Validation of age so that clients are older than 18
 add_filter('acf/validate_value/key=field_64dcf709e9eb2', 'validate_age', 10, 4);

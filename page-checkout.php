@@ -20,8 +20,8 @@ get_header();
   <div class="container">
     <div class="row justify-content-center align-items-center">
       <div class="col-12">
-        <!-- <h1>Comandes</h1> -->
-        <?php echo do_shortcode('[woocommerce_cart]'); ?>
+        <!-- <h1>Checkout</h1> -->
+        <?php echo do_shortcode('[woocommerce_checkout]'); ?>
       </div>
     </div>
   </div>

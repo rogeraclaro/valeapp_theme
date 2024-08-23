@@ -89,6 +89,10 @@
 
 
 /* GENERAL */
+a:hover {
+  color: #59ab9f !important;
+}
+
 :root {
   --bs-font-sans-serif: "Century Gothic", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
