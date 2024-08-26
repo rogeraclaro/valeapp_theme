@@ -14,6 +14,7 @@
  */
 include 'inc/post-requests/requests-main.php';
 get_header();
+get_requests();
 ?>
 <section class="section2 servicio-generica">
     <div class="container">
@@ -61,4 +62,5 @@ get_header();
     </div>
 </div>
 <?php
+get_requests_form_validation();
 get_footer();

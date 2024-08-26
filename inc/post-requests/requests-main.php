@@ -18,7 +18,7 @@ function build_request_detail($service_request, $profile_id, $post_id, $status, 
     $provider_rate = get_field('provider_rate', $request_id);
     $provider_rate_text = get_field('provider_rate_text', $request_id);
     $detail_link = '';
-    if ($request_id){
+    if ($request_id) {
         $detail_link = get_permalink($request_id);
     }
     $item_photo_field = "foto_de_perfil";
@@ -130,6 +130,31 @@ function load_client_requests($post_id, &$all_requests)
     wp_reset_postdata();
 }
 
+function get_provider_services()
+{
+    $service_categories = [];
+    $user_id = get_current_user_id();
+    if (is_user_logged_in()) {
+        $args = [
+            'post_type' => 'publicar-servicio',
+            'author' => $user_id,
+            'posts_per_page' => -1,
+        ];
+
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
+                $service_categories[] = get_field('categorias_categoria');
+            endwhile;
+            wp_reset_postdata();
+        endif;
+
+        return $service_categories;
+    }
+    return false;
+}
+
 function load_provider_requests($post_id, &$all_requests)
 {
     $requests_args = get_request_query($post_id, 'proveedor');
@@ -163,27 +188,38 @@ function load_provider_requests($post_id, &$all_requests)
             }
         }
     }
-
+    $services_category = get_provider_services();
     // $today = current_time('Y-m-d');
     $args = array(
         'post_type' => 'solicitar-servicio',
         'post_status' => 'publish',
         'posts_per_page' => -1,
         'meta_query' => array(
-            'relation' => 'OR',
+            'relation' => 'AND',
             array(
-                'key' => 'estado',
-                'value' => 'disponible',
-                'compare' => '='
+                'relation' => 'OR',
+                array(
+                    'key' => 'estado',
+                    'value' => 'disponible',
+                    'compare' => '='
+                ),
+                array(
+                    'key' => 'estado',
+                    'compare' => 'NOT EXISTS'
+                ),
+                array(
+                    'key' => 'estado',
+                    'value' => '',
+                    'compare' => '='
+                )
             ),
             array(
-                'key' => 'estado',
-                'compare' => 'NOT EXISTS'
-            ),
-            array(
-                'key' => 'estado',
-                'value' => '',
-                'compare' => '='
+                'relation' => 'AND',
+                array(
+                    'key' => 'servicio-card_categoria',
+                    'value' => $services_category,
+                    'compare' => 'IN'
+                ),
             )
         ),
         // 'date_query' => array(
@@ -216,19 +252,23 @@ function load_provider_requests($post_id, &$all_requests)
     wp_reset_postdata();
 }
 
-// $post_id = get_user_post_id(83, 'cliente');
-// $post_id = get_user_post_id(84, 'proveedor');
-$post_id = get_current_user_post_id();
-if ($post_id) {
-    if (current_user_can('proveedorvaleapp') || current_user_can('administrator')) {
-        load_provider_requests($post_id, $all_requests);
-    } elseif (current_user_can('clientevaleapp') || current_user_can('administrator')) {
-        load_client_requests($post_id, $all_requests);
+function get_requests()
+{
+    global $all_requests;
+    // $post_id = get_user_post_id(83, 'cliente');
+    // $post_id = get_user_post_id(84, 'proveedor');
+    $post_id = get_current_user_post_id();
+    if ($post_id) {
+        if (current_user_can('proveedorvaleapp') || current_user_can('administrator')) {
+            load_provider_requests($post_id, $all_requests);
+        } elseif (current_user_can('clientevaleapp') || current_user_can('administrator')) {
+            load_client_requests($post_id, $all_requests);
+        } else {
+            echo do_shortcode('[no_authorizatiojn_page]');
+        }
     } else {
         echo do_shortcode('[no_authorizatiojn_page]');
     }
-} else {
-    echo do_shortcode('[no_authorizatiojn_page]');
 }
 
 ##Available perms
@@ -291,7 +331,7 @@ function render_actived_requests()
             $perms = [
                 "edit" => true,
                 "confirm" => true,
-                "delete" => true,
+                "delete" => true
             ];
         }
         render_requests($all_requests['actived_requests'], $perms);
@@ -332,7 +372,3 @@ function render_ended_requests()
         render_requests($all_requests['ended_requests'], $perms);
     }
 }
-
-
-
-?>

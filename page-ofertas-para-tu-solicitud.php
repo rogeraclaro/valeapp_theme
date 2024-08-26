@@ -14,6 +14,7 @@
  */
 
 include 'inc/post-requests/requests-post-actions.php';
+include 'inc/post-requests/requests-render.php';
 get_header();
 
 function get_last_post_by_user($user_id)
@@ -34,7 +35,7 @@ function get_last_post_by_user($user_id)
             $id = get_the_ID();
         }
     }
-    return $id; 
+    return $id;
 }
 // $request_id = isset($_GET['solicitud_id']) ? intval($_GET['solicitud_id']) : 0;
 $current_user_id = get_current_user_id();
@@ -148,7 +149,8 @@ if ((current_user_can('clientevaleapp') || current_user_can('administrator')) &&
     }
 
     $category = get_field('servicio-card_categoria', $request_id);
-
+    $min_rate = get_field('encuentra_tu_profesional-card_star_filter', $request_id);
+    $min_rate = intval(preg_replace('/[^0-9]/', '', $min_rate ?? '0'));
     // GET ALL AVAILABLE PROVIDERS
     $args = array(
         'post_type' => 'publicar-servicio',
@@ -306,57 +308,60 @@ if ((current_user_can('clientevaleapp') || current_user_can('administrator')) &&
                     }
                     $average_rate = $average_rate / count($requests);
                 }
+                if ($average_rate > $min_rate) {
             ?>
-                <div class="col-12 col-md-6 my-2">
-                    <div class="JodRequests-item">
-                        <form method="post" action="" enctype="multipart/form-data">
-                            <div class="JodRequests-item-header">
-                                <img class="img-fluid" src="<?php echo $profile->photo; ?>" alt="<?php echo esc_attr($profile->name ?? 'Foto del proveedor'); ?>">
-                                <p class="JodRequests-item-header-text">
-                                    <?php echo $profile->name ?? 'Nombre no disponible'; ?>
-                                    <span>Proveïdor relacionat al vostre servei</span>
-                                    <span>Valoració de <?php echo esc_html(number_format($average_rate, 2)); ?></span>
-                                </p>
-                            </div>
-                            <div class="JodRequests-item-body">
-                                <?php
-                                if (isset($provider->services) && count($provider->services) > 0) {
-                                    $services = $provider->services;
-                                    foreach ($services as $service) {
-                                        $service_title = isset($service->categories['categoria']) ? esc_html($service->categories['categoria']) : 'Título no disponible';
-                                        $service_subtitle = isset($service->categories[strtolower($service_title)]) ? esc_html($service->categories[strtolower($service_title)]) : 'Subtítulo no disponible';
-                                ?>
-                                        <div class="JodRequests-item-body-item">
-                                            <span class="JodRequests-item-body-itemName">
-                                                <?php echo $service_title . ' - ' . $service_subtitle; ?>
-                                                <?php echo render_dates($service->schedule) ?>
-                                            </span>
-                                        </div>
-                                <?php
+                    <div class="col-12 col-md-6 my-2">
+                        <div class="JodRequests-item">
+                            <form method="post" action="" enctype="multipart/form-data">
+                                <div class="JodRequests-item-header">
+                                    <img class="img-fluid" src="<?php echo $profile->photo; ?>" alt="<?php echo esc_attr($profile->name ?? 'Foto del proveedor'); ?>">
+                                    <p class="JodRequests-item-header-text">
+                                        <?php echo $profile->name ?? 'Nombre no disponible'; ?>
+                                        <span>Proveïdor relacionat al vostre servei</span>
+                                        <span>Valoració de <?php echo esc_html(number_format($average_rate, 2)); ?></span>
+                                    </p>
+                                </div>
+                                <div class="JodRequests-item-body">
+                                    <?php
+                                    if (isset($provider->services) && count($provider->services) > 0) {
+                                        $services = $provider->services;
+                                        foreach ($services as $service) {
+                                            $service_title = isset($service->categories['categoria']) ? esc_html($service->categories['categoria']) : 'Título no disponible';
+                                            $service_subtitle = isset($service->categories[strtolower($service_title)]) ? esc_html($service->categories[strtolower($service_title)]) : 'Subtítulo no disponible';
+                                    ?>
+                                            <div class="JodRequests-item-body-item">
+                                                <span class="JodRequests-item-body-itemName">
+                                                    <?php echo $service_title . ' - ' . $service_subtitle; ?>
+                                                    <?php echo render_dates($service->schedule) ?>
+                                                </span>
+                                            </div>
+                                    <?php
+                                        }
                                     }
-                                }
-                                ?>
-                                <button class="JodRequests-accept my-2 w-auto" type="submit" name="action" value="request_hire_submit">
-                                    <span>
-                                        Contratar
-                                    </span>
-                                </button>
-                            </div>
-                            <input type="hidden" name="title" value="<?php echo $category; ?>">
-                            <input type="hidden" name="post_id" value="0">
-                            <input type="hidden" name="solicitud_id" value="<?php echo $request_id; ?>">
-                            <input type="hidden" name="provider_id" value="<?php echo $profile->id; ?>">
-                            <?php wp_nonce_field('requests_action', 'requests_nonce'); ?>
-                        </form>
+                                    ?>
+                                    <button class="JodRequests-accept my-2 w-auto" type="submit" name="action" value="request_hire_submit">
+                                        <span>
+                                            Contratar
+                                        </span>
+                                    </button>
+                                </div>
+                                <input type="hidden" name="title" value="<?php echo $category; ?>">
+                                <input type="hidden" name="post_id" value="0">
+                                <input type="hidden" name="solicitud_id" value="<?php echo $request_id; ?>">
+                                <input type="hidden" name="provider_id" value="<?php echo $profile->id; ?>">
+                                <?php wp_nonce_field('requests_action', 'requests_nonce'); ?>
+                            </form>
+                        </div>
                     </div>
-                </div>
             <?php
+                }
             }
             ?>
         </div>
 
     </div>
 <?php
+    get_requests_form_validation();
 } else {
     echo do_shortcode('[no_authorization_page]');
 }

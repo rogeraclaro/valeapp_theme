@@ -226,12 +226,12 @@ if (isset($post)) {
                 </div>
             </div>
         </div>
-        <a class="RequestsDetail-btn" href="#">
+        <!-- <a class="RequestsDetail-btn" href="#">
             Confirmar reserva
         </a>
         <a class="RequestsDetail-deny" href="#">
             Denegar
-        </a>
+        </a> -->
         <div class="RequestsDetail-rating">
             <div class="wrapper4">
                 <h3 class="title">Valoraciones de Claudia (30)</h3>

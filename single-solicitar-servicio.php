@@ -21,7 +21,7 @@ if (current_user_can('clientevaleapp') || current_user_can('administrator')) {
                     'post_id'       => $post_id,
                     'field_groups'  => ['group_64dcf8a7a89d8'],
                     'fields' => [
-                        'field_656f483c90876',
+                        // 'field_656f483c90876',
                         'field_656f507890877',
                         'field_656f517290878',
                         'field_656f51d690879',

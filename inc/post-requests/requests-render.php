@@ -45,7 +45,7 @@ function render_requests($requests, $perms)
             if (isset($perms['request'])) {
                 $btns = $btns . '<button class="JodRequests-accept" type="submit" name="action" value="request_create_submit">
                 <span>
-                Postularse
+                Aceptar
                 </span>
                 </button>';
             }
@@ -79,7 +79,7 @@ function render_requests($requests, $perms)
                 </a>';
             }
             if (isset($perms['repeat'])) {
-                $footer_options = $footer_options . '<button type="button" class="contracted-tasks-item-footerBtn contracted-tasks-item-footerBtn-border">
+                $footer_options = $footer_options . '<button type="submit" class="contracted-tasks-item-footerBtn contracted-tasks-item-footerBtn-border" name="action" value="request_duplicate_submit">
                 Volver a reservar <img class="img-fluid"
                 src="' . get_stylesheet_directory_uri() . '/img/valeapp-providers-chevron-faq.png"
                 alt="ValeApp">
@@ -186,6 +186,24 @@ function render_requests($requests, $perms)
 
             </form>
         </div>
-<?php
+    <?php
     }
+}
+
+function get_requests_form_validation()
+{
+    ?>
+    <script>
+        const submitButtons = document.querySelectorAll('button[type="submit"]');
+
+        submitButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                if (!button.disabled) {
+                    // button.disabled = true;
+                    button.style.pointerEvents = "none";
+                }
+            });
+        });
+    </script>
+<?php
 }

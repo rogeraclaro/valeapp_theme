@@ -16,6 +16,7 @@ include 'inc/match-service/index.php';
 include 'inc/post-requests/requests-main.php';
 
 get_header();
+get_requests();
 ?>
 
 <section class="section2 servicio-generica">
@@ -66,4 +67,5 @@ get_header();
 </div>
 
 <?php
+get_requests_form_validation();
 get_footer();
