@@ -58,6 +58,7 @@
   font-family: 'Century Gothic';
   color: #575550;
   font-size: 1rem;
+  height: inherit;
 }
 
 .forms-default .acf-field.card .acf-field textarea::placeholder {

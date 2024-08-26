@@ -169,7 +169,7 @@ function render_requests($requests, $perms)
                         echo do_shortcode('[better_messages_pm_button text="Contáctalo" user_id="' . $profile_id . '" message="Hola! Mucho Gusto!" target="_self" class="JodRequests-item-footerBtn" fast_start="0" url_only="0"]');
                     }
                     ?>
-                    <a type="button" href="https://valeapp.com/ajuda/" class="JodRequests-item-footerBtn">
+                    <a type="button" href="/ajuda" class="JodRequests-item-footerBtn">
                         ¿Necesitas ayuda? <img class="img-fluid"
                             src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
                             alt="ValeApp">
