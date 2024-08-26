@@ -29,9 +29,8 @@ function set_cancel_to_all_related_requests($solicitud_id, $post_id)
 }
 function is_the_request_available($solicitud_id)
 {
-    $status = get_field('estado', $solicitud_id);
-    $is_available = $status === "disponible";
-    if ($is_available) {
+    $status = get_field('estado', $solicitud_id) ?? 'disponible';
+    if ($status === "disponible") {
         $args = array(
             'post_type' => 'solicitudes',
             'post_status' => 'publish',
