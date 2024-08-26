@@ -51,12 +51,12 @@ function is_the_request_available($solicitud_id)
             )
         );
         $query = new WP_Query($args);
-
+        wp_reset_postdata();
         if ($query->have_posts()) {
-            wp_reset_postdata();
             return !($query->found_posts >= 3);
+        } else {
+            return true;
         }
-        return false;
     }
     return false;
 }
