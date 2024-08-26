@@ -1,6 +1,6 @@
 <?php
 // Asegurarse de que las variables globales estén definidas
-global $membership_fields, $membership_class, $button_text, $is_current_plan;
+global $membership_fields, $membership_class, $button_text, $is_current_plan, $button_style;
 $is_user_logged_in = is_user_logged_in();
 
 if (!is_array($membership_fields)) {
@@ -57,9 +57,10 @@ if (!is_array($membership_fields)) {
   <a href="<?php echo esc_url($add_to_cart_url); ?>"
     class="Membership-plan-button"><?php echo esc_html($button_text); ?></a>
   <?php else: ?>
-  <a href="/registre-proveidor" class="Membership-plan-button">Contractar</a>
+  <a href="/registre-proveidor" class="Membership-plan-button <?=$button_style;?>">Contractar</a>
   <?php endif; ?>
   <?php else: ?>
-  <a href="javascript:void(0);" class="Membership-plan-button"><?php echo esc_html($button_text); ?></a>
+  <a href="javascript:void(0);"
+    class="Membership-plan-button <?=$button_style;?>"><?php echo esc_html($button_text); ?></a>
   <?php endif; ?>
 </div>

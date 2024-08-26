@@ -1,4 +1,4 @@
-.desactivate {
+.deactivate {
   filter: grayscale(100%);
 }
 .Membership-plan-button {
@@ -7,4 +7,16 @@
   margin-left: auto;
   margin-right: auto;
   text-decoration: none;
+}
+.Membership-plan-button:hover {
+  color: white !important;
+}
+.button-cancel {
+  background-color: #ff4c4c !important;
+  color: white;
+}
+
+.button-cancel:hover {
+  background-color: #c73c3c !important;
+  color: white !important;
 }

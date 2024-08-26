@@ -14,8 +14,8 @@
  */
 
 get_header();
-$is_user_logged_in = is_user_logged_in();
 
+$is_user_logged_in = is_user_logged_in();
 $selected_membership = get_user_selected_membership(); // Esta es la membresía actual del usuario
 $memberships = get_all_memberships(); // Obtener todos los planes de membresía
 
@@ -92,29 +92,45 @@ $memberships = get_all_memberships(); // Obtener todos los planes de membresía
     <div class="container">
       <div class="row justify-content-center align-items-start">
         <?php foreach ($memberships as $fields): ?>
-          <div class="col-12 col-sm-4">
-            <?php
+        <div class="col-12 col-sm-4">
+          <?php
             // Verificar si el plan es el mismo que la membresía activa del usuario
             $is_current_plan = ($fields['titulo'] === $selected_membership);
+
             if ($is_user_logged_in) {
-              $membership_class = $is_current_plan ? 'active-plan' : 'desactivate';
+              if (!$selected_membership) {
+                // Si el usuario está logueado pero no tiene membresía activa, no asignar ninguna clase
+                $membership_class = '';
+              } else {
+                // Si tiene una membresía activa, asignar la clase correspondiente
+                $membership_class = $is_current_plan ? 'active-plan' : 'deactivate';
+              }
             } else {
               $membership_class = ''; // No agregar ninguna clase si el usuario no está logueado
             }
-            // Definir el texto del botón
-            $button_text = $is_current_plan ? 'Membresía Activa' : 'Contractar';
+
+            // Definir el texto y estilo del botón
+            if ($is_current_plan) {
+              // Si es el plan actual, cambiar el color y texto del botón
+              $button_text = 'Cancelar';
+              $button_style = 'button-cancel';
+            } else {
+              $button_text = 'Contractar';
+              $button_style = '';
+            }
 
             // Usar las variables globales
-            global $membership_fields, $membership_class, $button_text, $is_current_plan;
+            global $membership_fields, $membership_class, $button_text, $button_style, $is_current_plan;
             $membership_fields = $fields;
             $membership_class = $membership_class;
             $button_text = $button_text;
+            $button_style = $button_style;
             $is_current_plan = $is_current_plan;
 
             // Llamar al partial
             get_template_part('template-parts/membership/membership', 'plan');
             ?>
-          </div>
+        </div>
         <?php endforeach; ?>
       </div>
     </div>
@@ -130,24 +146,24 @@ $memberships = get_all_memberships(); // Obtener todos los planes de membresía
         if ($slides):
         ?>
 
-          <!-- Swiper -->
-          <div class="swiper-wrapper">
-            <?php foreach ($slides as $slide): ?>
-              <div class="swiper-slide">
-                <div class="content">
-                  <p class="text">
-                    <?php echo $slide['texto']; ?>
-                  </p>
-                  <div class="rate">
-                    <span>
-                      <?php echo $slide['autor']; ?>
-                    </span>
-                    <img class="img-fluid rate" src="<?php echo $slide['stars']; ?>" alt="valeapp">
-                  </div>
-                </div>
+        <!-- Swiper -->
+        <div class="swiper-wrapper">
+          <?php foreach ($slides as $slide): ?>
+          <div class="swiper-slide">
+            <div class="content">
+              <p class="text">
+                <?php echo $slide['texto']; ?>
+              </p>
+              <div class="rate">
+                <span>
+                  <?php echo $slide['autor']; ?>
+                </span>
+                <img class="img-fluid rate" src="<?php echo $slide['stars']; ?>" alt="valeapp">
               </div>
-            <?php endforeach; ?>
+            </div>
           </div>
+          <?php endforeach; ?>
+        </div>
         <?php endif; ?>
         <div class="swiper-pagination event" data-label="swiper_pagination"></div>
       </div>
@@ -164,30 +180,30 @@ $memberships = get_all_memberships(); // Obtener todos los planes de membresía
         $questions = get_field('preguntes_frequents');
         if ($questions):
         ?>
-          <!-- Faq repeater -->
-          <?php $counter = 0;
+        <!-- Faq repeater -->
+        <?php $counter = 0;
           foreach ($questions as $question): ?>
-            <div class="accordion-item">
-              <h2 id="headingPoints<?php echo $counter; ?>" class="accordion-header">
-                <button type="button" class="accordion-button event collapsed" data-label="collapsefaq"
-                  data-bs-toggle="collapse" data-bs-target="#collapsefaq<?php echo $counter; ?>" aria-expanded="false"
-                  aria-controls="collapsefaq<?php echo $counter; ?>">
-                  <?php echo $question['pregunta']; ?>
-                  <img class="img-fluid"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
-                    alt="ValeApp" />
-                </button>
-              </h2>
-              <div id="collapsefaq<?php echo $counter; ?>" class="accordion-collapse collapse"
-                aria-labelledby="headingPoints<?php echo $counter; ?>" data-bs-parent="#accordionfqa">
-                <div class="accordion-body">
-                  <?php echo $question['resposta']; ?>
-                </div>
-              </div>
+        <div class="accordion-item">
+          <h2 id="headingPoints<?php echo $counter; ?>" class="accordion-header">
+            <button type="button" class="accordion-button event collapsed" data-label="collapsefaq"
+              data-bs-toggle="collapse" data-bs-target="#collapsefaq<?php echo $counter; ?>" aria-expanded="false"
+              aria-controls="collapsefaq<?php echo $counter; ?>">
+              <?php echo $question['pregunta']; ?>
+              <img class="img-fluid"
+                src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-chevron-faq.png"
+                alt="ValeApp" />
+            </button>
+          </h2>
+          <div id="collapsefaq<?php echo $counter; ?>" class="accordion-collapse collapse"
+            aria-labelledby="headingPoints<?php echo $counter; ?>" data-bs-parent="#accordionfqa">
+            <div class="accordion-body">
+              <?php echo $question['resposta']; ?>
             </div>
-          <?php $counter++;
+          </div>
+        </div>
+        <?php $counter++;
           endforeach; ?>
-          <!-- End Faq repeater -->
+        <!-- End Faq repeater -->
         <?php endif; ?>
 
       </div>
