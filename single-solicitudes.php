@@ -13,10 +13,60 @@
  * @package ValeApp
  */
 include 'inc/match-service/index.php';
+include 'inc/post-requests/requests-render.php';
 
 get_header();
 $slug = get_query_var('name');
 $post = get_page_by_path($slug, OBJECT, 'solicitudes');
+
+function get_all_related_reviews($provider_id, $post_id)
+{
+    $all_related_reviews = [];
+    $args_requests = array(
+        'post_type' => 'solicitudes',
+        'post_status' => 'publish',
+        'meta_query' => array(
+            'relation' => 'AND',
+            array(
+                'key' => 'proveedor',
+                'value' => $provider_id,
+                'compare' => '='
+            ),
+            array(
+                'key' => 'estado',
+                'value' => 'confirmado',
+                'compare' => '='
+            ),
+            array(
+                'key'     => 'provider_rate',
+                'compare' => 'EXISTS'
+            ),
+        ),
+        'post__not_in' => array($post_id)
+    );
+    $query = new WP_Query($args_requests);
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $rate = get_field('provider_rate');
+            $rate_text = get_field('provider_rate_text');
+
+            $request_client_id = get_field('cliente');
+            $client_id = get_post_field('post_author', $request_client_id);
+            $client_profile = get_profile_data($client_id, $request_client_id, 'client');
+
+            $all_related_reviews[] = (object)[
+                'rate' => intval(preg_replace('/[^0-9]/', '', $rate ?? '')),
+                'rate_value' => $rate,
+                'rate_text' => $rate_text,
+                'client' => $client_profile,
+            ];
+        }
+    }
+    wp_reset_postdata();
+    return $all_related_reviews;
+}
 
 function get_profile_data($profile_id, $post_id, $role)
 {
@@ -26,11 +76,13 @@ function get_profile_data($profile_id, $post_id, $role)
         $item_photo_field = "fotos_de_perfil";
     }
     if (isset($profile_info)) {
+        $profile_photo = get_field($item_photo_field, $post_id);
+        $profile_photo_url = $profile_photo && isset($profile_photo['url']) ? esc_url($profile_photo['url']) : get_stylesheet_directory_uri() . '/img/valeapp-providers-ervice-user.png';
         $profile_details = [
             'id' => $post_id,
             'name' => $profile_info->first_name . ' ' . $profile_info->last_name,
             'user_id' => $profile_info->ID,
-            'photo' => get_field($item_photo_field, $post_id),
+            'photo' => $profile_photo_url,
             'direction' => get_field('datos_personales', $post_id),
             'post_date_month' => get_post_time('F Y', true, $post_id)
         ];
@@ -46,21 +98,29 @@ function get_profile_data($profile_id, $post_id, $role)
     return $profile_details;
 }
 
+function get_provider_data($post)
+{
+    $profile = [];
+    $provider_post_id = get_field('proveedor', $post->ID);
+    $provider_id = get_post_field('post_author', $provider_post_id);
+    $profile = get_profile_data($provider_id, $provider_post_id, 'provider');
+    return $profile;
+}
+
 if (isset($post)) {
     $profile = [];
+    $provider_profile = get_provider_data($post);
     if (current_user_can('proveedorvaleapp') || current_user_can('administrator')) {
         $client_post_id = get_field('cliente', $post->ID);
         $client_id = get_post_field('post_author', $client_post_id);
         $profile = get_profile_data($client_id, $client_post_id, 'client');
     } elseif (current_user_can('clientevaleapp') || current_user_can('administrator')) {
-        $provider_post_id = get_field('proveedor', $post->ID);
-        $provider_id = get_post_field('post_author', $provider_post_id);
-        $profile = get_profile_data($provider_id, $provider_post_id, 'provider');
+        $profile = $provider_profile;
     } else {
         echo do_shortcode('[no_authorizatiojn_page]');
     }
 
-
+    $reviews = get_all_related_reviews($provider_profile['id'], $post->ID);
 
     $solicitud = get_field('solicitud servicio', $post->ID);
     $status = get_field('estado', $post->ID);
@@ -81,9 +141,8 @@ if (isset($post)) {
 
     $solicitud_title = isset($request_data['title']) ? esc_html($request_data['title']) : 'Título no disponible';
     $profile_id = isset($profile['user_id']) ? esc_html($profile['user_id']) : '';
-    $profile_photo = isset($profile['photo']) ? $profile['photo'] : null;
+    $profile_photo = isset($profile['photo']) ? $profile['photo'] : '';
     $profile_name = isset($profile['name']) ? esc_html($profile['name']) : 'Nombre no disponible';
-    $profile_photo_url = $profile_photo && isset($profile_photo['url']) ? esc_url($profile_photo['url']) : get_stylesheet_directory_uri() . '/img/valeapp-providers-ervice-user.png';
 ?>
 
     <section class="section2 Ayuda">
@@ -108,7 +167,7 @@ if (isset($post)) {
     <div class="RequestsDetail">
         <div class="RequestsDetail-card">
             <div class="RequestsDetail-cardImg">
-                <img class="img-fluid" src="<?php echo $profile_photo_url ?>" alt="ValeApp">
+                <img class="img-fluid" src="<?php echo $profile_photo ?>" alt="ValeApp">
             </div>
             <div class="RequestsDetail-cardText">
                 <span class="RequestsDetail-cardName"><?php echo $profile_name; ?></span>
@@ -234,49 +293,33 @@ if (isset($post)) {
         </a> -->
         <div class="RequestsDetail-rating">
             <div class="wrapper4">
-                <h3 class="title">Valoraciones de Claudia (30)</h3>
-                <div class="rating-content">
-                    <div class="rating-wrapper">
-                        <img class="img-fluid profile" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-rating-photo.png" alt="ValeApp">
-                        <div class="rating-info">
-                            <p class="name">Jorge P</p>
-                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-rating-modal.png" alt="ValeApp">
+                <h3 class="title">Valoraciones de <?php echo $provider_profile['name'] . ' (' . count($reviews) . ')'; ?></h3>
+                <?php
+                foreach ($reviews as $review) {
+                ?>
+                    <div class="rating-content">
+                        <div class="rating-wrapper">
+                            <img class="img-fluid profile" src="<?php echo $review->client['photo']; ?>" alt="ValeApp">
+                            <div class="rating-info">
+                                <p class="name"><?php echo esc_html($review->client['name']); ?></p>
+                                <!-- <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-rating-modal.png" alt="ValeApp"> -->
+                                <div class="acf-field acf-field-radio radioAsStars" data-name="star_filter" data-type="radio" data-key="<?php echo $rate_form_star_name; ?>">
+                                    <div class="acf-input">
+                                        <ul class="acf-radio-list acf-bl px-0" data-allow_null="0" data-other_choice="0">
+                                            <?php render_stars('disabled', esc_html($review->rate_value)) ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="duration">Hace 2 dias</div>
                         </div>
-                        <div class="duration">Hace 2 dias</div>
+                        <p class="message">
+                        “<?php echo esc_html($review->rate_text); ?>” et dol
+                        </p>
                     </div>
-                    <p class="message">
-                        “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut bore.”
-                        et dol
-                    </p>
-                </div>
-                <div class="rating-content">
-                    <div class="rating-wrapper">
-                        <img class="img-fluid profile" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-rating-photo.png" alt="ValeApp">
-                        <div class="rating-info">
-                            <p class="name">Lorena P.</p>
-                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-rating-modal.png" alt="ValeApp">
-                        </div>
-                        <div class="duration">Hace 3 semanas</div>
-                    </div>
-                    <p class="message">
-                        “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut bore.”
-                        et dol
-                    </p>
-                </div>
-                <div class="rating-content">
-                    <div class="rating-wrapper">
-                        <img class="img-fluid profile" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-rating-photo.png" alt="ValeApp">
-                        <div class="rating-info">
-                            <p class="name">Isabel G. </p>
-                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-providers-rating-modal.png" alt="ValeApp">
-                        </div>
-                        <div class="duration">Hace 2 meses</div>
-                    </div>
-                    <p class="message">
-                        “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut bore.”
-                        et dol
-                    </p>
-                </div>
+                <?php
+                }
+                ?>
                 <button class="RequestsDetail-showMore"> + Ver mas</button>
             </div>
             <div class="wrapper5">

@@ -1,10 +1,11 @@
 <?php
-function render_stars($stars_name, $star_value)
+function render_stars($stars_name, $star_value, $disabled = false)
 {
+    $disabled_input = $disabled > 0 ? "disabled='disabled'" : "";
     for ($i = 0; $i < 5; $i++) {
         $current_star_value = 'star' . $i + 1;
 ?>
-        <li><label><input type="radio" name="<?php echo $stars_name; ?>" value="<?php echo $current_star_value; ?>" <?php checked($star_value, $current_star_value); ?>>
+        <li><label><input type="radio" name="<?php echo $stars_name; ?>" <?php echo $disabled_input; ?>" value="<?php echo $current_star_value; ?>" <?php checked($star_value, $current_star_value); ?>>
                 <?php echo $current_star_value; ?>
             </label></li>
     <?php
