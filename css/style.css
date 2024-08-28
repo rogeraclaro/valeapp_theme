@@ -7169,6 +7169,15 @@ input.wpcf7-form-control.wpcf7-submit {
     font-size: 1.4rem;
   }
 
+  .Blog .nav{
+    overflow-x: hidden;
+    justify-content: space-between;
+  }
+
+  .Blog .nav-item {
+    margin-right: 0;
+  }
+
   .Blog img.attachment-thumbnail {
     display: block;
     max-width: 3rem;
