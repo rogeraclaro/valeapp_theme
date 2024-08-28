@@ -228,3 +228,89 @@
   padding-left: 1.3rem;
   padding-right: 1.3rem;
 }
+
+.payment-methods-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.payment-methods-header {
+  background-color: #f4f4f4;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+.payment-methods-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.payment-methods-card-type,
+.payment-methods-card-num,
+.payment-methods-actions {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.payment-methods-card-type img.payment-methods-icon {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.payment-methods-actions {
+  text-align: center;
+}
+
+.payment-methods-button {
+  background-color: #5aab9f;
+  border: 0;
+  border-radius: 2rem;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1rem;
+  font-family: "Century Gothic";
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.payment-methods-button:hover {
+  background-color: #4c998e;
+  color: white !important;
+}
+
+.payment-methods-button.delete {
+  background-color: #e74c3c;
+}
+
+.payment-methods-button.delete:hover {
+  background-color: #c0392b;
+  color: white !important;
+}
+
+.payment-methods-add-button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #5aab9f;
+  border: 0;
+  border-radius: 2rem;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1rem;
+  font-family: "Century Gothic";
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.payment-methods-add-button:hover {
+  background-color: #4c998e;
+  color: white !important;
+}

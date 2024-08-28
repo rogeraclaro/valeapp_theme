@@ -326,3 +326,35 @@ add_filter('post_thumbnail_html', 'add_css_class_to_thumbnail', 10, 5);
 //     register_post_type('solicitudes', $args);
 // }
 // add_action('init', 'create_cpt_requests');
+
+function custom_payment_methods_page() {
+    if ( ! is_user_logged_in() ) {
+        return __( 'You need to be logged in to manage your payment methods.', 'woocommerce' );
+    }
+
+    ob_start();
+
+    // WooCommerce template for payment methods
+    wc_get_template( 'myaccount/payment-methods.php' );
+
+    $output = ob_get_clean();
+
+    // Obtener la URL correcta para "My Account" y el endpoint "add-payment-method"
+    $my_account_url = wc_get_page_permalink( 'myaccount' );
+    $add_payment_method_url = trailingslashit( $my_account_url ) . 'add-payment-method/';
+
+    // Reemplazar el enlace de "Add Payment Method" en la salida
+    $output = str_replace( '/el-meu-romanent-proveidor/add-payment-method/', esc_url( $add_payment_method_url ), $output );
+
+    return $output;
+}
+add_shortcode( 'custom_payment_methods', 'custom_payment_methods_page' );
+
+function redirect_after_add_payment_method( $return_url ) {
+    // Redirige a la página personalizada después de agregar un método de pago
+    if ( is_wc_endpoint_url( 'add-payment-method' ) ) {
+        $return_url = get_permalink( get_page_by_path( 'el-meu-romanent-proveidor' ) );
+    }
+    return $return_url;
+}
+add_filter( 'woocommerce_get_return_url', 'redirect_after_add_payment_method' );

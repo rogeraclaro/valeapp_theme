@@ -61,7 +61,7 @@ get_header();
           </p>
           <p class="MiSaldo-cardNum">
             <img class="MiSaldo-icon2"
-              src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-visalogo-mi-saldo.png">
+              src="<?php echo get_stylesheet_directory_uri(); ?>/img/payment-method-brands/valeapp-visalogo-mi-saldo.png">
             494019******5587
           </p>
         </div>

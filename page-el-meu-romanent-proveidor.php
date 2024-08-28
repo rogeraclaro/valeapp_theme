@@ -55,16 +55,12 @@ get_header();
             Edita
           </button>
         </div>
-        <div class="miSaldoProveedor-card">
-          <p class="miSaldoProveedor-cardType">
-            TARJETA VISA <span class="miSaldoProveedor-icon1">?</span>
-          </p>
-          <p class="miSaldoProveedor-cardNum">
-            <img class="miSaldoProveedor-icon2"
-              src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-visalogo-mi-saldo.png">
-            494019******5587
-          </p>
-        </div>
+
+        <!-- End custom ShortCode -->
+        <?php echo do_shortcode('[custom_payment_methods]'); ?>
+        <!-- End custom ShortCode -->
+
+
       </div>
     </div>
     <div class="miSaldoProveedor-contentModal">
