@@ -49,11 +49,11 @@ get_header();
           <p class="miSaldoProveedor-title">
             Mètode de pagament registrat
           </p>
-          <button class="miSaldoProveedor-editBtn">
+          <!-- <button class="miSaldoProveedor-editBtn">
             <img class="miSaldoProveedor-editIcon"
-              src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-editIcon-miSaldo.png">
+              src="<?php //echo get_stylesheet_directory_uri(); ?>/img/valeapp-editIcon-miSaldo.png">
             Edita
-          </button>
+          </button> -->
         </div>
 
         <!-- End custom ShortCode -->
@@ -64,11 +64,11 @@ get_header();
       </div>
     </div>
     <div class="miSaldoProveedor-contentModal">
-      <button type="button" class="miSaldoProveedor-filter" data-bs-toggle="modal" data-bs-target="#clientFilter">
+      <!-- <button type="button" class="miSaldoProveedor-filter" data-bs-toggle="modal" data-bs-target="#clientFilter">
         <img class="miSaldoProveedor-filterIcon"
-          src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeapp-filter-icon.png">
+          src="<?php //echo get_stylesheet_directory_uri(); ?>/img/valeapp-filter-icon.png">
         Filtrar
-      </button>
+      </button> -->
       <div class="modal fade miSaldoProveedor-modal" id="clientFilter" tabindex="-1"
         aria-labelledby="CustomeFilterLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered ">

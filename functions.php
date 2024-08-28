@@ -265,6 +265,8 @@ require_once plugin_dir_path(__FILE__) . 'inc/match-service/search_author.php';
 require_once plugin_dir_path(__FILE__) . 'inc/send-message-match/send_email.php';
 require_once plugin_dir_path(__FILE__) . 'inc/search-task/search.php';
 require_once plugin_dir_path(__FILE__) . 'inc/membership/membership-plans.php';
+require_once plugin_dir_path(__FILE__) . 'inc/membership/membresia-monei-api/subscriptions-handler.php';
+
 
 // function obtener_valor_de_correo() {
 //     if (is_user_logged_in()) {

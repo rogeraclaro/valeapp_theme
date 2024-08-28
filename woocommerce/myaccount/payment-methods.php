@@ -70,7 +70,6 @@ do_action( 'woocommerce_before_account_payment_methods', $has_methods ); ?>
 
 <?php if ( WC()->payment_gateways->get_available_payment_gateways() ) : ?>
 <a class="button payment-methods-add-button"
-  href="<?php echo esc_url( wc_get_endpoint_url( 'add-payment-method' ) ); ?>">
-  <?php esc_html_e( 'Add payment method', 'woocommerce' ); ?>
-</a>
+  href="<?php echo esc_url( wc_get_endpoint_url( 'add-payment-method', '', wc_get_page_permalink( 'myaccount' ) ) ); ?>"><?php esc_html_e( 'Add payment method', 'woocommerce' ); ?></a>
+
 <?php endif; ?>
