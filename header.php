@@ -303,8 +303,8 @@ include_once plugin_dir_path(__FILE__) . 'inc/button-menu.php';
         </button>
       </div>
       <div class="logomobile">
-        <img class="image-fluid image" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valelogo.png"
-          alt="ValeApp">
+        <img class="image-fluid image" width="110px"
+          src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/valeapp-desktop-logo.png" alt="ValeApp">
       </div>
       <div class="header-right-block">
         <div class="cerca">

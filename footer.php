@@ -190,7 +190,8 @@
       </div>
     </div>
     <div class="footlast">
-      <img class="image-fluid image" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valelogo.png" alt="ValeApp">
+      <img class="image-fluid image" width="110px"
+        src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo/valeapp-desktop-logo.png" alt="ValeApp">
       <div class="copyright">
         © 2024 Vale. Tots els drets reservats.
       </div>
