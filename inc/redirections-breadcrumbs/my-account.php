@@ -1,54 +1,48 @@
 <?php
 
 function breadcrumb_my_account() {
-    if(is_user_logged_in()) {
-        $current_user = wp_get_current_user();
-        $user_role = "";
-        $rol = "";
-        $user_id = "";
+    if (!is_user_logged_in()) {
+        echo '<a href="#">El meu compte</a>';
+        return;
+    }
 
-        if($current_user->ID !=0) {
-            $user_roles = $current_user->roles;
-            $user_id = get_current_user_id();
-        };
+    $current_user = wp_get_current_user();
+    $user_roles = $current_user->roles;
+    $user_id = $current_user->ID;
 
-        foreach($user_roles as $role) {
-            $user_role = $role;
-        };
+    // Determinar el rol basado en la prioridad
+    $rol = '';
+    if (in_array('proveedorvaleapp', $user_roles)) {
+        $rol = 'proveedor';
+    } elseif (in_array('clientevaleapp', $user_roles)) {
+        $rol = 'cliente';
+    }
 
-        switch($user_role) {
-            case "proveedorvaleapp":
-                $rol = "proveedor";
-            break;
-            case "clientevaleapp":
-                $rol = "cliente";
-            break;
-        };
+    if (empty($rol)) {
+        echo '<a href="#">El meu compte</a>';
+        return;
+    }
 
-        $args = [
-            'post_type' => $rol,
-            'author' => $user_id,
-        ];
+    $args = [
+        'post_type' => $rol,
+        'author' => $user_id,
+    ];
 
-        $query = new WP_Query($args);
+    $query = new WP_Query($args);
 
-        if($query->have_posts()) :
-            while ($query->have_posts()) : $query->the_post();
-                $id = get_the_ID();
-
-                ?>
-<a href="/<?php echo($rol); ?>/<?php echo($id); ?>">
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $id = get_the_ID();
+            ?>
+<a href="/<?php echo esc_attr($rol); ?>/<?php echo esc_attr($id); ?>">
   El meu compte
 </a>
 <?php
-            endwhile;
-            wp_reset_postdata();
-        else:
-            ?>
-<a href="#">El meu compte</a>
-<?php
-        endif;
+        }
+        wp_reset_postdata();
+    } else {
+        echo '<a href="#">El meu compte</a>';
     }
 }
-
 ?>

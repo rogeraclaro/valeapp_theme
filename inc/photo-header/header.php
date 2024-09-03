@@ -9,30 +9,37 @@ function add_photo_profile_header() {
         $field_photo = "";
         $field_balance = "";
 
-        if($current_user->ID !=0) {
+        if($current_user->ID != 0) {
             $user_roles = $current_user->roles;
             $user_id = get_current_user_id();
-        };
+        }
 
-        foreach($user_roles as $role) {
-            $user_role = $role;
-        };
+        // Verificar si el rol 'proveedorvaleapp' está presente
+        if (in_array('proveedorvaleapp', $user_roles)) {
+            $user_role = 'proveedorvaleapp';
+        } else {
+            // Si no es 'proveedorvaleapp', asignar el último rol en la lista
+            foreach($user_roles as $role) {
+                $user_role = $role;
+            }
+        }
 
+        // Aplicar la lógica de acuerdo al rol
         switch ($user_role) {
             case 'proveedorvaleapp':
                 $rol = "proveedor";
                 $field_photo = "field_64dcf553615dc";
                 $field_balance = "field_65f167b6d716e";
-            break;
+                break;
             case 'clientevaleapp':
                 $rol = "cliente";
                 $field_photo = "field_64dcf7f7e9ebb";
                 $field_balance = "field_65f1677e65100";
-            break;
+                break;
             case 'administrator':
                 $rol = "administrador";
-            break;
-        };
+                break;
+        }
 
         $args = [
             'post_type' => $rol,
@@ -47,46 +54,45 @@ function add_photo_profile_header() {
                 $balance = get_field($field_balance);
                 $id = get_the_ID();
 
-                if($profile_photo){
+                if($profile_photo) {
                     if (is_page('preguntas-frecuentes')){
-                    ?>                   
-                    <button class="PreguntasFrecuentes-headerBtn" id="questionShowBtn">
-                        <?php echo $balance; ?>
-                        <div class="PreguntasFrecuentes-boxImg">
-                            <img class="img-fluid PreguntasFrecuentes-iconHead" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeap-arrow-promociones.png" alt="valeapp">
-                            <span class="PreguntasFrecuentes-question head">
-                                ?
-                            </span>
-                        </div>
-                    </button>
-                    <?php
-                    } else {
-                        ?>
-                        <button class="PreguntasFrecuentes-headerBtn" id="questionShowBtn">
-                            <?php echo $balance; ?>
-                            <div class="PreguntasFrecuentes-boxImg">
-                                <img class="img-fluid PreguntasFrecuentes-iconHead" src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeap-arrow-promociones.png" alt="valeapp">
-                            </div>
-                        </button>
-                        <?php
-                    }
-                    ?>  
-                        <a href="/<?php echo($rol); ?>/<?php echo($id); ?>">
-                            <img class="image-profile-header" src="<?php echo($profile_photo['url']);?>" alt="<?php echo($profile_photo['alt']); ?>">
-                        </a>
-                    <?php
-                }
-                else{
                     ?>
-                        <i class="bi bi-person-circle"></i>
-                    <?php
+<button class="PreguntasFrecuentes-headerBtn" id="questionShowBtn">
+  <?php echo $balance; ?>
+  <div class="PreguntasFrecuentes-boxImg">
+    <img class="img-fluid PreguntasFrecuentes-iconHead"
+      src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeap-arrow-promociones.png" alt="valeapp">
+    <span class="PreguntasFrecuentes-question head">?</span>
+  </div>
+</button>
+<?php
+                    } else {
+                    ?>
+<button class="PreguntasFrecuentes-headerBtn" id="questionShowBtn">
+  <?php echo $balance; ?>
+  <div class="PreguntasFrecuentes-boxImg">
+    <img class="img-fluid PreguntasFrecuentes-iconHead"
+      src="<?php echo get_stylesheet_directory_uri(); ?>/img/valeap-arrow-promociones.png" alt="valeapp">
+  </div>
+</button>
+<?php
+                    }
+                    ?>
+<a href="/<?php echo($rol); ?>/<?php echo($id); ?>">
+  <img class="image-profile-header" src="<?php echo($profile_photo['url']);?>"
+    alt="<?php echo($profile_photo['alt']); ?>">
+</a>
+<?php
+                } else {
+                    ?>
+<i class="bi bi-person-circle"></i>
+<?php
                 }
             endwhile;
             wp_reset_postdata();
-        else :
         endif;
-    }
-        else{
-        //No ha iniciado sesion
+    } else {
+        // No ha iniciado sesión
     }
 }
+?>
