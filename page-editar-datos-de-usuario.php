@@ -33,12 +33,12 @@ get_footer();
 function mostrar_formulario_proveedor_acf($post_id)
 {
 ?>
-    <div class="Providers-form">
-        <div class="container login mt-5">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-12">
-                    <h2 class="title">El meu compte</h2>
-                    <?php
+<div class="Providers-form">
+  <div class="container login mt-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+        <h2 class="title">El meu compte</h2>
+        <?php
                     acf_form([
                         'post_id'       => $post_id,
                         'field_groups'  => ['group_64dcf1b40cfd3'],
@@ -55,32 +55,32 @@ function mostrar_formulario_proveedor_acf($post_id)
                         'return' => '/home',
                     ]);
                     ?>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <script>
-        function previewImage(event) {
-            const reader = new FileReader();
-            reader.onload = function() {
-                const output = document.getElementById('image_preview');
-                output.src = reader.result;
-                output.style.display = 'block';
-            }
-            reader.readAsDataURL(event.target.files[0]);
-        }
-    </script>
+  </div>
+</div>
+<script>
+function previewImage(event) {
+  const reader = new FileReader();
+  reader.onload = function() {
+    const output = document.getElementById('image_preview');
+    output.src = reader.result;
+    output.style.display = 'block';
+  }
+  reader.readAsDataURL(event.target.files[0]);
+}
+</script>
 <?php
 }
 
 function mostrar_formulario_cliente_acf($post_id)
 {
 ?>
-    <div class="container login mt-5">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12">
-                <h2 class="title">El meu compte</h2>
-                <?php
+<div class="container login mt-5">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12">
+      <h2 class="title">El meu compte</h2>
+      <?php
                 acf_form([
                     'post_id'       => $post_id,
                     'field_groups'  => ['group_64dcf6cf78620'],
@@ -95,20 +95,20 @@ function mostrar_formulario_cliente_acf($post_id)
                     'return' => '/home',
                 ]);
                 ?>
-            </div>
-        </div>
     </div>
-    <script>
-        function previewImage(event) {
-            const reader = new FileReader();
-            reader.onload = function() {
-                const output = document.getElementById('image_preview');
-                output.src = reader.result;
-                output.style.display = 'block';
-            }
-            reader.readAsDataURL(event.target.files[0]);
-        }
-    </script>
+  </div>
+</div>
+<script>
+function previewImage(event) {
+  const reader = new FileReader();
+  reader.onload = function() {
+    const output = document.getElementById('image_preview');
+    output.src = reader.result;
+    output.style.display = 'block';
+  }
+  reader.readAsDataURL(event.target.files[0]);
+}
+</script>
 <?php
 }
 

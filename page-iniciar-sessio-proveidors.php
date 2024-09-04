@@ -16,18 +16,18 @@ get_header();
 
 ?>
 <div class="container login mt-5">
-    <div class="row justify-content-center align-items-center">
-        <div class="col-12" id="login-code-container">
-            <form method="POST" id="" action="/wp-login.php">
-                <h2 class="title">Inici de sessió Proveidor</h2>
-                <input value="" type="text" id="user_login" name="log" class="text-form" placeholder="Correu electrònic" required>
-                <input value="" type="password" id="user_pass" name="pwd" class="text-form" placeholder="Contrasenya"
-                    required>
-                <i class="bi bi-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer; color:#d4d4d4"></i>
-                <button type="submit" name="save" id="publish2" class="btn btn-brand">Enviar</button>
-            </form>
-        </div>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12" id="login-code-container">
+      <form method="POST" id="" action="/wp-login.php">
+        <h2 class="title">Inici de sessió Proveïdor</h2>
+        <input value="" type="text" id="user_login" name="log" class="text-form" placeholder="Correu electrònic"
+          required>
+        <input value="" type="password" id="user_pass" name="pwd" class="text-form" placeholder="Contrasenya" required>
+        <i class="bi bi-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer; color:#d4d4d4"></i>
+        <button type="submit" name="save" id="publish2" class="btn btn-brand">Enviar</button>
+      </form>
     </div>
+  </div>
 </div>
 
 <?php

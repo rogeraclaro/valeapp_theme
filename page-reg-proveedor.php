@@ -21,7 +21,7 @@ get_header();
     <div class="row justify-content-center align-items-center">
         <div class="col-12">
                     <form method="post" action="" enctype="multipart/form-data">
-                        <h2 class="title">Registro Proveedores</h2>
+                        <h2 class="title">Registre Proveïdors</h2>
                         <input type="text" id="first_name" name="first_name" class="text-form" placeholder="Nombre" required>
 
                         <input type="text" id="last_name" name="last_name" class="text-form" placeholder="Apellidos" required>

@@ -24,37 +24,36 @@ function get_user_post_id($user_id, $rol){
 
 function get_current_user_post_id()
 {
-    if (is_user_logged_in()) {
-        $current_user = wp_get_current_user();
-        $user_role = "";
-        $user_id = "";
-        $post_id = "";
-
-        if ($current_user->ID != 0) {
-            $user_roles = $current_user->roles;
-            $user_id = get_current_user_id();
-        }
-
-        foreach ($user_roles as $role) {
-            $user_role = $role;
-        }
-
-        switch ($user_role) {
-            case 'proveedorvaleapp':
-                $rol = "proveedor";
-                break;
-            case 'clientevaleapp':
-                $rol = "cliente";
-                break;
-            case 'administrator':
-                $rol = "administrador";
-                break;
-            default:
-                $rol = "";
-        }
-        $post_id = get_user_post_id($user_id,$rol);
-        return $post_id;
+    if (!is_user_logged_in()) {
+        return false;
     }
 
-    return false;
+    $current_user = wp_get_current_user();
+    $user_id = $current_user->ID;
+
+    if ($user_id === 0) {
+        return false;
+    }
+
+    $user_roles = $current_user->roles;
+    $rol = '';
+
+    // Priorizar el rol 'proveedorvaleapp' si está presente
+    if (in_array('proveedorvaleapp', $user_roles)) {
+        $rol = 'proveedor';
+    } elseif (in_array('clientevaleapp', $user_roles)) {
+        $rol = 'cliente';
+    } elseif (in_array('administrator', $user_roles)) {
+        $rol = 'administrador';
+    }
+
+    // Si no se encontró un rol válido
+    if (empty($rol)) {
+        return false;
+    }
+
+    // Obtener el ID del post del usuario basado en su ID y rol
+    $post_id = get_user_post_id($user_id, $rol);
+
+    return $post_id ? $post_id : false;
 }

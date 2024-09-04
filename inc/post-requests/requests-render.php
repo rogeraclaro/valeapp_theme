@@ -92,7 +92,7 @@ function render_requests($requests, $perms)
         <div class="JodRequests-item">
             <form method="post" action="" enctype="multipart/form-data">
                 <div class="JodRequests-item-header">
-                    <img class="img-fluid" src="<?php echo $profile_photo_url; ?>" alt="<?php echo esc_attr($profile_photo['alt'] ?? 'Foto del proveedor'); ?>">
+                    <img class="img-fluid" src="<?php echo $profile_photo_url; ?>" alt="<?php echo esc_attr($profile_photo['alt'] ?? 'Foto del proveïdor'); ?>">
                     <p class="JodRequests-item-header-text">
                         <?php echo $solicitud_title; ?>
                         <span><?php echo $profile_name; ?></span>
