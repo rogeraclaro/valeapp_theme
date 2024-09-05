@@ -68,3 +68,42 @@ jQuery(document).ready(function () {
   //   this.classList.toggle("bi-eye-slash");
   // });
 });
+
+jQuery(document).ready(function($) {
+    // Obtener la URL actual
+    var currentUrl = window.location.href;
+
+    // Verificar si la URL contiene "/es/" para identificar el idioma español
+    var isSpanish = currentUrl.indexOf('/es/') !== -1;
+
+    // Cambiar los textos según el idioma
+    if (isSpanish) {
+        // Cambiar textos a español
+        // Traducción del botón "Agregar a galería"
+        $('.acf-gallery-add').text('Agregar a galería');
+
+        // Traducción de las opciones del select en español
+        $('.acf-gallery-sort option[value=""]').text('Acciones en lote'); // Opción por defecto
+        $('.acf-gallery-sort option[value="date"]').text('Ordenar por fecha de subida'); // Ordenar por fecha de subida
+        $('.acf-gallery-sort option[value="modified"]').text('Ordenar por fecha de modificación'); // Ordenar por fecha de modificación
+        $('.acf-gallery-sort option[value="title"]').text('Ordenar por título'); // Ordenar por título
+        $('.acf-gallery-sort option[value="reverse"]').text('Invertir orden actual'); // Invertir orden actual
+
+        // Traducción del botón "Agregar Fila"
+        $('.acf-button.acf-repeater-add-row').text('Agregar Fila');
+    } else {
+        // Cambiar textos a catalán
+        // Traducción del botón "Afegir fila!" (en catalán)
+        $('.acf-gallery-add').text('Afegir fila!');
+
+        // Traducción de las opciones del select en catalán
+        $('.acf-gallery-sort option[value=""]').text('Accions per lots'); // Opción por defecto en catalán
+        $('.acf-gallery-sort option[value="date"]').text('Ordenar per data de pujada'); // Ordenar por fecha de subida en catalán
+        $('.acf-gallery-sort option[value="modified"]').text('Ordenar per data de modificació'); // Ordenar por fecha de modificación en catalán
+        $('.acf-gallery-sort option[value="title"]').text('Ordenar per títol'); // Ordenar por título en catalán
+        $('.acf-gallery-sort option[value="reverse"]').text('Invertir ordre actual'); // Invertir orden actual en catalán
+
+        // Traducción del botón "Afegir Fila"
+        $('.acf-button.acf-repeater-add-row').text('Afegir Fila');
+    }
+});
