@@ -24,7 +24,7 @@ if (current_user_can('proveedorvaleapp') || current_user_can('administrator')) {
                         'post_id'       => $post_id,
                         'field_groups'  => ['group_64e3cd0b38f67'],
                         'submit_value'  => 'Confirmar',
-                        'updated_message' => '¡Formulario actualizado!',
+                        'updated_message' => 'Formulari actualitzat!',
                         'return' => '/mis-servicios',
                     ]);
                     ?>

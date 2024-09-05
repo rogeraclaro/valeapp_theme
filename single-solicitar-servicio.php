@@ -14,9 +14,9 @@ $post_id = get_the_ID();
 if (current_user_can('clientevaleapp') || current_user_can('administrator')) {
 ?>
 <div class="service-request-form forms-default container mt-5">
-    <div class="row justify-content-center align-items-center">
-        <div class="col-12">
-            <?php
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12">
+      <?php
                 acf_form([
                     'post_id'       => $post_id,
                     'field_groups'  => ['group_64dcf8a7a89d8'],
@@ -28,13 +28,13 @@ if (current_user_can('clientevaleapp') || current_user_can('administrator')) {
                         'field_656f52929087a',
                         'field_656f53019087b'
                     ],
-                    'submit_value'  => 'Actualizar',
-                    'updated_message' => '¡Formulario actualizado!',
+                    'submit_value'  => 'Actualitzar',
+                    'updated_message' => 'Formulari actualitzat!',
                     'return' => '/ofertas-para-tu-solicitud',
                 ]);
             ?>
-        </div>
     </div>
+  </div>
 </div>
 
 <?php

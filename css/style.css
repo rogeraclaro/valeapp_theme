@@ -6571,6 +6571,7 @@ a.HomeOffer-btn {
 
 .acf-field.ServiceDetail .acf-field.Certificates .acf-gallery {
   border: 0;
+  height: 250px !important;
 }
 
 .acf-field.ServiceDetail .acf-field.Certificates .acf-gallery .acf-gallery-toolbar {
