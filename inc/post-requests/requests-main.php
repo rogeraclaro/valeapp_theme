@@ -348,7 +348,7 @@ function render_canceled_requests()
         } else {
             $perms = [
                 "watch_detail" => true,
-                'repeat' => true
+                'repeat' => false
             ];
         }
         render_requests($all_requests['canceled_requests'], $perms);
@@ -366,7 +366,7 @@ function render_ended_requests()
             $perms = [
                 "watch_detail" => true,
                 'appreciate' => true,
-                'repeat' => true
+                'repeat' => false
             ];
         }
         render_requests($all_requests['ended_requests'], $perms);
