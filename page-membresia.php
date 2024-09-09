@@ -36,9 +36,12 @@ $memberships = get_all_memberships();
             $is_current_plan = ($user_membership && $fields['titulo'] === $user_membership['membership']['titulo']);
 
             // Definir la clase CSS para el estado del plan
-            $membership_class = '';
             if ($is_user_logged_in) {
+               if(!$user_membership){
+                $membership_class = '';
+              }else{
                 $membership_class = $is_current_plan ? 'active-plan' : 'deactivate';
+              }
             }
 
             // Definir el texto y estilo del botón

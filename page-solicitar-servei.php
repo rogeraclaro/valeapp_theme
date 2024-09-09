@@ -17,40 +17,53 @@ acf_form_head();
 
 get_header();
 
-if (current_user_can('clientevaleapp') || current_user_can('administrator')) {
+// Verificar si el usuario tiene una suscripción activa
+$user_membership = get_user_active_subscription();
+
+// Validar si el usuario tiene roles permitidos para solicitar un servicio y si tiene una suscripción activa
+if ((current_user_can('clientevaleapp') || current_user_can('administrator')) && $user_membership) {
 
 ?>
 <div class="service-request-form forms-default container mt-5">
-    <div class="row justify-content-center align-items-center">
-        <div class="col-12">
-            <?php
-                acf_form([
-                    'post_id'       => 'new_post',
-                    'field_groups'  => ['group_64dcf8a7a89d8'],
-                    'new_post'      => [
-                        'post_type'     => 'solicitar-servicio',
-                        'post_status'   => 'publish'
-                    ],
-                    'fields' => [
-                        'field_656f483c90876',
-                        'field_656f507890877',
-                        'field_656f517290878',
-                        'field_656f51d690879',
-                        'field_656f52929087a',
-                        'field_656f53019087b'
-                    ],
-                    'submit_value'  => 'Continuar',
-                    'updated_message' => '¡Formulario actualizado!',
-                    'return' => '/ofertas-para-tu-solicitud',
-                ]);
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12">
+      <?php
+            acf_form([
+                'post_id'       => 'new_post',
+                'field_groups'  => ['group_64dcf8a7a89d8'],
+                'new_post'      => [
+                    'post_type'     => 'solicitar-servicio',
+                    'post_status'   => 'publish'
+                ],
+                'fields' => [
+                    'field_656f483c90876',
+                    'field_656f507890877',
+                    'field_656f517290878',
+                    'field_656f51d690879',
+                    'field_656f52929087a',
+                    'field_656f53019087b'
+                ],
+                'submit_value'  => 'Continuar',
+                'updated_message' => '¡Formulario actualizado!',
+                'return' => '/ofertas-para-tu-solicitud',
+            ]);
             ?>
-        </div>
     </div>
+  </div>
 </div>
 
 <?php
+} else {
+?>
+<div class="service-request-form forms-default container mt-5">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12 text-center">
+      <h2 class="title">Per a sol·licitar un servei, necessites una <a href="/membresia">membresia</a>.</h2>
+      <p>Si us plau, visita la nostra <a href="/membresia">pàgina de membresies</a> per obtenir més informació.</p>
+    </div>
+  </div>
+</div>
+<?php
 }
- else {
-     echo do_shortcode('[no_authorization_page]');
- }
+
 get_footer();
