@@ -1,6 +1,6 @@
 <?php
 // Asegurarse de que las variables globales estén definidas
-global $membership_fields, $membership_class, $button_text, $is_current_plan, $button_style;
+global $membership_fields, $membership_class, $button_text, $is_current_plan, $button_style, $subscription_url;
 $is_user_logged_in = is_user_logged_in();
 
 if (!is_array($membership_fields)) {
@@ -13,6 +13,7 @@ if (!is_array($membership_fields)) {
   <div class="Membership-plan-price"><?php echo esc_html($membership_fields['precio']); ?><span>€</span></div>
 
   <?php
+  // Definir los elementos del plan a mostrar
   $plan_items = [
     'Àrees' => $membership_fields['areas_de_trabajo'],
     'Treballs' => $membership_fields['cantidad_de_trabajos'],
@@ -22,6 +23,7 @@ if (!is_array($membership_fields)) {
     'Informes' => $membership_fields['reporting']
   ];
 
+  // Mostrar los elementos del plan
   foreach ($plan_items as $label => $value): ?>
   <div class="Membership-plan-row">
     <p class="Membership-plan-text"><?php echo esc_html($label); ?></p>
@@ -51,16 +53,22 @@ if (!is_array($membership_fields)) {
 
   <?php if (!$is_current_plan): ?>
   <?php if ($is_user_logged_in && $membership_fields['product_id']):
-      $product_id = $membership_fields['product_id']->ID;
-      $add_to_cart_url = wc_get_cart_url() . '?add-to-cart=' . $product_id . '&membership_price=' . $membership_fields['precio'];
-    ?>
+        $product_id = $membership_fields['product_id'];
+        $add_to_cart_url = wc_get_cart_url() . '?add-to-cart=' . $product_id . '&membership_price=' . $membership_fields['precio'];
+      ?>
   <a href="<?php echo esc_url($add_to_cart_url); ?>"
     class="Membership-plan-button"><?php echo esc_html($button_text); ?></a>
   <?php else: ?>
   <a href="/registre-proveidor" class="Membership-plan-button <?=$button_style;?>">Contractar</a>
   <?php endif; ?>
   <?php else: ?>
-  <a href="javascript:void(0);"
-    class="Membership-plan-button <?=$button_style;?>"><?php echo esc_html($button_text); ?></a>
+  <!-- Verificar si la URL de la suscripción está disponible antes de mostrar el botón -->
+  <?php if (!empty($subscription_url)): ?>
+  <a href="<?php echo esc_url($subscription_url); ?>" class="Membership-plan-button <?=$button_style;?>">
+    <?php echo esc_html($button_text); ?>
+  </a>
+  <?php else: ?>
+  <p>Error: No se pudo generar la URL para cancelar la suscripción.</p>
+  <?php endif; ?>
   <?php endif; ?>
 </div>
