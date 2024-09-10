@@ -32,11 +32,14 @@ function associate_membership_with_user_post_direct($subscription) {
     // Get the user ID from the subscription
     $user_id = $subscription->get_user_id();
 
-    // Check if the user already has an active subscription
-    $active_subscription = check_user_has_active_subscription($user_id);
-    
+    // Get the current subscription ID (the one being activated)
+    $current_subscription_id = $subscription->get_id();
+
+    // Check if the user already has an active subscription (excluding the current one)
+    $active_subscription = check_user_has_active_subscription($user_id, $current_subscription_id);
+
     if ($active_subscription) {
-        // Cancel the previous active subscription if a new one is being activated
+        // Cancel the previous active subscription
         $active_subscription->update_status('cancelled');
     }
 
@@ -44,18 +47,20 @@ function associate_membership_with_user_post_direct($subscription) {
     associate_membership_with_provider($subscription, $user_id);
 }
 
-// Function to check if a user already has an active subscription
-function check_user_has_active_subscription($user_id) {
+// Function to check if a user has any active subscription, excluding the current one
+function check_user_has_active_subscription($user_id, $current_subscription_id = null) {
     $subscriptions = wcs_get_users_subscriptions($user_id);
-
+    
     foreach ($subscriptions as $subscription) {
-        if ($subscription->has_status('active')) {
-            return $subscription; // Return the active subscription if found
+        // Check if the subscription is active and is not the one being currently activated
+        if ($subscription->has_status('active') && $subscription->get_id() !== $current_subscription_id) {
+            return $subscription;
         }
     }
 
-    return false; // Return false if no active subscription is found
+    return false;
 }
+
 
 // Function to associate membership with the provider profile (original logic)
 function associate_membership_with_provider($subscription, $user_id) {
