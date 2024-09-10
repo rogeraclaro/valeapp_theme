@@ -20,7 +20,6 @@ function get_all_memberships()
       // Verificar si el campo 'producto_recurrente' existe antes de obtenerlo
       $product = get_field('producto_recurrente');
       $product_id = $product ? $product->ID : null;
-      error_log($product_id);
 
       $memberships[] = [
         'titulo' => get_the_title(),
