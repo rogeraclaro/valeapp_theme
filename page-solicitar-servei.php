@@ -17,11 +17,8 @@ acf_form_head();
 
 get_header();
 
-// Verificar si el usuario tiene una suscripción activa
-$user_membership = get_user_active_subscription();
-
-// Validar si el usuario tiene roles permitidos para solicitar un servicio y si tiene una suscripción activa
-if ((current_user_can('clientevaleapp') || current_user_can('administrator')) && $user_membership) {
+// Validar si el usuario tiene roles permitidos para solicitar un servicio
+if ((current_user_can('clientevaleapp') || current_user_can('administrator'))) {
 
 ?>
 <div class="service-request-form forms-default container mt-5">
@@ -58,8 +55,7 @@ if ((current_user_can('clientevaleapp') || current_user_can('administrator')) &&
 <div class="service-request-form forms-default container mt-5">
   <div class="row justify-content-center align-items-center">
     <div class="col-12 text-center">
-      <h2 class="title">Per a sol·licitar un servei, necessites una <a href="/membresia">membresia</a>.</h2>
-      <p>Si us plau, visita la nostra <a href="/membresia">pàgina de membresies</a> per obtenir més informació.</p>
+      <h2 class="title">No teniu permís per accedir a aquesta pàgina</h2>
     </div>
   </div>
 </div>
