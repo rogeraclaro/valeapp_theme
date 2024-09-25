@@ -10,6 +10,10 @@ body {
   padding: 0;
 } */
 
+div[data-name="membresia"] {
+    display: none;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -153,7 +157,7 @@ body {
     margin-right: auto;
     margin-bottom: 3rem;
     border-radius: 22px;
-    box-shadow: 2.877px 2.779px 7px rgba(0,0,0,0.1);
+    box-shadow: 2.877px 2.779px 7px rgba(0, 0, 0, 0.1);
     padding-bottom: 2.1rem;
 }
 
@@ -181,7 +185,7 @@ body {
     margin-bottom: 0.3rem;
 }
 
-.Membership-plan-price span{
+.Membership-plan-price span {
     font-size: 1.2rem;
     padding-top: 0;
     padding-bottom: 0;
@@ -241,7 +245,8 @@ body {
 
 @media (min-width: 768px) {
     .Membership-item img {
-        width: 2.5rem;;
+        width: 2.5rem;
+        ;
     }
 
     .Membership-item-title {
@@ -290,7 +295,8 @@ body {
         font-size: 0.8rem;
     }
 
-    p.Membership-plan-cancel, p.Membership-plan-success  {
+    p.Membership-plan-cancel,
+    p.Membership-plan-success {
         margin-bottom: 0;
     }
 
