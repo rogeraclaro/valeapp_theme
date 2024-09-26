@@ -360,3 +360,23 @@ function redirect_after_add_payment_method( $return_url ) {
     return $return_url;
 }
 add_filter( 'woocommerce_get_return_url', 'redirect_after_add_payment_method' );
+
+
+// Eliminar suscripciones duplicadas y agregar solo una nueva suscripción al carrito
+add_filter( 'woocommerce_add_cart_item_data', 'replace_subscription_in_cart', 10, 2 );
+
+function replace_subscription_in_cart( $cart_item_data, $product_id ) {
+    $product = wc_get_product( $product_id );
+    
+    // Verificar si el producto es una suscripción
+    if ( $product->is_type( 'subscription' ) ) {
+        // Recorrer el carrito y eliminar cualquier suscripción existente
+        foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+            if ( $cart_item['data']->is_type( 'subscription' ) ) {
+                WC()->cart->remove_cart_item( $cart_item_key );
+            }
+        }
+    }
+
+    return $cart_item_data;
+}
