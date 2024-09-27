@@ -380,3 +380,22 @@ function replace_subscription_in_cart( $cart_item_data, $product_id ) {
 
     return $cart_item_data;
 }
+
+// Personalizar el mensaje de "Producto agregado al carrito"
+add_filter( 'wc_add_to_cart_message_html', 'quadlayers_custom_add_to_cart_message', 10, 2 );
+function quadlayers_custom_add_to_cart_message( $message, $products ) {
+    // Mensaje personalizado al agregar productos al carrito
+    return 'El teu saldo ha estat afegit a la comanda.';
+}
+
+// Cambiar el mensaje de "Carrito actualizado" usando gettext
+add_filter( 'gettext', 'custom_cart_updated_notice_gettext', 20, 3 );
+
+function custom_cart_updated_notice_gettext( $translated_text, $text, $domain ) {
+    // Comprobar si es el mensaje de carrito actualizado y el dominio es WooCommerce
+    if ( $translated_text === 'Carrito actualizado.' && $domain === 'woocommerce' ) {
+        // Retornar el mensaje personalizado
+        return 'La comanda ha estat actualitzada amb èxit. Revisa els teus canvis!';
+    }
+    return $translated_text;
+}
