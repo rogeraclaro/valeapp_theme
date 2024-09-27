@@ -10,6 +10,15 @@ body {
   padding: 0;
 } */
 
+a.checkout-button.button.alt.wc-forward {
+    background: #5aab9f;
+}
+
+a.checkout-button.button.alt.wc-forward:hover {
+    color: white !important;
+    background: #519288;
+}
+
 div[data-name="membresia"] {
     display: none;
 }
